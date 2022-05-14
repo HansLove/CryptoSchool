@@ -1,0 +1,15 @@
+.div_menu{
+    z-index: 1;
+}
+.div_menu p{
+    margin-left: 4%;
+    font-size: 1.7rem;
+    font-family: monospace;
+    transition: all 0.5s ease-in-out;
+}
+
+.div_menu p:hover{
+    color: silver;
+    font-size: 1.8rem;
+    transition: all 0.5s ease-in-out;
+}

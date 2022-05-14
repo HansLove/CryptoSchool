@@ -5,9 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(-45deg,black,black);
+  color: #fff;
+  animation: anim 5s ease-in-out infinite alternate;
+  background-size: 150% 150%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@keyframes anim {
+  0%{
+    background-position: 0% 50%;
+  }
+  100%{
+    background-position: 50% 100%;
+  }
 }

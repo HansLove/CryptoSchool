@@ -1,0 +1,37 @@
+.div_main_welcome{
+    display: block;
+    margin: auto;
+
+}
+
+.div_main_welcome p{
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.boton_empezar{
+    background: linear-gradient(-45deg,hotpink,navy);
+    color: whitesmoke;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0.5% 1%;
+    border-radius: 1%;
+    transition: all 0.5s ease-in-out;
+}
+
+.boton_empezar:hover{
+    transition: all 1s ease-in-out;
+    color: silver;
+    padding: 1%;
+    border-radius: 10%;
+    transition: all 0.5s ease-in-out;
+}
+
+.div_part_welcome:hover{
+    transition: all 1s ease-in-out;
+    background: navy;
+    padding: 1.5%;
+    color: whitesmoke;
+    border: 3px solid blueviolet;
+
+}
