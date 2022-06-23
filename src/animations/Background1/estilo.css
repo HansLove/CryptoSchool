@@ -1,20 +1,19 @@
-
-  
-  #box_world {
-    -webkit-animation: rotate 30000ms linear infinite;
-            animation: rotate 30000ms linear infinite;
-    transform-style: preserve-3d;
+#box_world {
+        -webkit-animation: rotate 30000ms linear infinite;
+        animation: rotate 30000ms linear infinite;
+        transform-style: preserve-3d;
   }
   #box_world .box_wrapper {
     position: absolute;
     transform-style: preserve-3d;
   }
   #box_world .box_wrapper .box_wall {
-    position: absolute;
+    position: relative;
     width: 150px;
     height: 150px;
     border: 8px solid;
     box-sizing: border-box;
+    z-index: -1;
   }
   #box_world .box_wrapper .box_wall:nth-child(1) {
     transform: translate(-75px, -75px) translateZ(75px);

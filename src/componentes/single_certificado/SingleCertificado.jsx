@@ -1,15 +1,32 @@
 import React, { useEffect, useState } from 'react'
 import { ObjetoCertificado } from '../blockchain/Certificado'
+import {FormattedMessage} from 'react-intl'
 import Logo from '../image/logo.png'
 import './estilo.css'
+import styled from 'styled-components'
 
-function SingleCertificado({id=1}) {
+
+function SingleCertificado({
+    id=1,
+    name='',
+    color='lightgreen',
+    icon,
+    setcertificado,
+    certificado,
+    colored=false
+}) {
 
     const [data, setdata] = useState({})
+    const [selected, setSelected] = useState(false)
+
 
     useEffect(() => {
         getData()
-    }, [])
+        if(certificado==name)setSelected(true)
+        
+        if(certificado!=name)setSelected(false)
+
+    }, [certificado])
     
 const getData=async()=>{
     let ob=new ObjetoCertificado()
@@ -21,17 +38,34 @@ const getData=async()=>{
     
     }
     
-  return (
-    <div className='div_central border radial-repeating'>
-        <img width='15%' src={Logo}/>
-        <h1 className='h1_titulo_certificado'>Certificado</h1>
-        <p>Participacion en: {data.class}</p>
-        <p>{new Date().toDateString()} (Block number: {data.blockNumber})</p>
-        <p>{data.userName}</p>
-        {/* <p>{data.academy}</p> */}
-        <p>{data.address}</p>
+    const Div=styled.div`
+        background: ${selected?'linear-gradient(-45deg,'+color+',black)':colored?'linear-gradient(-45deg,'+color+',black)':'snow'};
+        color: ${selected?'whitesmoke':colored?'white':'gray'};
+
+        &:hover{
+            transition: all 0.5 ease-in-out;
+            border: 1px dashed ${color};
+            letter-spacing: 0.1em;
+            background: linear-gradient(-45deg,${color},black);
+            color: whitesmoke;
+        }
         
-    </div>
+    `
+  return (
+    <Div 
+    onClick={()=>setcertificado(name)}
+    className='div_central'>
+        <h1 className='h1_titulo_certificado'>{name}</h1>
+
+        {icon}
+        
+        <p className='p_certificado'>
+            <FormattedMessage 
+            id='titulo_certificado' 
+            defaultMessage='Certificate'/>
+        </p>
+        
+    </Div>
   )
 }
 

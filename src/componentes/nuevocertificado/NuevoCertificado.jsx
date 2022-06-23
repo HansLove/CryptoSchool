@@ -2,70 +2,62 @@ import React, { useState } from 'react'
 import { ObjetoCertificado } from '../blockchain/Certificado'
 import Cursos from '../cursos/Cursos'
 import Input from '../Input/Input'
-import Mined from '../image/mined_1.png'
 import Insight from '../image/logo.png'
-import '../../estilo/estilo_1.css'
+import {FormattedMessage} from 'react-intl'
+import styled from 'styled-components'
 
 
 
-function NuevoCertificado() {
+function NuevoCertificado({
+  name,
+  color1='navy',
+  color2='aqua'
+}) {
 
-  const [data, setdata] = useState({name:'',address:''})
+  const [data, setdata] = useState('')
   const [curso, setcurso] = useState(0)
-  const [academia, setAcademia] = useState('')
+  const [visible, setvisible] = useState(false)
 
   const GenerarNFT=async()=>{
     let ob=new ObjetoCertificado()
     await ob.load()
 
     let res=await ob.get(5)
-    console.log('contrato ',res)
 
-    if(!data.name.length>0) return
-    await ob.create(data.name,curso,data.address)
+
+    if(!data.length>0) return
+    await ob.create(data,1)
   }
 
-  return (
-    <div style={{height:'100vh'}}>
 
-        <h1 style={{width:'fit-content',display:'block',margin:'auto',
-          fontSize:'2.6rem',fontFamily:'fantasy'
-        }}>Emision de Certificados</h1>
-
-        
-        <div>
-          <h1>Elige una academia</h1>
-
-          <img onClick={()=>setAcademia('Mined')}
-           style={{width:'45%',display:'inline-block',border:'1px solid pink',height:'30vh'}} src={Mined} />
-
-        </div>
-
-        {academia.length>0&&<>
-        <h1>Elige un curso: </h1>
-        <Cursos setcurso={setcurso}/>
-
-        </>}
-
-     
-          <input value={data.name}
-          className='input_1'
-          onChange={(e)=>setdata({...data,name:e.target.value})}
-          type="text" placeholder='Client Name'
-          width='35%' fontSize='2rem' />
-
-          <input value={data.address}
-          className='input_1'
-          onChange={(e)=>setdata({...data,address:e.target.value})}
-          type="text" placeholder='Client Crypto Address' 
-          width='35%' fontSize='1.6rem'/>
-
-          <button className='button_1'
-          style={{display:'block',margin:'auto',marginTop:'1%',fontSize:'2.3rem'}}
-           onClick={GenerarNFT}>Generar NFT</button>
+  const Button=styled.button`
+    font-size: 2.2rem;
+    background: linear-gradient(45deg,${color1},${color2});
+    border-radius: 10%;
+    padding: 1% 2%;
+    color: whitesmoke;
+    transition: all 1s ease-in-out;
 
 
-    </div>
+    &:hover{
+      transition: all 0.5s ease-in-out;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 500px) {
+          font-size: 1.3rem;
+    
+    }
+  `
+
+  return (<Button 
+          style={{display:'block',margin:'auto',marginTop:'1%'}}
+          onClick={!visible?()=>setvisible(true):GenerarNFT}
+          >
+            <FormattedMessage 
+            id='button.certify_me' 
+            defaultMessage='Certify me'/>
+           </Button>
   )
 }
 

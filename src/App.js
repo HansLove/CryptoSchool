@@ -1,35 +1,41 @@
 import './App.css';
 import Menu from './componentes/menu/Menu';
-import SingleCertificado from './componentes/single_certificado/SingleCertificado';
-import Logo from './componentes/image/logo.png'
-import Certificado from './componentes/image/certificado_nft_1.png'
-import Welcome from './componentes/welcome/Welcome';
 import { useState } from 'react';
-import Cursos from './componentes/cursos/Cursos';
-import NuevoCertificado from './componentes/nuevocertificado/NuevoCertificado';
-import Contactanos from './pages/Contactanos/Contactanos';
-import AboutUs from './pages/AboutUs/AboutUs';
+import Welcome from './componentes/welcome/Welcome';
+import {BrowserRouter,Routes,Route,useLocation} from "react-router-dom";
+import MyNFT from './pages/MyNFT/MyNFT';
+import Mint from './pages/Mint/Mint';
+import {AnimatePresence} from 'framer-motion/dist/framer-motion'
 
 function App() {
 
   const [estado, setEstado] = useState(0)
 
-
-
+  // const location=useLocation()
 
   return (
     <div className="App">
-      
+      <BrowserRouter>
       <Menu setEstado={setEstado}/>
-      
-      <Welcome/>
-      <Cursos/>
-          
-      <AboutUs/>
 
-      <Contactanos/>
+      <AnimatePresence>
+      <Routes 
+      // location={location} key={location.path}
+      >
 
-      <NuevoCertificado/>
+        <Route exact path='/welcome' element={<Welcome/>}></Route>
+        <Route exact path='/nft' element={<MyNFT/>}></Route>
+        <Route exact path='/mint' element={<Mint/>}></Route>
+        <Route exact path='/' element={<Welcome/>}></Route>
+
+
+      </Routes>
+      </AnimatePresence>
+
+      </BrowserRouter>
+
+
+
 
 
     </div>

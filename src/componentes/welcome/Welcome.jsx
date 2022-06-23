@@ -1,81 +1,139 @@
-import React from 'react'
-import Bitcoin from '../image/btc_gif_1.gif'
+import React, { useEffect} from 'react'
 import {GiBookshelf, GiTeacher, GiWorld,GiMedal} from 'react-icons/gi'
-import {GrCertificate} from 'react-icons/gr'
+import {FormattedMessage, FormattedNumber,FormattedDate} from 'react-intl'
+import Fondo1 from '../image/cabecera_1.jpeg'
+import {Certificaciones} from '../../data/certifaciones.js'
+import AutomaticText from '../Texto/AutomaticText'
+import Cursos from '../cursos/Cursos'
+import Boton from '../Boton/Boton'
+import {motion,MotionConfig} from 'framer-motion/dist/framer-motion'
 import './estilo.css'
-import Background1 from '../../animations/Background1/Background1'
+import SingleCertificado from '../single_certificado/SingleCertificado'
+import NFT_Types from '../NFT_Types/NFT_Types'
 
-function Welcome() {
+
+export default function Welcome() {
+  
+
   return (
-    <div style={{height:'100vh'}} className='div_main_welcome'>
+    <MotionConfig transition={{ duration: 0.8 }}>
+      <motion.div 
+      initial={{width:0}}
+      animate={{width:'100%'}}
+      exit={{x:window.innerWidth}}
+      className='div_main_welcome'>
+        <img 
+        className='imagen_fondo_welcome'
+        src={Fondo1} alt="" />
 
-        <Background1/>
-        <div style={{display:'inline-block',width:'75%',marginLeft:'5%'}}>
+            <div className='div_header_welcome'>
 
-        <p style={{fontFamily:'monospace',fontSize:'4.5rem',width:'95%'}}
-          >Obten las herramientas para la nueva era Digital</p>
+              <p className='p_texto_principal'>
+              <FormattedMessage 
+                id='text_welcome'
+                defaultMessage='Diplomas NFT para descentralizar la educacion'/>
+              </p>
 
-          <p style={{fontFamily:'monospace',fontSize:'2.5rem',width:'75%'}}
-          >La academia virtual que lleva los NFT al siguiente nivel!</p>
+              <Boton 
+              onClick={async()=>await window.open('https://deccert.com/')}
+              marginTop='10%'
+              marginLeft='5%'
+              fontSize='1.5rem'
+              borderRadius='10%'
+              padding2='1%'
+              colorBorder='lightgreen'
+              color1='fuchsia'
+              color2='fuchsia'
+              display='inline-block'
+              text='Landing Page'
+              fontWeight='bold'
+              />
 
-          <button className='boton_empezar'
-          style={{display:'block',fontSize:'1.7rem',
-            margin:'auto'
-            }}>Empieza ahora!</button>
+            </div>
+          
+          
+          <>
+    
+            <div className='div_part_welcome'>
+              <GiWorld size={95} style={{display:'block',margin:'auto'}}/>
 
-        </div>
+              
+                <AutomaticText
+                fontSize='1.6rem'
+                id='acceso_ilimitado'
+                defaultMessage='Ilimited Access'
+                />
+              <AutomaticText
+                  id='protocolo_sin_fronteras'
+                  defaultMessage='Ilimited Access'
+              />
+            </div>
 
-         <div style={{background:'transparent',margin:'3%',color:'white',
-        padding:'0.5%',borderRadius:'1%'}}>
-
-           <div className='div_part_welcome'
-            style={{border:'1px solid white',height:'20vh',width:'21%',margin:'1%',
-            borderRadius:'3%',display:'inline-block',verticalAlign:'top'
-            }}>
-             <GiWorld size={95} style={{display:'block',margin:'auto'}}/>
-             <p style={{fontSize:'1.6rem',display:'block',
-              margin:'auto',width:'fit-content'}}>Accesso ilimitado</p>
-             <p style={{fontSize:'1.2rem',textAlign:'center'}}>Pagos unicos para acceso sin fronteras</p>
-           </div>
-
-           <div className='div_part_welcome' style={{border:'1px solid white',height:'20vh',width:'21%',margin:'1%',
-            borderRadius:'3%',display:'inline-block',verticalAlign:'top'
-            }}>
-             <GiBookshelf size={95} style={{display:'block',margin:'auto'}}/>
-             <p style={{fontSize:'1.6rem',display:'block',
-              margin:'auto',width:'fit-content'}}>Contenido Actualizado</p>
-             <p style={{fontSize:'1.2rem',textAlign:'center'}}>Actualizacion sistematica automatizada</p>
-           </div>
+            <div className='div_part_welcome'>
+              <GiBookshelf size={95} style={{display:'block',margin:'auto'}}/>
 
 
-           <div className='div_part_welcome' style={{border:'1px solid white',height:'20vh',width:'21%',margin:'1%',
-            borderRadius:'3%',display:'inline-block',verticalAlign:'top'
-            }}>
-             <GiTeacher size={95} style={{display:'block',margin:'auto'}}/>
-             <p style={{fontSize:'1.6rem',display:'block',
-              margin:'auto',width:'fit-content'}}>Colabora con nostros</p>
-             <p style={{fontSize:'1.2rem',textAlign:'center'}}>Usa los NFTs para obtener un ingreso</p>
-           </div>
+                <AutomaticText
+                fontSize='1.6rem'
+                id='our_courses'
+                defaultMessage='Our Courses'
+                />
 
-           
-           <div className='div_part_welcome' style={{
-             border:'1px solid white',width:'21%',margin:'1%',
-            borderRadius:'3%',display:'inline-block',height:'20vh',background:'red'
-            }}>
-             <GiMedal size={95} style={{display:'block',margin:'auto',
-              color:'white'}}/>
-             <p style={{fontSize:'1.6rem',display:'block',
-              margin:'auto',width:'fit-content'}}>Calidad y NFT´s</p>
-             <p style={{fontSize:'1.2rem',textAlign:'center'}}>Blockchain y descentralizacion</p>
-           </div>
 
-         </div>
-    </div>
+                <AutomaticText
+                fontSize='1.2rem'
+                id='actualizacion_automatica_descentralizada'
+                defaultMessage='Automatic decentralized update'
+                />
+
+            </div>
+
+
+            <div className='div_part_welcome'>
+              <GiTeacher size={95} style={{display:'block',margin:'auto'}}/>
+            
+                <AutomaticText 
+                fontSize='1.6rem'
+                defaultMessage='Work with us' 
+                id='work_with_us'/>
+
+              <AutomaticText
+                fontSize='1.2rem'
+                textAlign='center'
+                id='academic_process'
+                defaultMessage='Use 2.0 NFT´s for your academic process'
+                />
+            </div>
+
+            
+            <div className='div_part_welcome'>
+              <GiMedal size={95} style={{display:'block',margin:'auto'}}/>
+              
+                <AutomaticText
+                fontSize='1.6rem'
+                id='nft_and_learning'
+                defaultMessage='NFT´s 2.0 and Learning'
+                />
+              <AutomaticText
+              fontSize='1.2rem'
+              id='blockchain_digital_school'
+              defaultMessage='Blockchain in digital schools'
+              />
+            </div>
+
+            </>
+
+
+
+      <Cursos/>
+
+      <NFT_Types 
+      title='Our Soul Bond DECCERT NFT´s'
+      marginTop='20%'/>
+
+
+      </motion.div>
+    </MotionConfig>
   )
 }
 
-const toggle=document.querySelector('div_part_welcome')
-toggle.addEventListener('click',()=>{
-  toggle.classList.toggle('activate')
-})
-export default Welcome

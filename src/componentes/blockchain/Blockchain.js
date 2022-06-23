@@ -5,6 +5,7 @@ const web3=new Web3(window.ethereum)
 
 let currentAccount = null;
 
+
 export const actulizarCuenta=async()=>{
     await window.ethereum
     .request({ method: 'eth_accounts' })

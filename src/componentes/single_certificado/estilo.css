@@ -1,10 +1,30 @@
 .div_central{
     border-radius: 5%;
     padding: 1% 0%;
-    width: 65%;
-    margin: auto;
-    background: linear-gradient(-45deg,white,black);
+    width: 30%;
+	margin-left: 1%;
+	margin-top: 1%;
+	height: 25vh;
+	vertical-align: top;
+	display: inline-flex;
+	color: white;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	background-size: 200% 200%;
+	position: relative;
+	overflow: hidden;
+	padding: 16px;
+    border: 1px dashed green;
 }
+
+.img_singleCertificado_fondo{
+	position: absolute;
+	opacity: 0.4;
+	width: 100%;
+	height: auto;
+	left: 0;
+	top: 0;
+}
+
 .border {
 	font-size: 1.6rem;
 	display: grid;
@@ -14,21 +34,16 @@
 	padding: 1rem;
 }
 
-.radial-repeating {
-	border-width: 20px;
-	border-image: repeating-radial-gradient(
-			circle at 10px,
-			turquoise,
-			pink 2px,
-			greenyellow 4px,
-			pink 2px
-		)
-		1;
-}
 
 .h1_titulo_certificado{
     display: block;
-    font-size: 4rem;
+    font-size: 2.5rem;
+	text-align: center;
+	z-index: 1;
     margin: auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.p_certificado{
+	position: absolute;
+	top: auto;
 }
