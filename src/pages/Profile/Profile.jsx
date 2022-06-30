@@ -2,14 +2,18 @@ import React, { useEffect, useState } from 'react'
 import NothingHere from '../../animations/NothingHere/NothingHere'
 import { actulizarCuenta } from '../../componentes/blockchain/Blockchain'
 import { ObjetoDeccert } from '../../componentes/blockchain/ObjetoDeccert'
-import Boton from '../../componentes/Boton/Boton'
 import SingleNFT from '../../languaje/SingleNFT/SingleNFT'
 import {motion} from 'framer-motion/dist/framer-motion'
 import './estilo.css'
+import { getUserData } from '../../componentes/ConexionAxios/ConexionAxios'
+import UserBar from '../../componentes/UserBar/UserBar'
+import Materias from '../../componentes/Materias/Materias'
 
-function MyNFT() {
+export default function Profile() {
 
     const [listaNFT, setlistaNFT] = useState([])
+    const [data, setdata] = useState({name:'',image:''})
+
 
     useEffect(async() => {
       let objeto=new ObjetoDeccert()
@@ -20,10 +24,14 @@ function MyNFT() {
 
       for (let index = 1; index < _total+1; index++) {
           let certificado=await objeto.get(index)
-          console.log('certificado: ',certificado)
+          // console.log('certificado: ',certificado)
           if(certificado['owner']==account)_lista.push(certificado)
       }
       setlistaNFT(_lista)
+
+      let resultado=await getUserData(account)
+      setdata(resultado)
+      
     
     }, [])
     
@@ -33,6 +41,12 @@ function MyNFT() {
     animate={{width:'100%'}}
     exit={{x:window.innerWidth}}>
 
+        <UserBar 
+        name={data.name} 
+        description={data.description}
+        image={data.image}/>
+
+        <Materias/>
         {listaNFT.map((item,key)=><SingleNFT 
         id={item[0]}
         name={item['name']}
@@ -43,17 +57,10 @@ function MyNFT() {
 
         {listaNFT.length==0&&
         <>
-        {/* <Boton 
-        borderRadius='15%'
-        padding2='2%'
-        fontSize='2.2rem'
-        color1='coral'
-        color2='darkorange'
-        text='Certifications available'/> */}
-        <NothingHere/>
+
+        <NothingHere width='20%'/>
         </>}
     </motion.div>
   )
 }
 
-export default MyNFT

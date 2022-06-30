@@ -72,7 +72,7 @@ function Mint() {
         
         {isValid&&
 
-        <div style={{display:'block',margin:'auto',width:'85%',alignItems:'center'}}>
+        <div style={{display:'block',margin:'auto',width:'99%',alignItems:'center'}}>
         <p 
         className='p_mint_name_of_the_user'>DECCERT NFT</p>
 

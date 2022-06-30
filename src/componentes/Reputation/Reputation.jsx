@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import {BsStarFill,BsStarHalf} from 'react-icons/bs'
 
 function Reputation({
-    number
+    number,
+    size=20
 }) {
 
     const [lista, setlista] = useState([])
@@ -24,7 +25,7 @@ function Reputation({
         {/* <BsStarFill/> */}
         {lista.map((item,key)=><BsStarFill 
         style={{marginLeft:'0.5%'}}
-        size={40} color={'goldenrod'} key={key}/>)}
+        size={size} color={'goldenrod'} key={key}/>)}
     </div>
   )
 }

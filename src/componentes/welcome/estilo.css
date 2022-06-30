@@ -4,6 +4,7 @@
 
 .div_main_welcome{
     display: block;
+    z-index: -2;
     margin: auto;
     color: black;
     overflow: scroll;
@@ -22,7 +23,7 @@
 }
 .imagen_fondo_welcome{
     position: fixed;
-    opacity: 0.7;
+    opacity: 0.9;
     z-index: -1;
     left: 0;
     top: 0;

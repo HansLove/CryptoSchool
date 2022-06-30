@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 .div_menu{
-    z-index: 1;
+    z-index: 10;
     display: flex;
     width: 100%;
     align-items:flex-start;
     font-family: 'Montserrat', sans-serif;
+    padding: 0.5%;
     /* background: linear-gradient(rgb(78, 77, 77),rgb(41, 41, 41)); */
 }
 

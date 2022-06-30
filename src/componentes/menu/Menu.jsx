@@ -9,12 +9,13 @@ import {
 } from "react-router-dom";
 import styled from 'styled-components'
 import { animateScroll as scroll, Link as ScrollLink} from 'react-scroll'
+import { ConectWallet } from '../blockchain/Blockchain'
 
 
-function Menu({setEstado}) {
+
+function Menu() {
 
   const idioma=useContext(langContext)
-  console.log('idioma: ',idioma)
   const [visible, setVisible] = useState(false)
 
   useEffect(async() => {
@@ -22,7 +23,8 @@ function Menu({setEstado}) {
     setVisible(_res)
 
   }, [])
-  
+
+
 
   const Check=async()=>{
     var resFinal=true
@@ -77,7 +79,7 @@ function Menu({setEstado}) {
         to='/mint'>
         <img 
         width='7%' 
-        src={Logo}></img>
+        src={Logo}/>
         </NavLinkStlyed>
 
         <NavLinkStlyed
@@ -89,13 +91,13 @@ function Menu({setEstado}) {
         to='/'>
         <ScrollLink
             activeClass="active"
-            to="seccion_cursos"
+            to="id_trends"
             spy={true}
             smooth={true}
-            offset={-65}
+            offset={5}
             duration={1000}>
               
-            CURSES
+            TRENDS
           </ScrollLink>
         </NavLinkStlyed>  
 
@@ -106,7 +108,7 @@ function Menu({setEstado}) {
             to="nfts_id"
             spy={true}
             smooth={true}
-            offset={-65}
+            offset={-100}
             duration={1000}>
               
             CLASSES
@@ -114,13 +116,12 @@ function Menu({setEstado}) {
         </NavLinkStlyed>  
 
 
-        <NavLinkStlyed to='/nft'>
-              NFTS
+        <NavLinkStlyed to='/profile'>
+              PROFILE
         </NavLinkStlyed>
 
        
-     
-
+    
        <Banderas idioma={idioma}/>
 
        </nav>
@@ -129,7 +130,10 @@ function Menu({setEstado}) {
         padding2='0.6%'
         text_id='connect_wallet'
         color1='navy' color2='hotpink'
-        text='Connect Wallet' onClick={async()=>await window.ethereum.request({ method: 'eth_requestAccounts' })}/>}
+        text='Connect Wallet' 
+        // onClick={async()=>await window.ethereum.request({ method: 'eth_requestAccounts' })}
+        onClick={ConectWallet}
+        />}
      
     </div>
     

@@ -1,9 +1,12 @@
 import Web3 from "web3"
 import Json from '../../build/Deccert.json'
 import { actulizarCuenta, dameCurrentChain } from "./Blockchain"
+import { determinarChain } from "./FiltroChains"
 
 
 const web3=new Web3(window.ethereum)
+const metamaskProvider = window.ethereum.providers.find((provider) => provider.isMetaMask);
+
 
 export class ObjetoCertificado{
     constructor(){
@@ -14,25 +17,11 @@ export class ObjetoCertificado{
     async load(){
         const id=await web3.eth.net.getId()
         const deployedNetwork=Json.networks[id]
-        var winner=''  
         this.account=await actulizarCuenta()
-        // let binanceChainContract='0xD0055681c89841aE5c50787b0F18B5769a5091b9'
-        let chainId=await dameCurrentChain()
-        
 
-        if(chainId=='0x539'){
-           
-          winner=deployedNetwork.address
+        let winner=await determinarChain(deployedNetwork,0)
 
-        }else if(chainId=='0x38'){
-          // winner='0xD0055681c89841aE5c50787b0F18B5769a5091b9'
-          winner='0x66cafdD687b83663512bCfC99e36724d86b11C7e'
-        }else{
-          
-          winner='0x99Dc4a0CF0823b329F75D21278B2941bAffe1Ed7'
-        }
-        // winner='0xDe002d43CC54d21af12f914C86bBBbEa4D5679A2'
-        
+               
         try {
           const contrato=new web3.eth.Contract(
             Json.abi,
@@ -54,7 +43,7 @@ export class ObjetoCertificado{
             var _hashi=await this.contrato.methods.get(_index).call()
             return _hashi        
         } catch (error) {
-            console.log('error en HashimaContract.jsx ,dameHashima: ',error)
+            console.log('error en Certificado.jsx - DECCERT get(): ',error.message)
             return {}       
         }
     

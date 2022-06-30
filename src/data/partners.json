@@ -20,10 +20,11 @@
         "reputation":4
     },
     {
-        "name":"Satoshi Academy",
+        "name":"Hashima",
         "description":"History of money and digital assets. All its educational plan in monetary history and the social reasons that gave birth to bitcoin",
         "color":["darkorange"],
-        "image":"https://firebasestorage.googleapis.com/v0/b/deccert-1bc30.appspot.com/o/bitcoin_gold.png?alt=media&token=bbceb6b3-bc12-4669-bbd9-518f1491bbb0","type":2
+        "image":"https://firebasestorage.googleapis.com/v0/b/deccert-1bc30.appspot.com/o/logo_hashima_white.png?alt=media&token=d1f61c0f-940d-41bc-b58d-f5ddcc28c86c",
+        "type":2
         ,"courses":["Gold as money","Central bank system","Nixon","Bitcoin paper"],
         "nfts":90,
         "reputation":3

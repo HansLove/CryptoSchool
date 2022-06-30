@@ -1,0 +1,17 @@
+.seccion_materia{
+    margin: 0.5%;
+    border-radius: 2%;
+    padding: 0.5%;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.seccion_materia p{
+    font-size: 2rem;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-family: monospace;
+    font-weight: 800;
+    
+}

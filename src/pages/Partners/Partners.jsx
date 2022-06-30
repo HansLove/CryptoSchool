@@ -1,13 +1,13 @@
 import React from 'react'
 import {FormattedMessage} from 'react-intl'
-import SingleCurso from './SingleCurso'
-import ListaCursos from '../../data/academias.json'
-import ButtonLaser from '../Boton/ButtonLaser/ButtonLaser'
+import ListaPartners from '../../data/partners.json'
 import {motion,MotionConfig} from 'framer-motion/dist/framer-motion'
+import SinglePartner from './SinglePartner'
+import ButtonLaser from '../../componentes/Boton/ButtonLaser/ButtonLaser'
+import './estilo.css'
 
 
-
-function Cursos({setcurso}) {
+export default function Partners({setcurso}) {
 
   return (
     <MotionConfig transition={{ duration: 0.8 }}>
@@ -33,28 +33,24 @@ function Cursos({setcurso}) {
             defaultMessage='Our partners'/>
             </h1>
 
-
-        {ListaCursos.map((curso,key)=>
+        <div className='div_partners_inside'>
+        {ListaPartners.map((curso,key)=>
           
-        <SingleCurso 
+        <SinglePartner 
         key={key}
         onClick={()=>setcurso(curso.tipo)}
-        name={curso.name}
+
         image={curso.image}
-        color1={curso.color[0]}
-        description={curso.description}
-        courses={curso.courses}
-        type={curso.type}
-        nfts={curso.nfts}
+
         reputation={curso.reputation}
         />
      
         )
         }
+        </div>
 
     </motion.div>
     </MotionConfig>
   )
 }
 
-export default Cursos

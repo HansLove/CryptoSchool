@@ -1,23 +1,28 @@
-import React, { useEffect} from 'react'
+import React from 'react';
 import {GiBookshelf, GiTeacher, GiWorld,GiMedal} from 'react-icons/gi'
 import {FormattedMessage, FormattedNumber,FormattedDate} from 'react-intl'
 import Fondo1 from '../image/cabecera_1.jpeg'
 import {Certificaciones} from '../../data/certifaciones.js'
 import AutomaticText from '../Texto/AutomaticText'
-import Cursos from '../cursos/Cursos'
+import Partners from '../../pages/Partners/Partners'
 import Boton from '../Boton/Boton'
 import {motion,MotionConfig} from 'framer-motion/dist/framer-motion'
 import './estilo.css'
-import SingleCertificado from '../single_certificado/SingleCertificado'
 import NFT_Types from '../NFT_Types/NFT_Types'
+import Div from '../Div/Div'
+import Trends from '../../pages/Trends/Trends'
+import WhatIs from '../../pages/WhatIs/WhatIs'
+import Input from '../Input/Input';
+
 
 
 export default function Welcome() {
   
 
   return (
-    <MotionConfig transition={{ duration: 0.8 }}>
-      <motion.div 
+    
+    // <MotionConfig transition={{ duration: 0.8 }}>
+      <div 
       initial={{width:0}}
       animate={{width:'100%'}}
       exit={{x:window.innerWidth}}
@@ -123,17 +128,24 @@ export default function Welcome() {
 
             </>
 
+     
 
 
-      <Cursos/>
 
+      <Div View={<Trends/>}/>
+
+      <Div View={<WhatIs/>}/>
+
+     
+      <Div View={
       <NFT_Types 
-      title='Our Soul Bond DECCERT NFT´s'
-      marginTop='20%'/>
+      title='Soul Bond DECCERT NFT´s'
+      marginTop='20%'/>}/>
 
-
-      </motion.div>
-    </MotionConfig>
+      <Div View={<Partners/>}/>
+      </div>
+    // </MotionConfig>
+    
   )
 }
 

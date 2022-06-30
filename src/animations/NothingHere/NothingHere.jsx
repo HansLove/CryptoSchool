@@ -1,10 +1,15 @@
 import React from 'react'
 import './estilo.css'
 
-function NothingHere() {
+function NothingHere({
+  width='30%',
+  height='30%'
+}) {
   return (
     <center>
-  <div class="zen">
+  <div 
+  style={{width:width,height:height}}
+  className="zen">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640.86 653.51">
   <defs>
 
@@ -37,7 +42,7 @@ function NothingHere() {
   </g>
 </svg>
   </div>
-  <h2 class="msg">You dont have NFTS</h2>
+  
 </center>
   )
 }

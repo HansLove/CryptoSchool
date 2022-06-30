@@ -2,16 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 
 const InputStyled=styled.input`
-font-size: ${props=>props.fontSize};
-border-radius: ${props=>props.borderRadius};
-text-align: ${props=>props.textAllign};
-padding: ${props=>props.padding} ${props=>props.padding2};
-font-family: Georgia, 'Times New Roman', Times, serif;
-font-weight: 900;
-border: none;
-background: ${props=>props.background};
-color: ${props=>props.color};;
-outline-width: 0;
+  font-size: ${props=>props.fontSize};
+  border-radius: ${props=>props.borderRadius};
+  text-align: ${props=>props.textAllign};
+  padding: ${props=>props.padding} ${props=>props.padding2};
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 900;
+  border: none;
+  background: ${props=>props.background};
+  color: ${props=>props.color};;
+  outline-width: 0;
 `
 
 function Input({
