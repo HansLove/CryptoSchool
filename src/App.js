@@ -23,12 +23,8 @@ function App() {
 
       <Menu/>
 
-      {/* <WagmiConfig client={client}>
-        <ButtonConexion/>
-      </WagmiConfig> */}
-
       
-
+      <p>Aaron Tolentino</p>
       <AnimatePresence>
       <Routes>
 

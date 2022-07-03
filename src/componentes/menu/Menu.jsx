@@ -120,7 +120,7 @@ function Menu() {
               PROFILE
         </NavLinkStlyed>
 
-       
+
     
        <Banderas idioma={idioma}/>
 
@@ -134,6 +134,7 @@ function Menu() {
         // onClick={async()=>await window.ethereum.request({ method: 'eth_requestAccounts' })}
         onClick={ConectWallet}
         />}
+        
      
     </div>
     
