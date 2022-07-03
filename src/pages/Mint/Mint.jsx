@@ -83,6 +83,7 @@ function Mint() {
         color={item.colors[0]}
         certificado={certificado}
         setcertificado={setcertificado}
+        colored={true}
         key={key}/>)}
         
 

@@ -7,7 +7,6 @@ import {motion} from 'framer-motion/dist/framer-motion'
 import './estilo.css'
 import { getUserData } from '../../componentes/ConexionAxios/ConexionAxios'
 import UserBar from '../../componentes/UserBar/UserBar'
-import Materias from '../../componentes/Materias/Materias'
 
 export default function Profile() {
 
@@ -46,20 +45,13 @@ export default function Profile() {
         description={data.description}
         image={data.image}/>
 
-        {/* <Materias/>
-        {listaNFT.map((item,key)=><SingleNFT 
-        id={item[0]}
-        name={item['name']}
-        time={item['time']}
-        data={item['data']}
-        blockNumber={item['blockNumber']}
-        key={key}/>)} */}
-
         {listaNFT.length==0&&
         <>
-
         <NothingHere width='20%'/>
         </>}
+
+        {listaNFT.map((item,key)=>
+        <p key={key}>{item}</p>)}
     </motion.div>
   )
 }
