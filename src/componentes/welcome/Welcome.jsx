@@ -21,7 +21,6 @@ export default function Welcome() {
 
   return (
     
-    // <MotionConfig transition={{ duration: 0.8 }}>
       <div 
       initial={{width:0}}
       animate={{width:'100%'}}
@@ -30,6 +29,8 @@ export default function Welcome() {
         <img 
         className='imagen_fondo_welcome'
         src={Fondo1} alt="" />
+
+
 
             <div className='div_header_welcome'>
 
@@ -144,8 +145,6 @@ export default function Welcome() {
 
       <Div View={<Partners/>}/>
       </div>
-    // </MotionConfig>
-    
   )
 }
 

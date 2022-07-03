@@ -7,6 +7,7 @@ import Mint from './pages/Mint/Mint';
 import {AnimatePresence} from 'framer-motion/dist/framer-motion'
 import Profile from './pages/Profile/Profile';
 
+
 function App() {
 
   return (
@@ -15,7 +16,6 @@ function App() {
 
       <Menu/>
 
-      
       <AnimatePresence>
       <Routes>
 
@@ -31,7 +31,7 @@ function App() {
 
       </BrowserRouter>
 
-
+      <p>Actualizacion en la branch update</p>
     </div>
   );
 }
