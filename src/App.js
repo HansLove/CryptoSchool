@@ -32,6 +32,7 @@ function App() {
       </BrowserRouter>
 
       <p>Actualizacion en la branch update</p>
+      <h2>Aaron Tolentino</h2>
     </div>
   );
 }
