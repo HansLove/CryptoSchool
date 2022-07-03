@@ -5,7 +5,6 @@ import { determinarChain } from "./FiltroChains"
 
 
 const web3=new Web3(window.ethereum)
-const metamaskProvider = window.ethereum.providers.find((provider) => provider.isMetaMask);
 
 
 export class ObjetoCertificado{

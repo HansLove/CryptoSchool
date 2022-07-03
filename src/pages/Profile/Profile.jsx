@@ -46,14 +46,14 @@ export default function Profile() {
         description={data.description}
         image={data.image}/>
 
-        <Materias/>
+        {/* <Materias/>
         {listaNFT.map((item,key)=><SingleNFT 
         id={item[0]}
         name={item['name']}
         time={item['time']}
         data={item['data']}
         blockNumber={item['blockNumber']}
-        key={key}/>)}
+        key={key}/>)} */}
 
         {listaNFT.length==0&&
         <>
