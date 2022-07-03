@@ -69,18 +69,15 @@ function Menu() {
 `
 
   return (
-    
-    <div 
-    className='div_menu'>
         <nav className='nav_menu'>
 
-        <NavLinkStlyed
+        <NavLink
         style={{marginLeft:'2%'}}
         to='/mint'>
         <img 
         width='7%' 
         src={Logo}/>
-        </NavLinkStlyed>
+        </NavLink>
 
         <NavLinkStlyed
         to='/'>
@@ -111,7 +108,7 @@ function Menu() {
             offset={-100}
             duration={1000}>
               
-            CLASSES
+            CERTIFICATIONS
           </ScrollLink>
         </NavLinkStlyed>  
 
@@ -125,18 +122,6 @@ function Menu() {
        <Banderas idioma={idioma}/>
 
        </nav>
-       {!visible&&
-        <Boton 
-        padding2='0.6%'
-        text_id='connect_wallet'
-        color1='navy' color2='hotpink'
-        text='Connect Wallet' 
-        // onClick={async()=>await window.ethereum.request({ method: 'eth_requestAccounts' })}
-        onClick={ConectWallet}
-        />}
-        
-     
-    </div>
     
   )
 }

@@ -7,11 +7,11 @@
     align-items:flex-start;
     font-family: 'Montserrat', sans-serif;
     padding: 0.5%;
-    /* background: linear-gradient(rgb(78, 77, 77),rgb(41, 41, 41)); */
 }
 
 .nav_menu{
     display: flex;
+    background: red;
 }
 
 .div_menu p{
