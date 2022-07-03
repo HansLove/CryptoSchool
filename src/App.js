@@ -6,11 +6,16 @@ import {BrowserRouter,Routes,Route,useLocation} from "react-router-dom";
 import Mint from './pages/Mint/Mint';
 import {AnimatePresence} from 'framer-motion/dist/framer-motion'
 import Profile from './pages/Profile/Profile';
+import { WagmiConfig, createClient } from 'wagmi'
+import { getDefaultProvider } from 'ethers'
+import ButtonConexion from './componentes/Boton/ButtonConexion/ButtonConexion';
 
-
+const client = createClient({
+  autoConnect: true,
+  provider: getDefaultProvider(),
+})
 
 function App() {
-  
 
   return (
     <div className="App">
@@ -18,10 +23,9 @@ function App() {
 
       <Menu/>
 
-
-      <AnimatePresence>
       
-      {/* Definimos algunas rutas basicas para nuestra Dapp */}
+      <p>Aaron Tolentino</p>
+      <AnimatePresence>
       <Routes>
 
         <Route exact path='/welcome' element={<Welcome/>}></Route>
