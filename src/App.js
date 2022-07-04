@@ -32,6 +32,7 @@ function App() {
       
       <p>Hola, practica con Git</p>
 
+      <p>Me gusta mucho Bitcoin y Deccert</p>
     </div>
   );
 }
