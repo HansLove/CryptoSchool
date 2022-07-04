@@ -1,10 +1,6 @@
-// import md5 from "md5"
 import Web3 from "web3"
 import JSON_Contract from '../../build/Deccert.json'
 import { actulizarCuenta } from "./Blockchain"
-// import { TransformarToWei } from "./Blockchain"
-// import { actulizarCuenta } from "./Pago"
-
 import { determinarChain } from "./FiltroChains"
 
 const web3=new Web3(window.ethereum)

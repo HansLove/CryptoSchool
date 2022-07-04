@@ -1,28 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-
-.div_menu{
-    z-index: 10;
-    display: flex;
-    width: 100%;
-    align-items:flex-start;
-    font-family: 'Montserrat', sans-serif;
-    padding: 0.5%;
-}
-
 .nav_menu{
     display: flex;
-    background: red;
+    z-index: 10;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 900;
+    /* background: radial-gradient(rgba(0, 0, 0, 0.9),black); */
 }
 
-.div_menu p{
-    margin-left: 4%;
-    font-size: 1.7rem;
-    font-family: monospace;
-    transition: all 0.5s ease-in-out;
+#RouterNavLink{
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    padding-right: 3%;
+    padding-left: 1%;
 }
 
-.div_menu p:hover{
-    color: silver;
-    font-size: 1.8rem;
-    transition: all 0.5s ease-in-out;
+.div_menu{
+    margin: 0;
+    display: flex;
+    width: 100%;
+    
 }
+

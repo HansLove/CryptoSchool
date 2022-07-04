@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { ObjetoCertificado } from '../blockchain/Certificado'
 import {FormattedMessage} from 'react-intl'
 import Logo from '../image/logo.png'
 import './estilo.css'
 import styled from 'styled-components'
+import { ObjetoDeccert } from '../blockchain/ObjetoDeccert'
 
 
 function SingleCertificado({
@@ -29,7 +29,7 @@ function SingleCertificado({
     }, [certificado])
     
 const getData=async()=>{
-    let ob=new ObjetoCertificado()
+    let ob=new ObjetoDeccert()
     await ob.load()
     let res=await ob.get(id)
     console.log('res: ',res)

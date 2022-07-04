@@ -5,6 +5,10 @@ const base_url='http://localhost:5002/user/'
 
 
 export const getUserData=async(_address)=>{
+
+    try {
+        
+
     var image=''
     var name=''
     var description=''
@@ -19,6 +23,10 @@ export const getUserData=async(_address)=>{
     
     )
     return {name,image,description}
+    } catch (error) {
+           console.log('erorr en conexion con axios: ',error.message) 
+           return{}
+    }
 }
 
 

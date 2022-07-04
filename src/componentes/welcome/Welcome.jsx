@@ -6,13 +6,11 @@ import {Certificaciones} from '../../data/certifaciones.js'
 import AutomaticText from '../Texto/AutomaticText'
 import Partners from '../../pages/Partners/Partners'
 import Boton from '../Boton/Boton'
-import {motion,MotionConfig} from 'framer-motion/dist/framer-motion'
 import './estilo.css'
-import NFT_Types from '../NFT_Types/NFT_Types'
 import Div from '../Div/Div'
 import Trends from '../../pages/Trends/Trends'
 import WhatIs from '../../pages/WhatIs/WhatIs'
-import Input from '../Input/Input';
+
 
 
 
@@ -20,16 +18,11 @@ export default function Welcome() {
   
 
   return (
-    
-      <div 
-      initial={{width:0}}
-      animate={{width:'100%'}}
-      exit={{x:window.innerWidth}}
-      className='div_main_welcome'>
+      <div className='div_main_welcome'>
+
         <img 
         className='imagen_fondo_welcome'
         src={Fondo1} alt="" />
-
 
 
             <div className='div_header_welcome'>
@@ -47,9 +40,9 @@ export default function Welcome() {
               fontSize='1.5rem'
               borderRadius='10%'
               padding2='1%'
-              colorBorder='lightgreen'
-              color1='fuchsia'
-              color2='fuchsia'
+              colorBorder='blue'
+              color1='navy'
+              color2='royalblue'
               display='inline-block'
               text='Landing Page'
               fontWeight='bold'
@@ -59,19 +52,18 @@ export default function Welcome() {
           
           
           <>
-    
             <div className='div_part_welcome'>
               <GiWorld size={95} style={{display:'block',margin:'auto'}}/>
 
-              
                 <AutomaticText
                 fontSize='1.6rem'
                 id='acceso_ilimitado'
                 defaultMessage='Ilimited Access'
                 />
-              <AutomaticText
+
+                <AutomaticText
                   id='protocolo_sin_fronteras'
-                  defaultMessage='Ilimited Access'
+                  defaultMessage='World Reach'
               />
             </div>
 
@@ -127,21 +119,13 @@ export default function Welcome() {
               />
             </div>
 
-            </>
+          </>
 
-     
-
-
+    
+      <Div View={<WhatIs/>}/>
 
       <Div View={<Trends/>}/>
 
-      <Div View={<WhatIs/>}/>
-
-     
-      <Div View={
-      <NFT_Types 
-      title='Soul Bond DECCERT NFT´s'
-      marginTop='20%'/>}/>
 
       <Div View={<Partners/>}/>
       </div>

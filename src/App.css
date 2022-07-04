@@ -1,3 +1,7 @@
+.App{
+  margin: 0;
+}
+
 :root{
   --aaron:blue;
   --letra:1.2rem;
