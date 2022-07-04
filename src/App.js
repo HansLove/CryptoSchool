@@ -29,9 +29,9 @@ function App() {
       </Routes>
 
       </BrowserRouter>
+      
+      <p>Hola, practica con Git</p>
 
-      <p>Adaskjdbaskjdbasjk</p>
-      <p>dasjdnaskl</p>
     </div>
   );
 }
