@@ -34,6 +34,8 @@ function App() {
 
       <p>Hola! Desde App</p>
 
+      <p>Nuevo texto</p>
+
     </div>
   );
 }
