@@ -1,5 +1,6 @@
 import React from 'react'
 import {Certificaciones} from '../../data/certifaciones.js'
+import Div from '../Div/Div.jsx'
 import SingleCertificado from '../single_certificado/SingleCertificado.jsx'
 
 
@@ -8,6 +9,7 @@ function NFT_Types({
     title='DECCERT NFT'
 }) {
   return (
+    <Div View={
     <div style={{
         display:'block',
         margin:'auto',
@@ -28,7 +30,7 @@ function NFT_Types({
         key={key}/>)}
         
 
-        </div>
+    </div>}/>
   )
 }
 

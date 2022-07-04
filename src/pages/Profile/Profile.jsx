@@ -11,7 +11,7 @@ import UserBar from '../../componentes/UserBar/UserBar'
 export default function Profile() {
 
     const [listaNFT, setlistaNFT] = useState([])
-    const [data, setdata] = useState({name:'',image:''})
+    const [data, setdata] = useState({name:'',image:'.',description:''})
 
 
     useEffect(async() => {
@@ -23,13 +23,16 @@ export default function Profile() {
 
       for (let index = 1; index < _total+1; index++) {
           let certificado=await objeto.get(index)
-          // console.log('certificado: ',certificado)
           if(certificado['owner']==account)_lista.push(certificado)
       }
       setlistaNFT(_lista)
 
       let resultado=await getUserData(account)
       setdata(resultado)
+
+      return () => {
+        setdata({}); // This worked for me
+      };
       
     
     }, [])

@@ -4,17 +4,15 @@
 
 .div_main_welcome{
     display: block;
-    z-index: -2;
-    margin: auto;
+    z-index: -2;    
     color: black;
-    overflow: scroll;
+    /* overflow: scroll; */
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
 
 }
 
 .div_header_welcome{
-    /* background-image: url('../image/cabecera_1.jpeg'); */
     width: 100%;
     font-weight: 900;
     color: white;

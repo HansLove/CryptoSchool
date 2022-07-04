@@ -2,7 +2,7 @@ import React from 'react'
 import {FormattedMessage} from 'react-intl'
 import styled from 'styled-components'
 
-function Boton({
+export default function Boton({
   text='..',
   onClick=()=>{},
   color1='white' ,
@@ -50,4 +50,3 @@ function Boton({
   )
 }
 
-export default Boton

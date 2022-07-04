@@ -82,9 +82,6 @@ export const prenderCambioCuenta=(setAccount)=>{
   
 }
 
-
-
-
 export const prenderCambioCadena=(setChain)=>{
   var chain=''
   window.ethereum.on('chainChanged', (_chainId) =>{
@@ -98,7 +95,6 @@ export const prenderCambioCadena=(setChain)=>{
 }
 
 
-
 export const dameCurrentChain=async()=>{
 
   const chainId = await window.ethereum.request({ method: 'eth_chainId' });
@@ -106,4 +102,47 @@ export const dameCurrentChain=async()=>{
   
   
 
+}
+
+export const CheckConexion=async()=>{
+  var isConnected=false
+  var isInstall=true
+
+  if (window.ethereum !== undefined) {
+    console.log('window.ethereum: ',window.ethereum)
+
+    try {
+        
+      await window.ethereum
+      .request({ method: 'eth_accounts' })
+      .then(accounts=>{
+        if (accounts.length != 0) {
+          // MetaMask is locked or the user has not connected any accounts
+          isConnected=true           
+          
+        }
+      })
+
+    } catch (error) {
+      console.log('error CheckConexion: ',error.message)
+    }
+
+  }else{
+      //The user doesnt have install a web3Wallet
+      isInstall=false
+      
+  }
+  return {connect:isConnected,install:isInstall}
+}
+
+
+export const ChangeChain=async()=>{
+  await window.ethereum.request({ method: 'wallet_switchEthereumChain', params:[{chainId: '0x38'}]});
+
+}
+
+export const RequestConexion=async(isConnected=()=>{})=>{
+  let res=await window.ethereum.request({ method: 'eth_requestAccounts' })
+  if(res.length>0)isConnected(true)
+  
 }

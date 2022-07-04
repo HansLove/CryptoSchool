@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from 'react-scroll'
 import MexicoFlag from '../image/mexico_1.png'
 import UsaFlag from '../image/estados-unidos_1.png'
 
