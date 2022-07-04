@@ -30,8 +30,6 @@ function App() {
 
       </BrowserRouter>
 
-      <p>Adaskjdbaskjdbasjk</p>
-      <p>dasjdnaskl</p>
     </div>
   );
 }
