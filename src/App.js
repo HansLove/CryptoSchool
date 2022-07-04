@@ -32,6 +32,8 @@ function App() {
 
       <p>Adaskjdbaskjdbasjk</p>
 
+      <p>Hola! Desde App</p>
+
     </div>
   );
 }
