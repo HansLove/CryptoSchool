@@ -51,7 +51,6 @@ function Menu() {
         <NavLink
         id="RouterNavLink" 
         onClick={()=>setvisible(false)}
-
         to='/certifications'>
             CERTIFICATIONS  
         </NavLink>  

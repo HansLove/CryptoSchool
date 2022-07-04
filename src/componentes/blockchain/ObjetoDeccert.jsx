@@ -35,12 +35,12 @@ export class ObjetoDeccert{
     }
 
 
-    async mint(
+    async Manual(
         userName,
         _certificado,
         _address){
         try {
-            var _res=await this.contrato.methods.create(
+            var _res=await this.contrato.methods.ManualMinting(
                 userName,
                 _certificado,
                 _address
