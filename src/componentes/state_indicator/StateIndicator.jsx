@@ -9,7 +9,9 @@ function StateIndicator({text, fontSize, fontWeight, textColor, backgroundColor,
         padding:${padding};
         margin:${margin};
         border-radius:${borderRadius};
-        background-color:${backgroundColor};
+        /* background-color:${backgroundColor}; */
+        background: linear-gradient(45deg,black,${backgroundColor});
+        margin: 0.5%;
     `
 
   return (

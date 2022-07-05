@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import {FormattedMessage} from 'react-intl'
-import Logo from '../image/logo.png'
 import './estilo.css'
 import styled from 'styled-components'
 import { ObjetoDeccert } from '../blockchain/ObjetoDeccert'
