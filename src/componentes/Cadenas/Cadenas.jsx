@@ -6,6 +6,7 @@ import styled from 'styled-components'
 // import { CheckConexion, dameCurrentChain, RequestConexion } from '../../blockchain/Blockchain'
 import { AiFillAlert } from 'react-icons/ai'
 import { CheckConexion, dameCurrentChain, RequestConexion } from '../blockchain/Blockchain'
+import Boton from '../Boton/Boton'
 
 
 
@@ -19,8 +20,7 @@ function Cadenas({width='50%'}) {
     useEffect(async() => {
         const _chainId = await dameCurrentChain()
         const respuesta=await CheckConexion()
-        console.log('chainID:',_chainId)
-        console.log(respuesta)
+        console.log('respuesta::',respuesta)
         setChainId(_chainId)
         setIsConnected(respuesta.connect)
         setWeb3Install(respuesta.install)
@@ -77,10 +77,7 @@ function Cadenas({width='50%'}) {
         p{
             display: none;
             transition: all 0.5 ease-in-out;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            left: 0;
+          
         }
         a{
             font-size: 0.7rem;
@@ -88,6 +85,9 @@ function Cadenas({width='50%'}) {
         &:hover p{
             display: block;
             transition: all 0.5 ease-in-out;
+            font-size: 0.7rem;
+            width: fit-content;
+            margin: auto;
         }
 
     `
@@ -102,22 +102,20 @@ function Cadenas({width='50%'}) {
             <Div 
             key={index}
             chainId={item.id}>
-                <p style={{
-                    fontFamily:'Georgia, Times New Roman,Times, serif',
-                    fontSize:'0.7rem',
-                    width:'fit-content',
-                    margin:'auto'
-                }}>
+
+                <p>
                     {item.name}
                 </p>
                 
                 <img
                 width='30%'
                 style={{display:'block',margin:'auto'}}
-                src={item.image}></img>
+                src={item.image}/>
+
                 {item.warning&&<div className='icon_alert'>
                 <AiFillAlert 
-                size={30} color='crimson'/>
+                style={{margin:'auto',display:'block'}}
+                size={23} color='crimson'/>
                 <a style={{display:'block'}}>Testnet</a>
                 </div>
                 }
@@ -126,7 +124,7 @@ function Cadenas({width='50%'}) {
             )}
             </>
             :
-            <button
+            <Boton
             onClick={web3Installed?()=>RequestConexion(setIsConnected):()=>window.open('https://metamask.io/download/')}
             text={web3Installed?'Connect Wallet':'Download Wallet'}
             fontSize='0.9rem'

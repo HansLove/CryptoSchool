@@ -43,9 +43,7 @@ export default function Boton({
     `
   return (
     <Button onClick={onClick}>
-      <FormattedMessage 
-      id={text_id}
-      defaultMessage={text}/>
+      {text}
     </Button>
   )
 }
