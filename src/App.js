@@ -17,13 +17,17 @@ function App() {
 
       <Routes>
 
-        <Route exact path='/welcome' element={<Welcome/>}></Route>
-        <Route exact path='/profile' element={<ProfileTwo/>}></Route>
-        <Route exact path='/certifications' element={<NFT_Types
-        title='Soul Bond DECCERT NFT´s'
-        />}></Route>
-        <Route exact path='/mint' element={<Mint/>}></Route>
-        <Route exact path='/' element={<Welcome/>}></Route>
+        <Route exact path='/profile' element={<ProfileTwo/>}/>
+
+        <Route exact path='/welcome' element={<Welcome/>}/>
+
+        <Route exact path='/certifications' element={
+        <NFT_Types
+        title='Soul Bond DECCERT NFT´s'/>}/>
+
+        <Route exact path='/mint' element={<Mint/>}/>
+
+        <Route exact path='/' element={<Welcome/>}/>
 
 
       </Routes>
