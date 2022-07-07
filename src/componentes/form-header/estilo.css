@@ -1,0 +1,13 @@
+.header-description{
+    width: 50%;
+    text-align: center;
+}
+
+.background-header{
+    border-radius: 1rem;
+    width: -webkit-fill-available;
+    height: 34rem;
+    position: absolute;
+    z-index: -1;
+    top: auto;
+}
