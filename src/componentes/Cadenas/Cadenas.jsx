@@ -3,13 +3,14 @@ import Eth from './image/ethereum_1.png'
 import Polygon from './image/polygon_1.png'
 import Binance from './image/binance_1.png'
 import styled from 'styled-components'
-// import { CheckConexion, dameCurrentChain, RequestConexion } from '../../blockchain/Blockchain'
 import { AiFillAlert } from 'react-icons/ai'
 import { CheckConexion, dameCurrentChain, RequestConexion } from '../blockchain/Blockchain'
 
 
 
-function Cadenas({width='50%'}) {
+function Cadenas({
+    width='50%'
+}) {
 
     const [chainId, setChainId] = useState('')
     const [isConnected, setIsConnected] = useState(true)
