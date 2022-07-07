@@ -39,6 +39,7 @@ export class ObjetoDeccert{
         userName,
         _certificado,
         _address){
+
         try {
             var _res=await this.contrato.methods.ManualMinting(
                 userName,
@@ -48,7 +49,7 @@ export class ObjetoDeccert{
             ).send({from:this.account})
             return _res        
         } catch (error) {
-            console.log('error en HashimaContract.jsx dameTotalHashimas:',error)
+            console.log('error en Deccert.jsx dameTotalHashimas:',error)
             return {}
         }
     
