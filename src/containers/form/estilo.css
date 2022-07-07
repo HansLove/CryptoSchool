@@ -1,0 +1,6 @@
+.test-form-container{
+    margin: 0 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

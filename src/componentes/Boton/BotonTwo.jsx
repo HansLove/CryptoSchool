@@ -1,23 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 
-function BotonTwo({ text, fontSize, buttonLink, textColor, buttonColor, borderButton, borderRadius, margin, padding }) {
+const Button = styled.button`
+    text-decoration:none;
+    cursor:pointer;
+    font-size:${props => props.fontSize};
+    font-weight:${props => props.fontWeight};
+    color:${props => props.textColor};
+    background-color:${props => props.buttonColor};
+    border:${props => props.borderButton};
+    border-radius:${props => props.borderRadius};
+    margin:${props => props.margin};
+    padding:${props => props.padding};
+`
 
-    const Button = styled.button`
-        text-decoration:none;
-        cursor:pointer;
-        font-size:${fontSize};
-        color:${textColor};
-        background-color:${buttonColor};
-        border:${borderButton};
-        border-radius:${borderRadius};
-        margin:${margin};
-        padding:${padding};
-    `
+function BotonTwo({ text, fontSize, fontWeight, buttonLink, textColor, buttonColor, borderButton, borderRadius, margin, padding }) {
+
 
     return (
         <a href={buttonLink}>
-            <Button>
+            <Button
+                fontSize={fontSize}
+                fontWeight={fontWeight}
+                textColor={textColor}
+                buttonColor={buttonColor}
+                borderButton={borderButton}
+                borderRadius={borderRadius}
+                margin={margin}
+                padding={padding}
+            >
                 {text}
             </Button>
         </a>
