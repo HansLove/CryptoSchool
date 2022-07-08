@@ -1,7 +1,7 @@
 import React from 'react';
 import {GiBookshelf, GiTeacher, GiWorld,GiMedal} from 'react-icons/gi'
 import {FormattedMessage, FormattedNumber,FormattedDate} from 'react-intl'
-import Fondo1 from '../image/cabecera_1.jpeg'
+import Fondo1 from '../image/fondo_2.png'
 import {Certificaciones} from '../../data/certifaciones.js'
 import AutomaticText from '../Texto/AutomaticText'
 import Partners from '../../pages/Partners/Partners'
