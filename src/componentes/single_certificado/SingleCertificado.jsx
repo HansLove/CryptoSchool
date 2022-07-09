@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import {FormattedMessage} from 'react-intl'
 import './estilo.css'
 import styled from 'styled-components'
 import { ObjetoDeccert } from '../blockchain/ObjetoDeccert'
@@ -59,9 +58,8 @@ const getData=async()=>{
         {icon}
         
         <p className='p_certificado'>
-            <FormattedMessage 
-            id='titulo_certificado' 
-            defaultMessage='Certificate'/>
+            
+            Certificate
         </p>
         
     </Div>

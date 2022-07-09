@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
 
 
 import './estilo.css'
@@ -29,11 +28,7 @@ function ButtonLaser({
   return (
     <A
     className='boton_laser'><span>
-    <FormattedMessage
-      fontSize='1.2rem'
-      id={id}
-      defaultMessage={texto}
-      />
+      {texto}
       </span>
     <i></i>
     </A>

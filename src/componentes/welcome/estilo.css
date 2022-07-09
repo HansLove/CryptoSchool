@@ -81,7 +81,20 @@
     color: whitesmoke;
     border: 2px solid blueviolet;
     
+}
 
+.div_part_welcome h2{
+    width: fit-content;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.div_part_welcome p{
+    width: fit-content;
+    text-align: center;
+    display: block;
+    margin: auto;
 }
 
 @media (max-width: 500px) {
