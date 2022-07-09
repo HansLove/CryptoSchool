@@ -1,15 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-<<<<<<< HEAD
-function BotonTwo({ 
-    seteditMode,
-    editMode,
-    text, 
-    fontSize, 
-    textColor, 
-    buttonColor, borderButton, borderRadius, margin, padding }) {
-=======
 const Button = styled.button`
     text-decoration:none;
     cursor:pointer;
@@ -24,14 +15,9 @@ const Button = styled.button`
 `
 
 function BotonTwo({ text, fontSize, fontWeight, buttonLink, textColor, buttonColor, borderButton, borderRadius, margin, padding }) {
->>>>>>> front
 
 
     return (
-<<<<<<< HEAD
-       
-            <Button onClick={()=>seteditMode(!editMode)}>
-=======
         <a href={buttonLink}>
             <Button
                 fontSize={fontSize}
@@ -43,9 +29,9 @@ function BotonTwo({ text, fontSize, fontWeight, buttonLink, textColor, buttonCol
                 margin={margin}
                 padding={padding}
             >
->>>>>>> front
                 {text}
             </Button>
+            </a>
      
     )
 
