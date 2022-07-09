@@ -1,12 +1,13 @@
 import Web3 from "web3"
-import JSON_Contract from '../../build/Deccert.json'
+import JSON_Contract from '../../build/Signing.json'
 import { actulizarCuenta } from "./Blockchain"
 import { determinarChain } from "./FiltroChains"
+
 
 const web3=new Web3(window.ethereum)
 
 
-export class ObjetoDeccert{
+export class ObjetoSign{
     constructor(){
         this.contrato={}
         this.account=''
@@ -36,17 +37,28 @@ export class ObjetoDeccert{
     }
 
 
-    async Manual(
-        userName,
-        _certificado,
-        _address){
+
+    async firmar(_account,_hash){
+        await window.ethereum.request({ method: 'personal_sign',params:[_account,_hash]})
+
+    }
+    
+    async getEthSignedMessageHash(_message){
         try {
-            var _res=await this.contrato.methods.ManualMinting(
-                userName,
-                _certificado,
-                _address
-                
-            ).send({from:this.account})
+            var messHash=await this.contrato.methods.getEthSignedMessageHash(_message).call()
+            return messHash
+        } catch (error) {
+            console.log('error en HashimaContract.jsx: balanceHashimasCliente: ',error)
+            return ''
+    
+        }
+    
+    
+    }
+ 
+    async getMessageHash(_mensaje){
+        try {
+            var _res=await this.contrato.methods.getMessageHash(_mensaje).call()
             return _res        
         } catch (error) {
             console.log('error en HashimaContract.jsx dameTotalHashimas:',error)
@@ -55,6 +67,16 @@ export class ObjetoDeccert{
     
     }
 
+    async Verificar(
+        _signer,//Quien firma
+        _mensaje//Mensaje
+        ,_signature//Firma
+        ){
+            
+        var _resultado=await this.contrato.methods.verify(_signer,_mensaje,_signature).call()
+        return _resultado
+     
+    }
 
     async get(index){
         try {
@@ -67,17 +89,6 @@ export class ObjetoDeccert{
     
     }
 
-    
-    async getTotal(){
-        try {
-            var _res=await this.contrato.methods.getTotal().call()
-            return _res        
-        } catch (error) {
-            console.log('error en HashimaContract.jsx dameTotalHashimas:',error)
-            return {}
-        }
-    
-    }
 
     
 }

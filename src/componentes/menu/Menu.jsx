@@ -1,6 +1,6 @@
 import React, { useEffect, useState,useContext } from 'react'
 import Logo from '../image/logo_deccert.png'
-import {langContext}from '../../context/langContext'
+// import {langContext}from '../../context/langContext'
 import './estilo.css'
 import Banderas from '../Banderas/Banderas'
 import {
@@ -14,7 +14,7 @@ import Cadenas from '../Cadenas/Cadenas'
 
 function Menu() {
 
-  const idioma=useContext(langContext)
+  // const idioma=useContext(langContext)
   const [visible, setvisible] = useState(false)
 
 
@@ -67,7 +67,7 @@ function Menu() {
           </ScrollLink>}
         
 
-        <Banderas idioma={idioma}/>
+        {/* <Banderas idioma={idioma}/> */}
 
         <Cadenas/>
 

@@ -8,16 +8,16 @@ function TestForm() {
 
     var options = [
         {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 100."
+            "text": "Nick Fury"
         },
         {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 200."
+            "text": "Satoshi Nakamoto"
         },
         {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 300."
+            "text": "Sam Banc-man"
         },
         {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit 400."
+            "text": "Michael Saylor"
         }
     ]
 
@@ -48,7 +48,7 @@ function TestForm() {
                 textColor={"black"}
                 padding={"40px 50px 50px"}
                 numberQuestion={"1"}
-                question={"¿Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor?"}
+                question={"Name of the biggest cryptocurrency by market cap"}
                 boxShadow={"0px 10px 20px rgba(0, 0, 0, 0.07)"}
                 margin={"0 0 2rem"}
             />
@@ -60,25 +60,41 @@ function TestForm() {
                 textColor={"black"}
                 padding={"40px 50px 50px"}
                 numberQuestion={"2"}
-                question={"¿Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor?"}
+                question={"¿Name of the creator of Bitcoin?"}
                 options={options}
                 boxShadow={"0px 10px 20px rgba(0, 0, 0, 0.07)"}
                 margin={"0 0 2rem"}
             />
 
-            <QuestionText
-                value={answers.answer3}
+
+            <QuestionOptions
                 onChange={onChangeAnswer}
-                name={"answer3"}
+                name={"answer2"}
                 backgroundColor={"white"}
                 textColor={"black"}
                 padding={"40px 50px 50px"}
-                numberQuestion={"3"}
-                question={"¿Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?"}
+                numberQuestion={"2"}
+                question={"What is an NFT?"}
+                options={[
+                    {
+                        "text": "Art inside the blockchain"
+                    },
+                    {
+                        "text": "Smart contract standard for non fungible tokens"
+                    },
+                    {
+                        "text": "Real asset back by a digital asset "
+                    },
+                    {
+                        "text": "A currecy to buy assets in the blockchain"
+                    }
+                ]}
                 boxShadow={"0px 10px 20px rgba(0, 0, 0, 0.07)"}
                 margin={"0 0 2rem"}
             />
 
+            
+        
             <QuestionOptions
                 onChange={onChangeAnswer}
                 name={"answer4"}
@@ -86,14 +102,27 @@ function TestForm() {
                 textColor={"black"}
                 padding={"40px 50px 50px"}
                 numberQuestion={"4"}
-                question={"¿Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?"}
-                options={options}
+                question={"First country to make Bitcoin legal tender?"}
+                options={[
+                    {
+                        "text": "El Salvador"
+                    },
+                    {
+                        "text": "Germany"
+                    },
+                    {
+                        "text": "Central African Republic"
+                    },
+                    {
+                        "text": "USA"
+                    }
+                ]}
                 boxShadow={"0px 10px 20px rgba(0, 0, 0, 0.07)"}
                 margin={"0 0 2rem"}
             />
 
             <BotonSubmit
-                text={"Enviar respuestas"}
+                text={"Check answers"}
                 fontSize={"16px"}
                 fontWeight={"500"}
                 textColor={"white"}

@@ -24,7 +24,8 @@ function QuestionText({value, onChange, name, backgroundColor, textColor, paddin
     >
         <div className='question-container'>
             <div className='number-question'>
-                <Text text={numberQuestion+"."} fontSize={"26px"} fontWeight={"500"} textColor={textColor} margin={"0 16px 0 0"}/>
+                <Text text={numberQuestion+"."} fontSize={"26px"} 
+                fontWeight={"500"} textColor={textColor} margin={"0 16px 0 0"}/>
             </div>
 
             <div className='question-text'>
@@ -43,7 +44,7 @@ function QuestionText({value, onChange, name, backgroundColor, textColor, paddin
             onChange={onChange}
             name={name}
             rows={"6"} 
-            placeholder={"Tu respuesta"} 
+            placeholder={"Your Answer"} 
             placeholderColor={"#858585"} 
             fontSize={"16px"}
             padding={"20px 30px"} 

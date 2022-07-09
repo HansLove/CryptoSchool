@@ -31,8 +31,10 @@ function Cadenas({width='50%'}) {
         {name:'Ethereum', id:'0x1',image:Eth},
         {name:'Binance Smart Chain', id:'0x38',image:Binance},
         {name:'Polygon', id:'0x89',image:Polygon},
-        // {name:'Avalanche', id:'0xa86a',image:Avalanche},
+        {name:'Polygon Mumbai', id:'0x13881',image:Polygon,warning:true},
         {name:'ETH', id:'0x539',image:Eth,warning:true},
+        {name:'Ropsten', id:'0x3',image:Eth,warning:true},
+        {name:'Kovan', id:'0x2a',image:Eth,warning:true},
         {name:'Binance Testnet', id:'0x61',image:Binance,warning:true},
 
     ]

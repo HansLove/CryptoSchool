@@ -1,8 +1,7 @@
 import React from 'react';
 import {GiBookshelf, GiTeacher, GiWorld,GiMedal} from 'react-icons/gi'
-import {FormattedMessage, FormattedNumber,FormattedDate} from 'react-intl'
+import {FormattedMessage} from 'react-intl'
 import Fondo1 from '../image/fondo_2.png'
-import {Certificaciones} from '../../data/certifaciones.js'
 import AutomaticText from '../Texto/AutomaticText'
 import Partners from '../../pages/Partners/Partners'
 import Boton from '../Boton/Boton'
@@ -33,8 +32,9 @@ export default function Welcome() {
                 defaultMessage='Diplomas NFT para descentralizar la educacion'/>
               </p>
 
+              <a href="./test">
               <Boton 
-              onClick={async()=>await window.open('https://deccert.com/')}
+              // onClick={async()=>await window.open('https://deccert.com/')}
               marginTop='10%'
               marginLeft='5%'
               fontSize='1.5rem'
@@ -44,9 +44,9 @@ export default function Welcome() {
               color1='navy'
               color2='royalblue'
               display='inline-block'
-              text='Landing Page'
+              text='First certification'
               fontWeight='bold'
-              />
+              /></a>
 
             </div>
           
