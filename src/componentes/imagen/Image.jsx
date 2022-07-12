@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-function Image({src, alt, width, height,borderRadius }){
+const Img = styled.img`
+    width:${props => props.width};
+    height:${props => props.height};
+    border-radius:${props => props.borderRadius};
+    margin:${props => props.margin};
+`
 
-    const Img = styled.img`
-        width:${width};
-        height:${height};
-        border-radius:${borderRadius};
-    `
+function Image({src, alt, width, height,borderRadius, margin }){
 
     return(
-        <Img src={src} alt={alt}/>
+        <Img src={src} alt={alt} width={width} height={height} borderRadius={borderRadius} margin={margin} />
     )
 }
 

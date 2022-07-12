@@ -14,24 +14,25 @@ const Button = styled.button`
     padding:${props => props.padding};
 `
 
-function BotonTwo({ text, fontSize, fontWeight, buttonLink, textColor, buttonColor, borderButton, borderRadius, margin, padding }) {
+function BotonTwo({ text, onClick, fontSize, fontWeight, textColor, buttonColor, borderButton, borderRadius, margin, padding }) {
 
 
     return (
-        <a href={buttonLink}>
-            <Button
-                fontSize={fontSize}
-                fontWeight={fontWeight}
-                textColor={textColor}
-                buttonColor={buttonColor}
-                borderButton={borderButton}
-                borderRadius={borderRadius}
-                margin={margin}
-                padding={padding}
-            >
-                {text}
-            </Button>
-        </a>
+
+        <Button
+            onClick={onClick}
+            fontSize={fontSize}
+            fontWeight={fontWeight}
+            textColor={textColor}
+            buttonColor={buttonColor}
+            borderButton={borderButton}
+            borderRadius={borderRadius}
+            margin={margin}
+            padding={padding}
+        >
+            {text}
+        </Button>
+
     )
 
 }
