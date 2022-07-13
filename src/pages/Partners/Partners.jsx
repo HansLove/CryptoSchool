@@ -1,5 +1,4 @@
 import React from 'react'
-import {FormattedMessage} from 'react-intl'
 import ListaPartners from '../../data/partners.json'
 import {motion,MotionConfig} from 'framer-motion/dist/framer-motion'
 import SinglePartner from './SinglePartner'
@@ -28,9 +27,9 @@ export default function Partners({setcurso}) {
           display:'block',
           margin:'auto',
           fontSize:'2.6rem'}}>
-            <FormattedMessage 
-            id='titulo.cursos' 
-            defaultMessage='Our partners'/>
+             
+          
+            Our partners
             </h1>
 
         <div className='div_partners_inside'>

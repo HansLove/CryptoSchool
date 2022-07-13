@@ -1,5 +1,4 @@
 import React from 'react'
-import {FormattedMessage} from 'react-intl'
 import styled from 'styled-components'
 
 export default function Boton({
@@ -35,17 +34,29 @@ export default function Boton({
         padding:0.5%;
         margin-bottom: 1%;
         margin-left: ${marginLeft};
+        animation: anim_b 5s ease-in-out infinite alternate-reverse;
+        background-size: 300% 300%;
         &:hover{
             border-radius: 10%;
             padding:${padding2};
             transition: all 1s ease-in-out;
         }
+
+        @keyframes anim_b {
+          0%{
+              background-position: 0% 50%;
+          }
+          50%{
+              background-position: 100% 50%;
+          }
+          100%{
+              background-position: 0% 50%;
+          }
+        }
     `
   return (
     <Button onClick={onClick}>
-      <FormattedMessage 
-      id={text_id}
-      defaultMessage={text}/>
+      {text}
     </Button>
   )
 }

@@ -96,20 +96,26 @@ export const prenderCambioCadena=(setChain)=>{
 
 
 export const dameCurrentChain=async()=>{
+  try {
+    
 
   const chainId = await window.ethereum.request({ method: 'eth_chainId' });
   return chainId
+
+} catch (error) {
+    return ''
+}
   
   
 
 }
+
 
 export const CheckConexion=async()=>{
   var isConnected=false
   var isInstall=true
 
   if (window.ethereum !== undefined) {
-    console.log('window.ethereum: ',window.ethereum)
 
     try {
         

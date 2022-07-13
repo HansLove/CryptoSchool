@@ -7,9 +7,9 @@ function CourseTest() {
   return (
     <div className='course-test-container'>
         <TestHeader
-            courseName={"Matemáticas 01"}
-            testName={"Test Operaciones Básicas"}
-            testDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
+            courseName={"General Test"}
+            testName={"Your first certificate NFT"}
+            testDescription={"Need to get right 3/4 questions to be able to mint your DECCERT NFT Certificate"}
             backgroundColor={"black"} 
             padding={"70px 0 70px"}
             textColor={"white"}

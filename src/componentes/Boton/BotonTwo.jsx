@@ -18,6 +18,7 @@ function BotonTwo({ text, onClick, fontSize, fontWeight, textColor, buttonColor,
 
 
     return (
+<<<<<<< HEAD
 
         <Button
             onClick={onClick}
@@ -33,6 +34,23 @@ function BotonTwo({ text, onClick, fontSize, fontWeight, textColor, buttonColor,
             {text}
         </Button>
 
+=======
+        <a href={buttonLink}>
+            <Button
+                fontSize={fontSize}
+                fontWeight={fontWeight}
+                textColor={textColor}
+                buttonColor={buttonColor}
+                borderButton={borderButton}
+                borderRadius={borderRadius}
+                margin={margin}
+                padding={padding}
+            >
+                {text}
+            </Button>
+            </a>
+     
+>>>>>>> main
     )
 
 }
