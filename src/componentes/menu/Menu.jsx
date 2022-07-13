@@ -6,7 +6,6 @@ import Banderas from '../Banderas/Banderas'
 import {
   NavLink
 } from "react-router-dom";
-import styled from 'styled-components'
 import {Link as ScrollLink} from 'react-scroll'
 import Cadenas from '../Cadenas/Cadenas'
 

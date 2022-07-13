@@ -7,7 +7,9 @@ import './estilo.css'
 import Div from '../Div/Div'
 import Trends from '../../pages/Trends/Trends'
 import WhatIs from '../../pages/WhatIs/WhatIs'
-
+import {
+  NavLink
+} from "react-router-dom";
 
 
 
@@ -30,7 +32,7 @@ export default function Welcome() {
               of the education
               </p>
 
-              <a href="./test">
+              <NavLink to='./test'>
               <Boton 
               // onClick={async()=>await window.open('https://deccert.com/')}
               marginTop='10%'
@@ -44,7 +46,8 @@ export default function Welcome() {
               display='inline-block'
               text='First certification'
               fontWeight='bold'
-              /></a>
+              />
+              </NavLink>
 
             </div>
           
