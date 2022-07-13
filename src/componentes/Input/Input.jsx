@@ -47,7 +47,6 @@ function Input({
     padding2={padding2} 
     onChange={onChange}
     value={value}
-    textAllign={textAllign}
     background={background}
     color={color}
     />
