@@ -7,9 +7,8 @@ import './estilo.css'
 import Div from '../Div/Div'
 import Trends from '../../pages/Trends/Trends'
 import WhatIs from '../../pages/WhatIs/WhatIs'
-import {
-  NavLink
-} from "react-router-dom";
+import Roadmap from '../../containers/roadmap/Roadmap';
+
 
 
 
@@ -103,6 +102,8 @@ export default function Welcome() {
 
 
       <Div View={<Partners/>}/>
+
+      <Roadmap/>
       </div>
   )
 }
