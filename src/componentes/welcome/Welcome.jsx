@@ -10,6 +10,7 @@ import './estilo.css'
 import Div from '../Div/Div'
 import Trends from '../../pages/Trends/Trends'
 import WhatIs from '../../pages/WhatIs/WhatIs'
+import Roadmap from '../../containers/roadmap/Roadmap';
 
 
 
@@ -128,6 +129,8 @@ export default function Welcome() {
 
 
       <Div View={<Partners/>}/>
+
+      <Roadmap/>
       </div>
   )
 }
