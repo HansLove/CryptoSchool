@@ -4,7 +4,7 @@ import Element from "../../componentes/roadmap-element/Element";
 import bitcoinImage from "../../componentes/image/Bitcoin_ilustration.png"
 import shibaImage from "../../componentes/image/Shiba.png"
 import blackCoinImage from "../../componentes/image/black_final.png"
-import ColorCoinImage from "../../componentes/image/colored_final.png"
+import colorCoinImage from "../../componentes/image/colored_final.png"
 import './estilo.css'
 
 function Roadmap() {
@@ -54,7 +54,7 @@ function Roadmap() {
                     description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
                     linkText={"Lorem ipsum dolor"}
                     linkHref={"/"}
-                    image={ColorCoinImage}
+                    image={colorCoinImage}
                 />
                 <Element
                     date={"Junio 2022"}
