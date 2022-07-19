@@ -62,7 +62,7 @@ function Menu() {
             smooth={true}
             offset={5}
             duration={1000}>      
-            About
+            CONTACT
           </ScrollLink>}
         
 

@@ -31,7 +31,7 @@ export default function Welcome() {
               of the education
               </p>
 
-              <NavLink to='./test'>
+              <a href='./test'>
               <Boton 
               // onClick={async()=>await window.open('https://deccert.com/')}
               marginTop='10%'
@@ -46,7 +46,7 @@ export default function Welcome() {
               text='First certification'
               fontWeight='bold'
               />
-              </NavLink>
+              </a>
 
             </div>
           
