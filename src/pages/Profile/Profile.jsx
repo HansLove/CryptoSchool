@@ -26,6 +26,7 @@ export default function Profile() {
           if(certificado['owner']==account)_lista.push(certificado)
       }
       setlistaNFT(_lista)
+      console.log('lista: ',_lista)
 
       let resultado=await getUserData(account)
       setdata(resultado)

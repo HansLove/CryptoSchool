@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {GiBookshelf, GiTeacher, GiWorld,GiMedal} from 'react-icons/gi'
 import Fondo1 from '../image/fondo_2.png'
 import Partners from '../../pages/Partners/Partners'
@@ -8,11 +8,21 @@ import Div from '../Div/Div'
 import Trends from '../../pages/Trends/Trends'
 import WhatIs from '../../pages/WhatIs/WhatIs'
 import Roadmap from '../../containers/roadmap/Roadmap';
+import { ObjetoDeccert } from '../blockchain/ObjetoDeccert';
 
 
 
 
 export default function Welcome() {
+
+
+  useEffect(async() => {
+    let objeto=new ObjetoDeccert()
+    await objeto.load()
+    let total=await objeto.getTotal()
+    console.log('total nfts: ',total)
+  }, [])
+  
   
 
   return (

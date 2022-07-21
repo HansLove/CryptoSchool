@@ -7,7 +7,7 @@
     border-radius: 1rem;
     width: -webkit-fill-available;
     height: 34rem;
-    position: absolute;
-    z-index: -1;
+    position: relative;
+    margin: 1%;
     top: auto;
 }
