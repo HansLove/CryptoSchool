@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import ButtonLaser from '../Boton/ButtonLaser/ButtonLaser'
 import Text from '../Texto/Text'
 import './estilo.css'
 
@@ -12,11 +13,24 @@ const Header = styled.div`
         border-radius:1rem;
     `
 
-function TestHeader({courseName, testName, testDescription, backgroundColor, padding, textColor}) {
+function TestHeader({
+    onClick,
+    courseName, testName, 
+    testDescription, 
+    backgroundColor, 
+    padding, textColor}) {
 
   return (
-    <>
-    <div className='background-header' style={{backgroundColor:backgroundColor}}/>
+    <div 
+    className='background-header' 
+    style={{backgroundColor:backgroundColor}}>
+    
+    <ButtonLaser 
+    onClick={onClick}
+    texto='ENTER'
+    color={backgroundColor}
+    // style={{position:'absolute',top:0,right:0}}
+    />
     <Header
         padding={padding}
     >
@@ -32,7 +46,8 @@ function TestHeader({courseName, testName, testDescription, backgroundColor, pad
             />
         </div>
     </Header>
-    </>
+    </div>
+    
     
   )
 }

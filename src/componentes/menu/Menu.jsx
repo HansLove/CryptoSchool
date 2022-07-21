@@ -2,7 +2,6 @@ import React, { useEffect, useState,useContext } from 'react'
 import Logo from '../image/logo_deccert.png'
 // import {langContext}from '../../context/langContext'
 import './estilo.css'
-import Banderas from '../Banderas/Banderas'
 import {
   NavLink
 } from "react-router-dom";

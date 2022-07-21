@@ -1,32 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import QuestionText from '../../componentes/question/QuestionText'
 import QuestionOptions from '../../componentes/question/QuestionOptions'
 import BotonSubmit from '../../componentes/Boton/BotonSubmit'
+import axios from 'axios'
 import './estilo.css'
+import { actulizarCuenta } from '../../componentes/blockchain/Blockchain'
 
-function TestForm() {
+function TestForm({
+    id,
+    formData=[]
+}) {
 
-    var options = [
-        {
-            "text": "Nick Fury"
-        },
-        {
-            "text": "Satoshi Nakamoto"
-        },
-        {
-            "text": "Sam Banc-man"
-        },
-        {
-            "text": "Michael Saylor"
-        }
-    ]
 
-    const [answers, setAnswers] = useState({
-        answer1: "",
-        answer2: "",
-        answer3: "",
-        answer4: "",
-    })
+
+    useEffect(async() => {
+      let account=await actulizarCuenta()
+      setAddress(account)
+    }, [])
+
+    const [address, setAddress] = useState('')
+    const [answers, setAnswers] = useState({})
+    const [succesfulMinting, setSuccesfulMinting] = useState('null')
+    
 
     const onChangeAnswer = (e) => {
         setAnswers({ ...answers, [e.target.name]: e.target.value })
@@ -37,10 +32,22 @@ function TestForm() {
         console.log(answers)
     }
 
+    const Submit=async()=>{
+        axios.post('http://localhost:5002/nft/'+id.toString()+'/'+address.toString()
+        ,answers).
+        then((response)=>{
+            console.log(response.data.status);
+            setSuccesfulMinting(response.data.status)
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+    }
+
     return (
 
         <form className='test-form-container' onSubmit={handleSubmit}>
-            <QuestionText
+            {/* <QuestionText
                 value={answers.answer1}
                 onChange={onChangeAnswer}
                 name={"answer1"}
@@ -51,77 +58,22 @@ function TestForm() {
                 question={"Name of the biggest cryptocurrency by market cap"}
                 boxShadow={"0px 10px 20px rgba(0, 0, 0, 0.07)"}
                 margin={"0 0 2rem"}
-            />
-
-            <QuestionOptions
-                onChange={onChangeAnswer}
-                name={"answer2"}
-                backgroundColor={"white"}
-                textColor={"black"}
-                padding={"40px 50px 50px"}
-                numberQuestion={"2"}
-                question={"¿Name of the creator of Bitcoin?"}
-                options={options}
-                boxShadow={"0px 10px 20px rgba(0, 0, 0, 0.07)"}
-                margin={"0 0 2rem"}
-            />
-
-
-            <QuestionOptions
-                onChange={onChangeAnswer}
-                name={"answer2"}
-                backgroundColor={"white"}
-                textColor={"black"}
-                padding={"40px 50px 50px"}
-                numberQuestion={"2"}
-                question={"What is an NFT?"}
-                options={[
-                    {
-                        "text": "Art inside the blockchain"
-                    },
-                    {
-                        "text": "Smart contract standard for non fungible tokens"
-                    },
-                    {
-                        "text": "Real asset back by a digital asset "
-                    },
-                    {
-                        "text": "A currecy to buy assets in the blockchain"
-                    }
-                ]}
-                boxShadow={"0px 10px 20px rgba(0, 0, 0, 0.07)"}
-                margin={"0 0 2rem"}
-            />
-
+            /> */}
+            {formData.map((item,key)=>
             
-        
             <QuestionOptions
+                key={key}
                 onChange={onChangeAnswer}
-                name={"answer4"}
-                backgroundColor={"white"}
-                textColor={"black"}
-                padding={"40px 50px 50px"}
-                numberQuestion={"4"}
-                question={"First country to make Bitcoin legal tender?"}
-                options={[
-                    {
-                        "text": "El Salvador"
-                    },
-                    {
-                        "text": "Germany"
-                    },
-                    {
-                        "text": "Central African Republic"
-                    },
-                    {
-                        "text": "USA"
-                    }
-                ]}
-                boxShadow={"0px 10px 20px rgba(0, 0, 0, 0.07)"}
-                margin={"0 0 2rem"}
-            />
+                name={"answer"+(key+1).toString()}
+                numberQuestion={key+1}
+                question={item.question}
+                options={item.options}
+            />)} 
 
+
+            {succesfulMinting=='null'?
             <BotonSubmit
+                onClick={Submit}
                 text={"Check answers"}
                 fontSize={"16px"}
                 fontWeight={"500"}
@@ -132,6 +84,12 @@ function TestForm() {
                 margin={"26px 0 26px"}
                 padding={"20px 28px"}
             />
+            :
+            succesfulMinting?
+            <p>Amazing job! You minted your Deccert NFT</p>
+            :
+            <p>You failed the test</p>
+            }
         </form>
 
 

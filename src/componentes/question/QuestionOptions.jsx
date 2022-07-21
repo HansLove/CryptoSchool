@@ -13,7 +13,16 @@ const QuestionBox = styled.div`
         margin:${props => props.margin};
     `
 
-function QuestionOptions({ name, onChange, backgroundColor, textColor, padding, numberQuestion, question,options, boxShadow, margin }) {
+function QuestionOptions({ name, onChange, 
+    backgroundColor='white', 
+    textColor='black', 
+    padding="40px 50px 50px", 
+    numberQuestion, 
+    question,
+    options,
+    boxShadow="0px 10px 20px rgba(0, 0, 0, 0.07)", 
+    margin="0 0 2rem" 
+}) {
     
     return (
         <QuestionBox
