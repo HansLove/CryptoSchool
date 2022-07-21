@@ -19,11 +19,13 @@ function Profile(){
       var _lista=[]
 
       for (let index = 1; index < parseInt(_total)+1; index++) {
-          let certificado=await objeto.get(index)
+          var certificado=await objeto.get(index)
           let _uri=await objeto.getURI(index)
-          console.log('uri: ',_uri)
-          axios.get(_uri).then((res)=>console.log('res axios nft uri:',res.data))
-          if(certificado['owner']==account)_lista.push(certificado)
+        //   console.log('uri: ',_uri)
+        //   axios.get(_uri).then((res)=>console.log('res axios nft uri:',res.data))
+          if(certificado['owner']==account){
+              _lista.push({certificado,uri:_uri})
+          }
       }
       
       
@@ -42,7 +44,7 @@ function Profile(){
     return(
         <div>
             <ProfileInfo/>
-            <ProfileNFTs/>
+            <ProfileNFTs list={listaNFT}/>
         </div>
         
     )

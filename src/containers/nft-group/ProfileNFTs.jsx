@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import NFTCardInfo from '../../componentes/single_nft/NFTCardInfo';
 import NFTImage from "../../componentes/image/image-card-nft-example.png"
 import StateIndicator from '../../componentes/state_indicator/StateIndicator'
 import profilePhoto from "../../componentes/image/EDDI.png"
 import './estilo.css'
 
-function ProfileNFTs() {
+function ProfileNFTs({
+  list=[]
+}) {
+
+useEffect(() => {
+  
+
+  console.log('mierda')
+  list.forEach(element => {
+    console.log('element: ',element)
+  });
+}, [])
+
+  
   return (
     <div className='nfts-group'>
+
       <div className='group-one'>
 
         <div className='group-name'>
@@ -64,6 +78,8 @@ function ProfileNFTs() {
         </div>
 
         <div className='group-cards-container'>
+        
+
         <NFTCardInfo
           background='lightcoral'
           NFTImage={NFTImage} 
