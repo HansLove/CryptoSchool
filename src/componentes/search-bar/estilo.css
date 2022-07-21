@@ -1,0 +1,10 @@
+.form-search{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-search>button{
+    position: absolute;
+    right: 1px;
+}
