@@ -19,7 +19,6 @@ function Profile(){
 
       for (let index = 1; index < parseInt(_total)+1; index++) {
           let certificado=await objeto.get(index)
-          console.log('certificado: ',certificado['owner'])
           if(certificado['owner']==account)_lista.push(certificado)
       }
       
