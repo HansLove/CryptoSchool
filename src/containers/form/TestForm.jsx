@@ -21,7 +21,8 @@ function TestForm({
     const [address, setAddress] = useState('')
     const [answers, setAnswers] = useState({})
     const [succesfulMinting, setSuccesfulMinting] = useState('null')
-    
+    const [clientName, setName] = useState('')
+
 
     const onChangeAnswer = (e) => {
         setAnswers({ ...answers, [e.target.name]: e.target.value })
@@ -33,7 +34,8 @@ function TestForm({
     }
 
     const Submit=async()=>{
-        axios.post('http://localhost:5002/nft/'+id.toString()+'/'+address.toString()
+        axios.post('http://localhost:5002/nft/'+id.toString()+
+        '/'+address.toString()+'/'+clientName
         ,answers).
         then((response)=>{
             console.log(response.data.status);
@@ -69,6 +71,11 @@ function TestForm({
                 question={item.question}
                 options={item.options}
             />)} 
+
+            <input 
+            value={clientName}
+            onChange={(e)=>setName(e.target.value)}
+            type="text" name="" id="" />            
 
 
             {succesfulMinting=='null'?
