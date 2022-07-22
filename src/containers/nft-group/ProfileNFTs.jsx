@@ -11,8 +11,6 @@ function ProfileNFTs({
 
 useEffect(() => {
   
-
-  console.log('mierda')
   list.forEach(element => {
     console.log('element: ',element)
   });
