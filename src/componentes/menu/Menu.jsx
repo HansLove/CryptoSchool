@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'
 import Logo from '../image/logo_deccert.png'
-import { langContext } from '../../context/langContext'
 import './estilo.css'
 import {
   NavLink
@@ -14,7 +13,6 @@ import Search from '../search-bar/Search'
 
 function Menu() {
 
-  const idioma = useContext(langContext)
   const [visible, setvisible] = useState(false)
 
 
@@ -83,7 +81,6 @@ function Menu() {
         marginButtom={"0 0 0 -100px"}
       />
 
-      <Banderas idioma={idioma} />
 
       <Cadenas />
 

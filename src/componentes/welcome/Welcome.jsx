@@ -19,12 +19,12 @@ import FactDeccertFour from '../../containers/fact/FactDeccertFour';
 export default function Welcome() {
 
 
-  useEffect(async() => {
-    let objeto=new ObjetoDeccert()
-    await objeto.load()
-    let total=await objeto.getTotal()
-    console.log('total nfts: ',total)
-  }, [])
+  // useEffect(async() => {
+  //   let objeto=new ObjetoDeccert()
+  //   await objeto.load()
+  //   let total=await objeto.getTotal()
+  //   console.log('total nfts: ',total)
+  // }, [])
   
   
 
