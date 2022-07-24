@@ -8,7 +8,10 @@ import Div from '../Div/Div'
 import Trends from '../../pages/Trends/Trends'
 import WhatIs from '../../pages/WhatIs/WhatIs'
 import Roadmap from '../../containers/roadmap/Roadmap';
-import { ObjetoDeccert } from '../blockchain/ObjetoDeccert';
+import FactDeccertOne from '../../containers/fact/FactDeccertOne';
+import FactDeccertTwo from '../../containers/fact/FactDeccertTwo';
+import FactDeccertThree from '../../containers/fact/FactDeccertThree';
+import FactDeccertFour from '../../containers/fact/FactDeccertFour';
 
 
 
@@ -16,12 +19,12 @@ import { ObjetoDeccert } from '../blockchain/ObjetoDeccert';
 export default function Welcome() {
 
 
-  useEffect(async() => {
-    let objeto=new ObjetoDeccert()
-    await objeto.load()
-    let total=await objeto.getTotal()
-    console.log('total nfts: ',total)
-  }, [])
+  // useEffect(async() => {
+  //   let objeto=new ObjetoDeccert()
+  //   await objeto.load()
+  //   let total=await objeto.getTotal()
+  //   console.log('total nfts: ',total)
+  // }, [])
   
   
 
@@ -114,6 +117,14 @@ export default function Welcome() {
       <Div View={<Partners/>}/>
 
       <Roadmap/>
+
+      <FactDeccertOne/>
+
+      <FactDeccertTwo/>
+
+      <FactDeccertThree/>
+
+      <FactDeccertFour/>
       </div>
   )
 }

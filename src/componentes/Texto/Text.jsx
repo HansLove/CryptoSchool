@@ -16,9 +16,9 @@ function Text({text, fontSize, fontWeight, textColor, margin}){
             fontWeight={fontWeight}
             textColor={textColor}
             margin={margin}
-        >
-            {text}
-        </Paragraph>
+            dangerouslySetInnerHTML={{__html: text}}
+        />
+           
 
     )
 }
