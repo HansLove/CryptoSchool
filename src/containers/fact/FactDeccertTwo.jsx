@@ -13,8 +13,8 @@ function FactDeccertTwo() {
     return (
         <div className='fact-container-two'>
             <div className='fact-title'>
-                <Text text={"Lorem ipsum dolor"} fontSize={"1.5rem"} textColor={"#3B37FF"} margin={"0"} fontWeight={"bold"}/>
-                <Text text={"Prueba de Conocimiento"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
+                <Text text={"Our concept"} fontSize={"1.5rem"} textColor={"snow"} margin={"0"} fontWeight={"bold"}/>
+                <Text text={"Proof of Learning"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
             </div>
 
             <div className='fact-content'>
@@ -33,8 +33,9 @@ function FactDeccertTwo() {
                         <div className='element-icon-text'>
                             <Image src={iconTwo} alt={"illustration"} width={"auto"} height={"4rem"} margin={"0 3rem 0 0"}/>
                             <div className='icon-text-content'>
-                                <Text text={"Generadores de Ingreso Pasivo"} fontSize={"26px"} textColor={"white"} margin={"0 0 10px"} />
-                                <Text text={"Each member of our team has at least 5 years of legal experience."} fontSize={"18px"} textColor={"white"} margin={"0"} />
+                                <Text text={"Passive Income generator"} fontSize={"26px"} textColor={"white"} margin={"0 0 10px"} />
+                                <Text text={"DEFI magic is in our protocol with the goal of add distribution to our token hodling."} 
+                                fontSize={"18px"} textColor={"white"} margin={"0"} />
                             </div>
                         </div>
 
@@ -42,14 +43,18 @@ function FactDeccertTwo() {
                             <Image src={iconThree} alt={"illustration"} width={"auto"} height={"4rem"} margin={"0 3rem 0 0"}/>
                             <div className='icon-text-content'>
                                 <Text text={"Indestructibles"} fontSize={"26px"} textColor={"white"} margin={"0 0 10px"} />
-                                
+                                <Text text={"Once our NFTs are in the blockchain, they become almost indestructibles."} 
+                                fontSize={"18px"} textColor={"white"} margin={"0 0 10px"} />
+
                             </div>
                         </div>
                         
                         <div className='element-icon-text'>
                             <Image src={iconFour} alt={"illustration"} width={"auto"} height={"4rem"} margin={"0 3rem 0 0"}/>
                             <div className='icon-text-content'>
-                                <Text text={"Adaptables a otras bases de datos"} fontSize={"26px"} textColor={"white"} margin={"0 0 10px"} />
+                                <Text text={"Adaptable"} fontSize={"26px"} textColor={"white"} margin={"0 0 10px"} />
+                                <Text text={"Scalabe and easy to connect with another third party databases."} 
+                                fontSize={"18px"} textColor={"white"} margin={"0 0 10px"} />
                              
                             </div>
                         </div>
@@ -65,8 +70,8 @@ function FactDeccertTwo() {
                         <div className='element-icon-text'>
                             <Image src={iconSix} alt={"illustration"} width={"auto"} height={"4rem"} margin={"0 3rem 0 0"}/>
                             <div className='icon-text-content'>
-                                <Text text={"Incentivo Natural"} fontSize={"26px"} textColor={"white"} margin={"0 0 10px"} />
-                                <Text text={"a los estudiantes para expandir su campo de conocimiento y diversificar sus areas de conocimiento."} fontSize={"18px"} textColor={"white"} margin={"0"} />
+                                <Text text={"Natural Incentive"} fontSize={"26px"} textColor={"white"} margin={"0 0 10px"} />
+                                <Text text={"Students to expand their field of knowledge and diversify their areas of knowledge."} fontSize={"18px"} textColor={"white"} margin={"0"} />
                             </div>
                         </div>
                         

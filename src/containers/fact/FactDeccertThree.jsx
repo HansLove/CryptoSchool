@@ -12,10 +12,10 @@ function FactDeccertThree() {
     return (
         <div className='fact-container-three'>
             <div className='fact-title'>
-                <Text text={"Lorem ipsum dolor"} fontSize={"1.5rem"} textColor={"#3B37FF"} margin={"0"} fontWeight={"bold"} />
-                <Text text={"Aportaciones al Mercado"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
+                <Text text={"What we are doing?"} fontSize={"1.5rem"} textColor={"snow"} margin={"0"} fontWeight={"bold"} />
+                <Text text={"Market Contributions"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
 
-                <Text text={"Gracias a la naturaleza distribuida e indestructible de los NFT, estamos utilizando estos activos para las siguientes actividades"}
+                <Text text={"Thanks to the distributed and indestructible nature of NFTs, we are using these assets for the following activities."}
                     fontSize={"20px"}
                     textColor={"white"}
                     margin={"2rem 12vw"}
@@ -29,9 +29,9 @@ function FactDeccertThree() {
                     padding={"60px 30px"}
                     image={iconOne}
                     imageHeight={"3.6rem"}
-                    title={"Organizar"}
+                    title={"Organize"}
                     titleFontSize={"26px"}
-                    textContent={"a los usuarios por escalas de conocimiento."}
+                    textContent={"Users by scales of knowledge."}
                     textFontSize={"18px"}
                 />
 
@@ -41,9 +41,9 @@ function FactDeccertThree() {
                     padding={"60px 30px"}
                     image={iconTwo}
                     imageHeight={"3.6rem"}
-                    title={"Bolsa de Trabajo"}
+                    title={"Job bank"}
                     titleFontSize={"26px"}
-                    textContent={"semi-descentralizada para privados."}
+                    textContent={"Semi-descentralized work and skills database for those who are looking for a worker profile."}
                     textFontSize={"18px"}
                 />
 
@@ -53,9 +53,9 @@ function FactDeccertThree() {
                     padding={"60px 30px"}
                     image={iconThree}
                     imageHeight={"3.6rem"}
-                    title={"Adaptación"}
+                    title={"Adaptable"}
                     titleFontSize={"26px"}
-                    textContent={"adaptar los cursos a la demanda de nuestros usuarios basandonos en los activos digitales de sus wallets."}
+                    textContent={"Adapt the courses to the demand of our users based on the digital assets of their wallets."}
                     textFontSize={"18px"}
                 />
 
@@ -65,9 +65,9 @@ function FactDeccertThree() {
                     padding={"60px 30px"}
                     image={iconFour}
                     imageHeight={"3.6rem"}
-                    title={"Captial Humano"}
+                    title={"Human Capital"}
                     titleFontSize={"26px"}
-                    textContent={"Generacion natural de capital humano."}
+                    textContent={"Natural incetive to create and improve human skills."}
                     textFontSize={"18px"}
                 />
 

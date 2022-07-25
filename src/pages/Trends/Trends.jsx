@@ -28,22 +28,17 @@ function Trends() {
                 <li>
                     <button className='button_number'>3</button>
                     <h2>Blockchain – a potential solution</h2>
-                    One solution proposed to the recruitment industry was to use Artificial Intelligence (AI) Technology. 
-                    While AI has made significant strides in recent times,
-                    its application to the Recruitment Industry seems to have provided limited results.            
+                    One solution proposed to the recruitment industry is the blockchain to use keep track of all
+                    the skills and knowladge got by an user inside our ecosystem.         
                 </li>
 
                 <li>
                     <button className='button_number'>4</button>
-                    <h2>Third-Party Services – to address Information Asymmetry</h2>
-                    Third Party companies providing services ranging from Background and Reference Checks to those catering to specific employment needs such as conducting drug tests, Psychometric tests, etc.            
+                    <h2>Third-Party Services as work providers</h2>
+                    Third Party companies providing services and demand for workers with a specific profile.            
                 </li>
 
-                <li>
-                    <button className='button_number'>5</button>
-                    <h2>Recruitment - Truly a problem of lack of Reliable & Trusted Data</h2>
-                    While the existing recruitment processes are costly, time-consuming, exhausting, and stressful for everyone involved, still being largely ineffective.
-                </li>
+               
             </ul>
 
             <img 

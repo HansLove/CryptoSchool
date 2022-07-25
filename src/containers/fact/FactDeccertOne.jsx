@@ -14,12 +14,14 @@ function FactDeccertOne() {
 
             <div className='fact-content'>
 
-                <Text text={"Lorem ipsum dolor"} fontSize={"1.5rem"} textColor={"#3B37FF"} margin={"0"} fontWeight={"bold"}/>
-                <Text text={"El problema"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
+                <Text text={"Why DECCERT?"} 
+                fontSize={"1.5rem"} 
+                textColor={"snow"} margin={"0"} fontWeight={"bold"}/>
+                <Text text={"The problem"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
                 
                 <Text text={
-                    "En el area previa a la tecnologia blockchain, la educacion ha tenido pocos avances en las ultimas decadas, significativos .Con este protocolo, buscamos aportar valor con la tecnologia blockchain. </br></br>"
-                    + "Las Universidades, Academias y profesores deben tener a la mano tecnologia de ultima generacion para poder emitir sus certificados incorrompibles dentro de un ecosistema como Deccert."}
+                    "In the area prior to blockchain technology, education has had few significant advances in recent decades. With this protocol, we seek to add value with blockchain technology. </br></br>"
+                    + "Universities, Academies and professors must have the latest generation technology at hand to be able to issue their incorruptible certificates within an ecosystem like Deccert."}
                     fontSize={"20px"}
                     textColor={"white"}
                     margin={"2rem 0"}

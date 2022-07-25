@@ -24,8 +24,7 @@ useEffect(async() => {
   for (let index = 1; index < parseInt(_total)+1; index++) {
       var certificado=await objeto.get(index)
       let _uri=await objeto.getURI(index)
-    //   console.log('uri: ',_uri)
-    //   axios.get(_uri).then((res)=>console.log('res axios nft uri:',res.data))
+    
       if(certificado['owner']==account){
           _lista.push({certificado,uri:_uri})
       }
@@ -33,22 +32,13 @@ useEffect(async() => {
   
   
   setlistaNFT(_lista)
-  console.log('lista nfts: ',_lista)
-//   let resultado=await getUserData(account)
-//   setdata(resultado)
 
-//   return () => {
-//     setdata({}); // This worked for me
-//   };
-  
 
 }, [])
 
   
   return (
     <div className='nfts-group'>
-
-      <div>
         {listaNFT.map((item,key)=><NFTCardInfo
         blockNumber={item.certificado.blockNumber}
         time={item.certificado.time}
@@ -60,9 +50,7 @@ useEffect(async() => {
         Valid={true}
         NFTSystem={"BSC"}
         key={key}/>)}
-    
-      </div>      
-
+        
     </div>
   )
 }
