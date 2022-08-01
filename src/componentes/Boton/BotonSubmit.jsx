@@ -14,11 +14,18 @@ const Button = styled.button`
         padding:${props => props.padding};
     `
 
-function BotonSubmit({ text, fontSize, fontWeight, textColor, buttonColor, borderButton, borderRadius, margin, padding }) {
+function BotonSubmit({ 
+    onClick,
+    text, 
+    fontSize, fontWeight, textColor, 
+    buttonColor, borderButton,
+    borderRadius, 
+    margin, padding }) {
 
     return (
        
         <Button 
+            onClick={onClick}
             type="submit"
             fontSize={fontSize}
             fontWeight={fontWeight}

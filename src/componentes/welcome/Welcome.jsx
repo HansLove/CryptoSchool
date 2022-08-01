@@ -1,9 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {GiBookshelf, GiTeacher, GiWorld,GiMedal} from 'react-icons/gi'
-import {FormattedMessage, FormattedNumber,FormattedDate} from 'react-intl'
-import Fondo1 from '../image/cabecera_1.jpeg'
-import {Certificaciones} from '../../data/certifaciones.js'
-import AutomaticText from '../Texto/AutomaticText'
+import Fondo1 from '../image/fondo_2.png'
 import Partners from '../../pages/Partners/Partners'
 import Boton from '../Boton/Boton'
 import './estilo.css'
@@ -15,11 +12,21 @@ import FactDeccertOne from '../../containers/fact/FactDeccertOne';
 import FactDeccertTwo from '../../containers/fact/FactDeccertTwo';
 import FactDeccertThree from '../../containers/fact/FactDeccertThree';
 import FactDeccertFour from '../../containers/fact/FactDeccertFour';
+import { ObjetoDeccert } from '../blockchain/ObjetoDeccert';
 
 
 
 
 export default function Welcome() {
+
+
+  useEffect(async() => {
+    let objeto=new ObjetoDeccert()
+    await objeto.load()
+    let total=await objeto.getTotal()
+    console.log('total nfts: ',total)
+  }, [])
+  
   
 
   return (
@@ -33,13 +40,14 @@ export default function Welcome() {
             <div className='div_header_welcome'>
 
               <p className='p_texto_principal'>
-              <FormattedMessage 
-                id='text_welcome'
-                defaultMessage='Diplomas NFT para descentralizar la educacion'/>
+                
+              Certificates NFT for the decentralization 
+              of the education
               </p>
 
+              <a href='./test'>
               <Boton 
-              onClick={async()=>await window.open('https://deccert.com/')}
+              // onClick={async()=>await window.open('https://deccert.com/')}
               marginTop='10%'
               marginLeft='5%'
               fontSize='1.5rem'
@@ -47,11 +55,12 @@ export default function Welcome() {
               padding2='1%'
               colorBorder='blue'
               color1='navy'
-              color2='royalblue'
+              color2='darkmagenta'
               display='inline-block'
-              text='Landing Page'
+              text='First certification'
               fontWeight='bold'
               />
+              </a>
 
             </div>
           
@@ -60,68 +69,42 @@ export default function Welcome() {
             <div className='div_part_welcome'>
               <GiWorld size={95} style={{display:'block',margin:'auto'}}/>
 
-                <AutomaticText
-                fontSize='1.6rem'
-                id='acceso_ilimitado'
-                defaultMessage='Ilimited Access'
-                />
-
-                <AutomaticText
-                  id='protocolo_sin_fronteras'
-                  defaultMessage='World Reach'
-              />
+                <h2>Ilimited Access</h2>
+                
+                <p>World Reach using blockchain</p>
+                
             </div>
 
             <div className='div_part_welcome'>
               <GiBookshelf size={95} style={{display:'block',margin:'auto'}}/>
 
+                <h2>Our Courses</h2>
+                
 
-                <AutomaticText
-                fontSize='1.6rem'
-                id='our_courses'
-                defaultMessage='Our Courses'
-                />
-
-
-                <AutomaticText
-                fontSize='1.2rem'
-                id='actualizacion_automatica_descentralizada'
-                defaultMessage='Automatic decentralized update'
-                />
+                <p>Automatic decentralized update</p>
+                
+                
 
             </div>
 
 
             <div className='div_part_welcome'>
               <GiTeacher size={95} style={{display:'block',margin:'auto'}}/>
-            
-                <AutomaticText 
-                fontSize='1.6rem'
-                defaultMessage='Work with us' 
-                id='work_with_us'/>
 
-              <AutomaticText
-                fontSize='1.2rem'
-                textAlign='center'
-                id='academic_process'
-                defaultMessage='Use 2.0 NFT´s for your academic process'
-                />
+                <h2>Work with us</h2>
+                <p>Use 2.0 NFT´s for your academic process</p>
+    
+                
             </div>
 
             
             <div className='div_part_welcome'>
               <GiMedal size={95} style={{display:'block',margin:'auto'}}/>
               
-                <AutomaticText
-                fontSize='1.6rem'
-                id='nft_and_learning'
-                defaultMessage='NFT´s 2.0 and Learning'
-                />
-              <AutomaticText
-              fontSize='1.2rem'
-              id='blockchain_digital_school'
-              defaultMessage='Blockchain in digital schools'
-              />
+                <h2>NFT´s 2.0 and Learning</h2>
+                
+                <p>Blockchain in digital schools</p>
+                
             </div>
 
           </>

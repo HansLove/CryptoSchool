@@ -6,7 +6,9 @@ import {MdGppGood} from 'react-icons/md'
 import {FcCancel} from 'react-icons/fc'
 import './estilo.css'
 
-function NFTCardInfo({NFTImage, NFTName, NFTSystem, 
+function NFTCardInfo({NFTImage, 
+    NFTName, 
+    NFTSystem, 
     NFTMinter='DECCERT', 
     Valid=false,
     NFTOwnerImage, 

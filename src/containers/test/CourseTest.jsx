@@ -1,21 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TestHeader from '../../componentes/form-header/TestHeader'
 import TestForm from '../form/TestForm'
 import './estilo.css'
 
-function CourseTest() {
+function CourseTest({
+  name='General Test',
+  testName="Your first certificate NFT",
+  description="Need to get right 3/4 questions to be able to mint your DECCERT NFT Certificate",
+  backgroundColor='black',
+  textColor='white',
+  formData,
+  id
+}) {
+
+
+  const [selected, setselected] = useState(false)
+  
   return (
     <div className='course-test-container'>
         <TestHeader
-            courseName={"Matemáticas 01"}
-            testName={"Test Operaciones Básicas"}
-            testDescription={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
-            backgroundColor={"black"} 
+            onClick={()=>setselected(!selected)}
+            courseName={name}
+            testName={testName}
+            testDescription={description}
+            backgroundColor={backgroundColor} 
             padding={"70px 0 70px"}
-            textColor={"white"}
+            textColor={textColor}
         />
-
-        <TestForm/>
+        {selected&&
+        <TestForm 
+        id={id}
+        formData={formData}/>}
     </div>
   )
 }

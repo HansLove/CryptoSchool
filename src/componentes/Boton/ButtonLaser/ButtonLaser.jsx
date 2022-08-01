@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
 
 
 import './estilo.css'
 
 function ButtonLaser({
+    onClick,
     texto='Bitcoin',
     color='hotpink',
     display='block',
     margin='auto',
     fontSize='1.4rem',
-    id=''
+
 }) {
 
     const A=styled.a`
@@ -28,12 +28,9 @@ function ButtonLaser({
     `
   return (
     <A
+    onClick={onClick}
     className='boton_laser'><span>
-    <FormattedMessage
-      fontSize='1.2rem'
-      id={id}
-      defaultMessage={texto}
-      />
+      {texto}
       </span>
     <i></i>
     </A>

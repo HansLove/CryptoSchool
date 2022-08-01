@@ -1,12 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react'
 import Logo from '../image/logo_deccert.png'
-import { langContext } from '../../context/langContext'
+// import {langContext}from '../../context/langContext'
 import './estilo.css'
-import Banderas from '../Banderas/Banderas'
 import {
   NavLink
 } from "react-router-dom";
-import styled from 'styled-components'
 import { Link as ScrollLink } from 'react-scroll'
 import Cadenas from '../Cadenas/Cadenas'
 import Search from '../search-bar/Search'
@@ -15,7 +13,7 @@ import Search from '../search-bar/Search'
 
 function Menu() {
 
-  const idioma = useContext(langContext)
+  // const idioma=useContext(langContext)
   const [visible, setvisible] = useState(false)
 
 
@@ -64,9 +62,11 @@ function Menu() {
           smooth={true}
           offset={5}
           duration={1000}>
-          About
+          CONTACT
         </ScrollLink>}
 
+
+      {/* <Banderas idioma={idioma}/> */}
 
       <Search
         name="name"
@@ -84,9 +84,6 @@ function Menu() {
         marginButtom={"0 0 0 -100px"}
       />
 
-      <Banderas idioma={idioma} />
-
-      <Cadenas />
 
     </nav>
 
