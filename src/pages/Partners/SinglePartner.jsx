@@ -45,7 +45,7 @@ export default function SinglePartner({
           <img
           style={{width:'50%',height:'26vh',opacity:'0.9'}}
           src={image} alt="" />
-          <Reputation number={reputation}/>
+          {/* <Reputation number={reputation}/> */}
         
     </Div>
   )

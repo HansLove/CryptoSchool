@@ -67,6 +67,17 @@ export class ObjetoDeccert{
     
     }
 
+    async getURI(index){
+        try {
+            var _res=await this.contrato.methods.tokenURI(index).call()
+            return _res        
+        } catch (error) {
+            console.log('error en Deccert.jsx get:',error)
+            return {}
+        }
+    
+    }    
+
     
     async getTotal(){
         try {

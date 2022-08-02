@@ -6,12 +6,32 @@ import Mint from './pages/Mint/Mint';
 import ProfileTwo from './pages/Profile/ProfileTwo';
 import Test from './pages/Test/Test';
 import NFT_Types from './componentes/NFT_Types/NFT_Types';
+import { useEffect } from 'react';
+import { turnOnAccountChange, turnOnChainChange } from './componentes/blockchain/Blockchain';
+import Fondo1 from '../src/componentes/image/fondo_2.png'
 
 
 function App() {
 
+
+  useEffect(() => {
+    
+    async function initialSettleDown(){
+      await turnOnAccountChange()
+      await turnOnChainChange()
+
+    }
+    initialSettleDown()
+  }, [])
+  
+
   return (
     <div className="App">
+
+      <img 
+      className='imagen_fondo_welcome'
+      src={Fondo1} alt="" />     
+
       <BrowserRouter>
 
       <Menu/>

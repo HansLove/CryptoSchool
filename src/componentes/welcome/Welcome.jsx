@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import {GiBookshelf, GiTeacher, GiWorld,GiMedal} from 'react-icons/gi'
-import Fondo1 from '../image/fondo_2.png'
 import Partners from '../../pages/Partners/Partners'
 import Boton from '../Boton/Boton'
 import './estilo.css'
@@ -12,7 +11,6 @@ import FactDeccertOne from '../../containers/fact/FactDeccertOne';
 import FactDeccertTwo from '../../containers/fact/FactDeccertTwo';
 import FactDeccertThree from '../../containers/fact/FactDeccertThree';
 import FactDeccertFour from '../../containers/fact/FactDeccertFour';
-import { ObjetoDeccert } from '../blockchain/ObjetoDeccert';
 
 
 
@@ -20,21 +18,12 @@ import { ObjetoDeccert } from '../blockchain/ObjetoDeccert';
 export default function Welcome() {
 
 
-  useEffect(async() => {
-    let objeto=new ObjetoDeccert()
-    await objeto.load()
-    let total=await objeto.getTotal()
-    console.log('total nfts: ',total)
-  }, [])
-  
   
 
   return (
       <div className='div_main_welcome'>
 
-        <img 
-        className='imagen_fondo_welcome'
-        src={Fondo1} alt="" />
+
 
 
             <div className='div_header_welcome'>
@@ -112,20 +101,24 @@ export default function Welcome() {
     
       <Div View={<WhatIs/>}/>
 
-      <Div View={<Trends/>}/>
+      <Div View={
+      <Trends/>}/>
 
-
-      <Div View={<Partners/>}/>
 
       <Roadmap/>
 
       <FactDeccertOne/>
-
-      <FactDeccertTwo/>
+      
+      <Div View={
+      <FactDeccertTwo/>}/>
 
       <FactDeccertThree/>
+      
+      <Div View={
+      <FactDeccertFour/>}/>
 
-      <FactDeccertFour/>
+      <Div View={<Partners/>}/>
+
       </div>
   )
 }
