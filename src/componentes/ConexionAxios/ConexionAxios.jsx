@@ -1,7 +1,9 @@
 import axios from 'axios'
+import { actulizarCuenta } from '../blockchain/Blockchain'
 
 const base_url='http://localhost:5002/user/'
-// const base_url_real='htpp://heroku.deccert.com/'
+// const base_url='https://deccert.herokuapp.com/user/'
+
 
 
 export const registerUser=async({name,address,description,image,occupation})=>{
@@ -22,13 +24,13 @@ export const registerUser=async({name,address,description,image,occupation})=>{
 }
 
 
-export const getUserData=async(_address)=>{
+export const getUserData=async()=>{
     try {
-
     var image=''
     var name=''
     var description=''
     var occupation=''
+    let _address=await actulizarCuenta()
 
     await axios.get(base_url+_address.toString()).then(
         result=>{

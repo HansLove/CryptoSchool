@@ -20,7 +20,7 @@ function ProfileInfo(){
 
     useEffect(async() => {
       
-        let data=await getUserData(await actulizarCuenta())
+        let data=await getUserData()
         setUserData(data)
         //user has no registry in the database, go to edit mode 
         if(!data)seteditMode(true)

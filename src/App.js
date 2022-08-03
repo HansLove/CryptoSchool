@@ -9,6 +9,7 @@ import NFT_Types from './componentes/NFT_Types/NFT_Types';
 import { useEffect } from 'react';
 import { turnOnAccountChange, turnOnChainChange } from './componentes/blockchain/Blockchain';
 import Fondo1 from '../src/componentes/image/fondo_2.png'
+import JobBank from './pages/JobBank/JobBank';
 
 
 function App() {
@@ -45,6 +46,8 @@ function App() {
         title='Soul Bond DECCERT NFT´s'
         />}></Route>
         <Route exact path='/mint' element={<Mint/>}></Route>
+        <Route exact path='/jobbank' element={<JobBank/>}></Route>
+
         <Route exact path='/' element={<Welcome/>}></Route>
 
 
