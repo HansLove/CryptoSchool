@@ -5,9 +5,6 @@ import ProfileNFTs from "../../containers/nft-group/ProfileNFTs";
 
 function Profile(){
 
-    const [data, setdata] = useState({name:'',image:'.',description:''})
-
-
 
 
     return(

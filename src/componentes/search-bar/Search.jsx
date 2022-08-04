@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import BotonSubmit from '../Boton/BotonSubmit';
 import styled from 'styled-components'
 import './estilo.css'
+import { NavLink } from 'react-router-dom';
 
 const Input = styled.input`
         width:${props => props.width};
@@ -68,6 +69,7 @@ function Search({ name, type, placeholder, placeholderColor, fontSize, fontWeigh
 
             {
                 showButtom &&
+                <NavLink to='/jobbank'>
                 <BotonSubmit
                     text={"Search"}
                     fontSize={fontSize}
@@ -79,6 +81,7 @@ function Search({ name, type, placeholder, placeholderColor, fontSize, fontWeigh
                     margin={marginButtom}
                     padding={paddingButtom}
                 />
+                </NavLink>
 
             }
 
