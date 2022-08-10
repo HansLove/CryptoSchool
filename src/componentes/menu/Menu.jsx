@@ -13,8 +13,11 @@ import Search from '../search-bar/Search'
 
 function Menu() {
 
+<<<<<<< HEAD
   const [visible, setvisible] = useState(false)
 
+=======
+>>>>>>> 10bf2f6c69257a0273d16655239ad6838d9cd929
 
   return (
     <nav className='nav_menu'>
@@ -30,7 +33,6 @@ function Menu() {
 
       <NavLink
         id="RouterNavLink"
-        onClick={() => setvisible(true)}
         to='/'>
         HOME
       </NavLink>
@@ -39,7 +41,6 @@ function Menu() {
 
       <NavLink
         id="RouterNavLink"
-        onClick={() => setvisible(false)}
         to='/profile'>
         PROFILE
       </NavLink>
@@ -48,11 +49,11 @@ function Menu() {
 
       <NavLink
         id="RouterNavLink"
-        onClick={() => setvisible(false)}
         to='/certifications'>
         CERTIFICATIONS
       </NavLink>
 
+<<<<<<< HEAD
       {visible &&
         <ScrollLink
           activeClass="active"
@@ -64,6 +65,8 @@ function Menu() {
           About
         </ScrollLink>}
 
+=======
+>>>>>>> 10bf2f6c69257a0273d16655239ad6838d9cd929
 
       <Search
         name="name"

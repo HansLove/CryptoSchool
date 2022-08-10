@@ -5,6 +5,8 @@ import BotonSubmit from '../../componentes/Boton/BotonSubmit'
 import axios from 'axios'
 import './estilo.css'
 import { actulizarCuenta } from '../../componentes/blockchain/Blockchain'
+import { getUserData } from '../../componentes/ConexionAxios/ConexionAxios'
+import Animacion_felicidades from '../../animations/Congrats/Animacion_felicidades'
 
 function TestForm({
     id,
@@ -21,7 +23,7 @@ function TestForm({
     const [address, setAddress] = useState('')
     const [answers, setAnswers] = useState({})
     const [succesfulMinting, setSuccesfulMinting] = useState('null')
-    
+
 
     const onChangeAnswer = (e) => {
         setAnswers({ ...answers, [e.target.name]: e.target.value })
@@ -33,7 +35,13 @@ function TestForm({
     }
 
     const Submit=async()=>{
-        axios.post('http://localhost:5002/nft/'+id.toString()+'/'+address.toString()
+
+        //Get user data and then the name
+        let userData=await getUserData()
+
+
+        axios.post('http://localhost:5002/nft/'+id.toString()+
+        '/'+address.toString()+'/'+userData.name
         ,answers).
         then((response)=>{
             console.log(response.data.status);
@@ -42,6 +50,7 @@ function TestForm({
           .catch(function (error) {
             console.log(error);
           });
+
     }
 
     return (
@@ -70,7 +79,7 @@ function TestForm({
                 options={item.options}
             />)} 
 
-
+         
             {succesfulMinting=='null'?
             <BotonSubmit
                 onClick={Submit}
@@ -86,9 +95,10 @@ function TestForm({
             />
             :
             succesfulMinting?
-            <p>Amazing job! You minted your Deccert NFT</p>
+            // <p>Amazing job! You minted your Deccert NFT</p>
+            <Animacion_felicidades/>
             :
-            <p>You failed the test</p>
+            <p style={{color:'crimson',fontWeight:'900',fontSize:'3rem'}}>You failed the test</p>
             }
         </form>
 

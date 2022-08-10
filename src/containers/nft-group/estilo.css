@@ -1,7 +1,8 @@
 .nfts-group{
     margin: 0 6rem;
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
+    display: flex;
+
+    
 }
 
 .group-cards-container{

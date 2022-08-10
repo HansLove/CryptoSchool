@@ -1,19 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from '../imagen/Image';
 import StateIndicator from '../state_indicator/StateIndicator';
 import Text from '../Texto/Text';
 import {MdGppGood} from 'react-icons/md'
 import {FcCancel} from 'react-icons/fc'
+import axios from 'axios';
 import './estilo.css'
 
-function NFTCardInfo({NFTImage, 
-    NFTName, 
+function NFTCardInfo({
+    blockNumber,
+    uri,
+    time,
+    NFTImage,  
     NFTSystem, 
     NFTMinter='DECCERT', 
     Valid=false,
-    NFTOwnerImage, 
-    background='black'}) {
+    NFTOwnerImage
+}) {
+
+        const [metaData, setmetaData] = useState({})
+        const [background, setbackground] = useState('black')
+
+        useEffect(() => {
+            
+            async function Load(){
+                let res=await getMetaData(uri) 
+                setmetaData(res)
+                console.log('res: ',res,uri)
+                if(res.type=='Educational')setbackground('lightcoral')
+                
+            }
+            Load()
+
+
+        }, [])
+        
+
+        const getMetaData=async(_uri)=>{
+            var data
+            await axios.get(_uri).then((res)=>data=res.data)
+            return data
+      
+      }        
+
+        
   return (
+
+    
     <div 
     style={{background: 'linear-gradient(45deg,black,'+background+')'}}
     className="card-container">
@@ -22,7 +55,7 @@ function NFTCardInfo({NFTImage,
         </div>
 
         <div className='card-name'>
-            <Text text={NFTName} fontSize={"20px"} textColor={"white"} margin={"0"}/>
+            <Text text={metaData.name} fontSize={"20px"} textColor={"white"} margin={"0"}/>
             <StateIndicator text={NFTSystem} fontSize={"10px"} fontWeight={"bold"} textColor={"white"} backgroundColor={"#3B37FF"} borderRadius={"5px"} padding={"4px 10px"}/>
         </div>
 
@@ -30,8 +63,8 @@ function NFTCardInfo({NFTImage,
             <div className='owner-info'>
                 <Image src={NFTOwnerImage} alt={"profile-photo"} width={"2rem"} height={"auto"} borderRadius={"5px"}/>
                 <div className='owner-name'>
-                    <Text text={"Minted by"} fontSize={"10px"} textColor={"white"} margin={"0"}/>
-                    <Text text={NFTMinter} fontSize={"12px"} textColor={"white"} margin={"0"}/>
+                    <Text text={"Minted on"} fontSize={"10px"} textColor={"white"} margin={"0"}/>
+                    <Text text={new Date(time*1000).toLocaleDateString("en-US")} fontSize={"12px"} textColor={"white"} margin={"0"}/>
                 </div>
 
             </div>

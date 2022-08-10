@@ -4,8 +4,7 @@ import styled from "styled-components";
 const Button = styled.button`
     text-decoration:none;
     cursor:pointer;
-    height: 7vh;
-    position: absolute;
+    width: -webkit-fill-available;
     right: 120px;
     font-size:${props => props.fontSize};
     font-weight:${props => props.fontWeight};
@@ -25,7 +24,7 @@ const Button = styled.button`
     }
 `
 
-function BotonTwo({ 
+function BotonNavigate({ 
     text, 
     onClick, 
     fontSize, 
@@ -53,4 +52,4 @@ function BotonTwo({
 
 }
 
-export default BotonTwo;
+export default BotonNavigate;

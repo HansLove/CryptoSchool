@@ -6,12 +6,34 @@ import Mint from './pages/Mint/Mint';
 import ProfileTwo from './pages/Profile/ProfileTwo';
 import Test from './pages/Test/Test';
 import NFT_Types from './componentes/NFT_Types/NFT_Types';
+import { useEffect } from 'react';
+import { turnOnAccountChange, turnOnChainChange } from './componentes/blockchain/Blockchain';
+import Fondo1 from '../src/componentes/image/fondo_2.png'
+import JobBank from './pages/JobBank/JobBank';
+import ProfileSingle from './pages/Profile/ProfileSingle';
 
 
 function App() {
 
+
+  useEffect(() => {
+    
+    async function initialSettleDown(){
+      await turnOnAccountChange()
+      await turnOnChainChange()
+
+    }
+    initialSettleDown()
+  }, [])
+  
+
   return (
     <div className="App">
+
+      <img 
+      className='imagen_fondo_welcome'
+      src={Fondo1} alt="" />     
+
       <BrowserRouter>
 
       <Menu/>
@@ -25,6 +47,9 @@ function App() {
         title='Soul Bond DECCERT NFT´s'
         />}></Route>
         <Route exact path='/mint' element={<Mint/>}></Route>
+        <Route exact path='/job-bank' element={<JobBank/>}></Route>
+        <Route exact path = "/user-profile/:idUser" element={<ProfileSingle />}></Route>
+
         <Route exact path='/' element={<Welcome/>}></Route>
 
 

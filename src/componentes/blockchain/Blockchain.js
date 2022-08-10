@@ -74,22 +74,20 @@ export const actulizarCuenta=async()=>{
     
 }
 
-export const prenderCambioCuenta=(setAccount)=>{
+export const turnOnAccountChange=()=>{
 
   window.ethereum.on('accountsChanged',(acc)=>{
       console.log("cuenta cambiada: ",acc[0])
-      setAccount(acc[0])
       window.location.reload(false);
     });
   
 }
 
-export const prenderCambioCadena=(setChain)=>{
+export const turnOnChainChange=()=>{
   var chain=''
   window.ethereum.on('chainChanged', (_chainId) =>{
       console.log("Cambiando a: ",_chainId)
       chain= _chainId
-      setChain(chain)
       window.location.reload(false)
       
   });
