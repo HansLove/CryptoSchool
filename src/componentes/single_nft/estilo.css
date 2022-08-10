@@ -5,6 +5,14 @@
     margin: 10px 1px;
 }
 
+.card-info-nft-container{
+    background-color: black;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 10px 0;
+}
+
 .card-image{
     margin-bottom: 10px;
 }

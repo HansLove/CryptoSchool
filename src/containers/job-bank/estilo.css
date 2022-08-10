@@ -1,0 +1,9 @@
+.job-bank-header,.job-bank-cards{
+    margin: 10rem 6rem;
+}
+
+.job-bank-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
+}

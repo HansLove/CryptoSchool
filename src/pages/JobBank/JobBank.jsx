@@ -1,19 +1,14 @@
 import React from 'react'
+import Header from '../../containers/job-bank/Header'
+import CardsContainer from '../../containers/job-bank/CardsContainer'
+
+import './estilo.css'
 
 export default function JobBank() {
   return (
     <div>
-        <ul>
-            <li>Finanzas</li>
-            <li>Salud</li>
-            <li>Musica</li>
-            <div>
-                <img src="" alt="" srcset="" />
-                <p>Satoshi Nakamoto</p>
-
-                <button>Contact</button>
-            </div>
-        </ul>
+      <Header/>
+      <CardsContainer/>
     </div>
   )
 }
