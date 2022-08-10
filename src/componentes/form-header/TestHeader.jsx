@@ -25,12 +25,7 @@ function TestHeader({
     className='background-header' 
     style={{backgroundColor:backgroundColor}}>
     
-    <ButtonLaser 
-    onClick={onClick}
-    texto='ENTER'
-    color={backgroundColor}
-    // style={{position:'absolute',top:0,right:0}}
-    />
+
     <Header
         padding={padding}
     >
@@ -45,7 +40,14 @@ function TestHeader({
                 margin={"0"}
             />
         </div>
+            <ButtonLaser 
+            onClick={onClick}
+            texto='ENTER'
+            color={backgroundColor}
+            // style={{position:'absolute',top:0,right:0}}
+        />
     </Header>
+    
     </div>
     
     

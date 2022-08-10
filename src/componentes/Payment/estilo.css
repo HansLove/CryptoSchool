@@ -1,0 +1,42 @@
+.div_payment{
+    color: white;
+    position: relative;
+}
+
+.div_payment div{
+    width: 48%;
+    display: inline-block;
+    margin-left: 1%;
+    padding: 0.5%;
+    background: black;
+    border-radius: 5%;
+}
+
+
+.div_payment div img{
+    width: 15%;
+    display: block;
+    margin: auto;
+}
+
+.div_payment div h2{
+    width: fit-content;
+    display: block;
+    margin: auto;
+    padding: 1%;
+}
+
+.div_payment div p{
+    position: absolute;
+    right: 220px;
+    bottom: 0;
+    padding: 1%;
+}
+
+
+.div_payment div .stablecoin_price{
+    position: absolute;
+    left: 410px;
+    bottom: 0;
+    padding: 1%;
+}

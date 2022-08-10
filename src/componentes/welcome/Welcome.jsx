@@ -13,19 +13,12 @@ import FactDeccertThree from '../../containers/fact/FactDeccertThree';
 import FactDeccertFour from '../../containers/fact/FactDeccertFour';
 
 
-
-
 export default function Welcome() {
-
-
-  
 
   return (
       <div className='div_main_welcome'>
 
-
-
-
+       
             <div className='div_header_welcome'>
 
               <p className='p_texto_principal'>
@@ -39,15 +32,15 @@ export default function Welcome() {
               // onClick={async()=>await window.open('https://deccert.com/')}
               marginTop='10%'
               marginLeft='5%'
-              fontSize='1.5rem'
+              fontSize='2.8rem'
               borderRadius='10%'
               padding2='1%'
               colorBorder='blue'
               color1='navy'
-              color2='darkmagenta'
+              color2='red'
               display='inline-block'
-              text='First certification'
-              fontWeight='bold'
+              text={"Certifications \n NFT"}
+              fontWeight='300'
               />
               </a>
 

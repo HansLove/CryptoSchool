@@ -47,7 +47,6 @@ function App() {
         />}></Route>
         <Route exact path='/mint' element={<Mint/>}></Route>
         <Route exact path='/jobbank' element={<JobBank/>}></Route>
-
         <Route exact path='/' element={<Welcome/>}></Route>
 
 

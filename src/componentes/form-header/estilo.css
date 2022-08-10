@@ -1,12 +1,13 @@
 .header-description{
     width: 50%;
     text-align: center;
+    padding: 0.5%;
 }
 
 .background-header{
     border-radius: 1rem;
     width: -webkit-fill-available;
-    height: 34rem;
+    height: 18rem;
     position: relative;
     margin: 1%;
     top: auto;

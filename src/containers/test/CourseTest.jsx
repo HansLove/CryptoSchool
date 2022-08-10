@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import TestHeader from '../../componentes/form-header/TestHeader'
+import Payment from '../../componentes/Payment/Payment'
 import TestForm from '../form/TestForm'
 import './estilo.css'
 
@@ -18,6 +19,7 @@ function CourseTest({
   
   return (
     <div className='course-test-container'>
+
         <TestHeader
             onClick={()=>setselected(!selected)}
             courseName={name}
@@ -28,9 +30,11 @@ function CourseTest({
             textColor={textColor}
         />
         {selected&&
-        <TestForm 
-        id={id}
-        formData={formData}/>}
+        <Payment/>
+        // <TestForm 
+        // id={id}
+        // formData={formData}/>
+        }
 
 
     </div>
