@@ -11,6 +11,7 @@ import { turnOnAccountChange, turnOnChainChange } from './componentes/blockchain
 import Fondo1 from '../src/componentes/image/fondo_2.png'
 import JobBank from './pages/JobBank/JobBank';
 import ProfileSingle from './pages/Profile/ProfileSingle';
+import CertificationSingleView from './pages/Certification/CertificationSingleView';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route exact path='/certifications' element={<NFT_Types
         title='Soul Bond DECCERT NFT´s'
         />}></Route>
+        <Route exact path = "/certifications/:nameCertification" element={<CertificationSingleView />}></Route>
         <Route exact path='/mint' element={<Mint/>}></Route>
         <Route exact path='/job-bank' element={<JobBank/>}></Route>
         <Route exact path = "/user-profile/:idUser" element={<ProfileSingle />}></Route>
