@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import {useNavigate} from 'react-router-dom';
 import './estilo.css'
 import styled from 'styled-components'
 import { ObjetoDeccert } from '../blockchain/ObjetoDeccert'
@@ -13,6 +14,8 @@ function SingleCertificado({
     certificado,
     colored=false
 }) {
+
+    const navigate = useNavigate();
 
     const [data, setdata] = useState({})
     const [selected, setSelected] = useState(false)
@@ -51,7 +54,11 @@ const getData=async()=>{
     `
   return (
     <Div 
-    onClick={()=>setcertificado(name)}
+    onClick={() => {
+        const certificationName = name.toLowerCase()
+        navigate(`/certifications/${certificationName}`);
+        setcertificado(name)
+    }}
     className='div_central'>
         <h1 className='h1_titulo_certificado'>{name}</h1>
 

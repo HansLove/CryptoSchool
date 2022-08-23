@@ -5,6 +5,13 @@
     align-items: center;
 }
 
+.fact-container-cert-three{
+    padding: 150px 0 0;
+    margin: 0 10rem;
+    display: flex;
+    align-items: center;
+}
+
 .fact-container-two{
     padding: 150px 0;
     margin: 0 10rem;  
@@ -12,7 +19,38 @@
 
 
 .fact-container-three{
-    padding: 150px 0;
+    padding: 150px 0 0;
+    margin: 0 10rem;  
+}
+
+.fact-cert-container-four{
+    padding: 150px 0 0;
+    margin: 0 10rem;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fact-cert-container-five{
+    padding: 150px 0 150px;
+    margin: 0 10rem;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fact-cert-button-five{
+    width: 26%;
+}
+
+.fact-cert-content-five{
+    background: #3B37FF;
+    padding: 80px;
+    border-radius: 50px;
+}
+
+.fact-container-cert-one{
+    padding: 150px 0 0;
     margin: 0 10rem;  
 }
 
@@ -26,6 +64,14 @@
 
 .fact-title{
     text-align: center;
+    margin-bottom: 60px;
+}
+
+.fact-cert-two-title{
+    margin-bottom: 60px;
+}
+
+.fact-cert-four-title{
     margin-bottom: 60px;
 }
 
@@ -44,4 +90,22 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
+}
+
+.fact-two-content-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.fact-two-content-conatiner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+    align-items: center;
+    justify-items: end;
+}
+
+.fact-four-content-cards{
+    margin-top: 2rem;
 }

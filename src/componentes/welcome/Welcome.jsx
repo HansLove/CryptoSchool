@@ -15,10 +15,12 @@ import FactDeccertFour from '../../containers/fact/FactDeccertFour';
 
 export default function Welcome() {
 
+
+
   return (
       <div className='div_main_welcome'>
 
-       
+
             <div className='div_header_welcome'>
 
               <p className='p_texto_principal'>
