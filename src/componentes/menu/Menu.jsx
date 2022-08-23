@@ -13,11 +13,6 @@ import Search from '../search-bar/Search'
 
 function Menu() {
 
-<<<<<<< HEAD
-  const [visible, setvisible] = useState(false)
-
-=======
->>>>>>> 10bf2f6c69257a0273d16655239ad6838d9cd929
 
   return (
     <nav className='nav_menu'>
@@ -53,20 +48,6 @@ function Menu() {
         CERTIFICATIONS
       </NavLink>
 
-<<<<<<< HEAD
-      {visible &&
-        <ScrollLink
-          activeClass="active"
-          to="id_trends"
-          spy={true}
-          smooth={true}
-          offset={5}
-          duration={1000}>
-          About
-        </ScrollLink>}
-
-=======
->>>>>>> 10bf2f6c69257a0273d16655239ad6838d9cd929
 
       <Search
         name="name"
