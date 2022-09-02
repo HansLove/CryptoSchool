@@ -16,6 +16,7 @@ function CourseTest({
 
 
   const [selected, setselected] = useState(false)
+  const [formVisible, setFormVisible] = useState(false)
   
   return (
     <div className='course-test-container'>
@@ -29,13 +30,16 @@ function CourseTest({
             padding={"70px 0 70px"}
             textColor={textColor}
         />
-        {selected&&
-        <Payment/>
-        // <TestForm 
-        // id={id}
-        // formData={formData}/>
+        {selected&&!formVisible&&
+        <Payment 
+        makeVisible={()=>setFormVisible(true)}/>
+       
         }
 
+        {formVisible&&
+        <TestForm 
+         id={id}
+         formData={formData}/>}
 
     </div>
   )

@@ -6,6 +6,7 @@ const Paragraph = styled.p`
     font-weight:${props => props.fontWeight};
     color:${props => props.textColor};
     margin:${props => props.margin};
+    overflow: auto;
 `
 
 function Text({text, fontSize, fontWeight, textColor, margin}){

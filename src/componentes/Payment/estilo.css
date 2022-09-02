@@ -12,6 +12,10 @@
     border-radius: 5%;
 }
 
+.div_payment div:hover{
+    background:darkblue;
+    box-shadow: 1px 1px 1px 1px springgreen;
+}
 
 .div_payment div img{
     width: 15%;
@@ -28,7 +32,7 @@
 
 .div_payment div p{
     position: absolute;
-    right: 220px;
+    right: 400px;
     bottom: 0;
     padding: 1%;
 }

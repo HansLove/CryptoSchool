@@ -24,7 +24,9 @@ function CardJobBank({id, userImage, userName, userPosition, userExperience, use
                 <div className='user-info'>
                     <Text text={userName} fontSize={"26px"} textColor={"white"} margin={"0"} />
                     <Text text={userPosition} fontSize={"18px"} textColor={"white"} margin={"0"} />
-                    <Text text={userExperience} fontSize={"14px"} textColor={"white"} margin={"10px 0 0"} />
+                    
+                    <Text 
+                    text={userExperience} fontSize={"14px"} textColor={"white"} margin={"10px 0 0"} />
                 </div>
             </div>
 
@@ -37,7 +39,7 @@ function CardJobBank({id, userImage, userName, userPosition, userExperience, use
 
             <BotonNavigate
                 onClick={onClickContact}
-                text={"Contactar"}
+                text={"Contact"}
                 fontSize={"16px"}
                 fontWeight={"500"}
                 textColor={"white"}

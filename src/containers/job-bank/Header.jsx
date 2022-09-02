@@ -9,13 +9,13 @@ function Header() {
     <div className='job-bank-header'>
       <div className='fact-content'>
 
-        <Text text={"Lorem ipsum dolor"}
+        <Text text={"DECCERT"}
           fontSize={"1.5rem"}
           textColor={"snow"} margin={"0"} fontWeight={"500"} />
-        <Text text={"Lorem ipsum dolor sit amet consectetur"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
+        <Text text={"Decentralized Job Bank"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
 
         <Text text={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
+          "We use nft technology in our database to filter the skills you need in your business. In order to be filtered in our database, you have to keep accumulating the digital assets issued by Deccert official private key."}
           fontSize={"20px"}
           textColor={"white"}
           margin={"2rem 40vw 2rem 0"}

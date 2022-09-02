@@ -1,19 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CardJobBank from '../../componentes/card/CardJobBank'
+import { getUsers } from '../../componentes/ConexionAxios/ConexionAxios'
 import userImage from '../../componentes/image/profile-photo-example.jpg'
 
 function CardsContainer() {
+
+    const [array, setarray] = useState([])
+
+    useEffect(async() => {
+        
+        let list=await getUsers()
+
+        setarray(list)
+    
+      return () => {
+        
+      }
+    }, [])
+    
     return (
         <div className='job-bank-cards'>
-            <CardJobBank  
-                id={1} 
-                userImage={userImage}
-                userName="Jhon Smith"
-                userPosition="Software Developer"
-                userExperience="10 years experience"
-                userCardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                userLocation="New York, EE. UU."
-            />
+
+            {array.map((item,key)=><CardJobBank  
+                id={key} 
+                userImage={item.image}
+                userName={item.name}
+                userPosition={item.occupation}
+                userExperience={item.address}
+                userCardDescription={item.description}
+                userLocation="CDMX, Mexico."
+            />)}
+            
 
             <CardJobBank
                 id={2} 

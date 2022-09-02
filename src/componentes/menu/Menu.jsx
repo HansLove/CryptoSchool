@@ -40,6 +40,12 @@ function Menu() {
         PROFILE
       </NavLink>
 
+      <NavLink
+        id="RouterNavLink"
+        to='/job-bank'>
+        JOB BANK
+      </NavLink>
+
 
 
       <NavLink
@@ -49,7 +55,7 @@ function Menu() {
       </NavLink>
 
 
-      <Search
+      {/* <Search
         name="name"
         type="text"
         placeholder={"Search"}
@@ -63,7 +69,7 @@ function Menu() {
         border={"1px solid white"}
         paddingButtom={"15px 24px"}
         marginButtom={"0 0 0 -100px"}
-      />
+      /> */}
 
 
       <Cadenas />

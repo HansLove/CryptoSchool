@@ -34,14 +34,14 @@ export default function Welcome() {
               // onClick={async()=>await window.open('https://deccert.com/')}
               marginTop='10%'
               marginLeft='5%'
-              fontSize='2.8rem'
+              fontSize='1.7rem'
               borderRadius='10%'
               padding2='1%'
-              colorBorder='blue'
+              colorBorder='green'
               color1='navy'
-              color2='red'
+              color2='lightgreen'
               display='inline-block'
-              text={"Certifications \n NFT"}
+              text={"Certifications NFT"}
               fontWeight='300'
               />
               </a>

@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { actulizarCuenta } from '../blockchain/Blockchain'
 
-const base_url='http://localhost:5002/user/'
-// const base_url='https://deccert.herokuapp.com/user/'
+// const base_url='http://localhost:5002/user/'
+const base_url='https://deccert.herokuapp.com/user/'
 
 
 
@@ -65,6 +65,25 @@ export const editUser=async({name,address,description,image,occupation})=>{
            console.log('erorr en conexion con axios: ',error.message) 
            return false
     }
+}
+
+
+
+export const getUsers=async()=>{
+    var list=[]
+    try {
+    await axios.get(base_url).then(
+        result=>{
+           
+            list=result.data.data
+            }
+        )
+        
+    } catch (error) {
+           console.log('erorr en ConexionAxios: getUsers: ',error.message) 
+           return false
+    }
+    return list
 }
 
 

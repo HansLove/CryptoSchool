@@ -8,8 +8,9 @@ function AutomaticConversion({
   color='black',
   total,
   setConversion,
-  setRate,
-  visible=false
+  setRate=()=>{},
+  visible=false,
+
 }) {
 
     const [dollar, setDollar] = useState(0);
@@ -63,19 +64,18 @@ function AutomaticConversion({
              
     }
   return <p style={{
-         display:'block',
-         position:'absolute',
-         right:0,
-         top:0,
-         margin: 'auto',
-         width:'fit-content',
-         fontFamily:'monospace',
-         color:color,
-         fontSize:'1.1rem'}}>
+      display:'block',
+      marginLeft:'10%',
+      width:'fit-content',
+      fontFamily:'monospace',
+      color:color,
+      fontSize:'1.1rem'
+         }}>
+
            {visible&&<>
            {SeparadorDecimal(Math.round(dollar))} USD</>
            }
-           </p>
+    </p>
   }
         
 

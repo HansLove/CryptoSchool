@@ -5,10 +5,12 @@ import FactCertificationTwo from '../../containers/fact/FactCertificationTwo'
 import FactCertificationThree from '../../containers/fact/FactCertificationThree'
 import FactCertificationFour from '../../containers/fact/FactCertificationFour'
 import FactCertificationFive from '../../containers/fact/FactCertificationFive'
+import NFT_Types from '../../componentes/NFT_Types/NFT_Types'
 
 function CertificationSingleView() {
   return (
     <div>
+        <NFT_Types/>
         <HeroCertificaction/>
         <FactCertificationOne/>
         <FactCertificationTwo/>
