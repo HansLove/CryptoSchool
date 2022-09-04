@@ -1,12 +1,14 @@
 import React from 'react'
 import Text from "../../componentes/Texto/Text";
-
 import {useNavigate} from 'react-router-dom';
 import BotonNavigate from '../../componentes/Boton/BotonNavigate';
 
 import './estilo.css'
 
-function FactCertificationFive({ headingText, title, dataCards, image }) {
+function FactCertificationFive({ 
+    background,
+    subtitle,
+    headingText, title, dataCards, image }) {
 
     const navigate = useNavigate()
     
@@ -15,13 +17,18 @@ function FactCertificationFive({ headingText, title, dataCards, image }) {
     }
 
     return (
-        <div className='fact-cert-container-five'>
-            <div className='fact-cert-content-five'>
-                <Text text={"Lorem ipsum dolor sit amet consectetur adipiscing elit"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
+        <div 
+        className='fact-cert-container-five'>
+            <div 
+            style={{background:background}}
+            className='fact-cert-content-five'>
+                <Text text={subtitle} 
+                fontSize={"4rem"} 
+                textColor={"black"} margin={"0"} />
                 <div className='fact-cert-button-five'>
                     <BotonNavigate
                         onClick={onClickContact}
-                        text={"Lorem ipsum dolor"}
+                        text={"START"}
                         fontSize={"16px"}
                         fontWeight={"500"}
                         textColor={"white"}

@@ -21,23 +21,22 @@ function SingleCertificado({
     const [selected, setSelected] = useState(false)
 
 
-    useEffect(() => {
-        getData()
-        if(certificado==name)setSelected(true)
+    // useEffect(() => {
+    //     getData()
+    //     if(certificado==name)setSelected(true)
         
-        if(certificado!=name)setSelected(false)
+    //     if(certificado!=name)setSelected(false)
 
-    }, [certificado])
+    // }, [certificado])
     
-const getData=async()=>{
-    let ob=new ObjetoDeccert()
-    await ob.load()
-    let res=await ob.get(id)
-    console.log('res: ',res)
-    setdata({...data,userName:res.name,academy:res.academy,address:res.owner,
-        blockNumber:res.blockNumber,class:res.class})
-    
-    }
+    // const getData=async()=>{
+    //     let ob=new ObjetoDeccert()
+    //     await ob.load()
+    //     let res=await ob.get(id)
+    //     setdata({...data,userName:res.name,academy:res.academy,address:res.owner,
+    //         blockNumber:res.blockNumber,class:res.class})
+        
+    // }
     
     const Div=styled.div`
         background: ${selected?'linear-gradient(-45deg,'+color+',black)':colored?'linear-gradient(-45deg,'+color+',black)':'snow'};
@@ -57,15 +56,15 @@ const getData=async()=>{
     onClick={() => {
         const certificationName = name.toLowerCase()
         navigate(`/certifications/${certificationName}`);
-        setcertificado(name)
+        // setcertificado(name)
     }}
     className='div_central'>
+
         <h1 className='h1_titulo_certificado'>{name}</h1>
 
         {icon}
         
         <p className='p_certificado'>
-            
             Certificate
         </p>
         

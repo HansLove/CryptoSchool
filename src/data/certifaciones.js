@@ -12,6 +12,6 @@ export const Certificaciones=[
     {name:'Participation',colors:['navy','orange'],icon:<GiHand size={size1}/>},
     {name:'Charity',colors:['orange','orange'],icon:<BiDonateHeart size={size1}/>},
     {name:'Authenticity',colors:['hotpink','orange'],icon:<BsGem size={size1}/>},
-    {name:'Guarantee',colors:['indigo','orange'],icon:<SiAdguard size={size1}/>},
+    // {name:'Guarantee',colors:['indigo','orange'],icon:<SiAdguard size={size1}/>},
 
 ]

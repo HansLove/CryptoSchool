@@ -47,7 +47,9 @@ function App() {
         <Route exact path='/certifications' element={<NFT_Types
         title='Soul Bond DECCERT NFT´s'
         />}></Route>
-        <Route exact path = "/certifications/:nameCertification" element={<CertificationSingleView />}></Route>
+        <Route exact path = "/certifications/:nameCertification" 
+        element={<CertificationSingleView />}>
+        </Route>
         <Route exact path='/mint' element={<Mint/>}></Route>
         <Route exact path='/job-bank' element={<JobBank/>}></Route>
         <Route exact path = "/user-profile/:idUser" element={<ProfileSingle />}></Route>

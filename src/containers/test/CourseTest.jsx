@@ -30,6 +30,7 @@ function CourseTest({
             padding={"70px 0 70px"}
             textColor={textColor}
         />
+        
         {selected&&!formVisible&&
         <Payment 
         makeVisible={()=>setFormVisible(true)}/>

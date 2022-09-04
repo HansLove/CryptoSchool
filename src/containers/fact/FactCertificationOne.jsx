@@ -8,7 +8,10 @@ import iconFour from "../../componentes/image/two_persons.svg"
 import './estilo.css'
 import CardImageText from '../../componentes/card/CardImageText';
 
-function FactCertificationOne({headingText, title, description, dataCards}) {
+function FactCertificationOne({
+    type,
+    headingText, title, description, dataCards}) {
+
     return (
         <div className='fact-container-cert-one'>
             <div className='fact-title'>

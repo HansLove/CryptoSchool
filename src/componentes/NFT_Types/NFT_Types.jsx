@@ -6,7 +6,7 @@ import SingleCertificado from '../single_certificado/SingleCertificado.jsx'
 
 function NFT_Types({
     marginTop='none',
-    title='DECCERT NFT'
+    title='Soul Bond Deccert NFT´s'
 }) {
   return (
     <Div View={
