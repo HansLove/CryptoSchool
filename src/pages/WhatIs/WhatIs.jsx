@@ -9,14 +9,15 @@ function WhatIs() {
 
         <img 
         src={Logo} 
-        alt=""  />
+        alt="logo"  />
 
         <p>
-        DECCERT is the world’s first AI-enabled Verified Resume NFT platform that turns people’s resumes into unique NFTs. 
-        The minted NFTs are available on our Marketplace for employers and recruiters to buy and trade for fees.
-        The minted NFTs are also directly matched with relevant open jobs using our proprietary AI engine. 
-        Employers and Recruiters can choose to view complete resume details after paying fees. 
-        Nearly all of the fee collected is directly transferred to the Job Seeker/NFT owner, thereby empowering people for sharing their Verified Data.
+        Deccert is a protocol that verified Resume NFT platform that turns people’s skills into blocks 
+        of unique NFTs. 
+        The minted NFTs are available on our database connected into the Job Bank  for employers and recruiters 
+        to hire or search for a talent with a desired profile 
+        Employers and Recruiters can choose to view complete resume details base on in the holding of the digital assets. 
+        
         </p>
     </div>
   )

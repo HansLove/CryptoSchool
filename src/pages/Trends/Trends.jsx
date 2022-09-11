@@ -6,8 +6,7 @@ import './estilo.css'
 function Trends() {
   return (
     <div className='div_trends'
-    id='id_trends'
-    >
+    id='id_trends'>
         <h1>Trends</h1>
 
         <div style={{display:'flex'}}>

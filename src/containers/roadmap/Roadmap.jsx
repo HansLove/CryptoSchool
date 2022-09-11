@@ -7,7 +7,6 @@ import blackCoinImage from "../../componentes/image/certi_1.jpeg"
 import colorCoinImage from "../../componentes/image/colored_final.png"
 import rocketImage from "../../componentes/image/Rocket_1.png"
 import blockchainImage from "../../componentes/image/blockchain.png"
-
 import blackCoin from "../../componentes/image/black_final.png"
 import './estilo.css'
 
@@ -15,8 +14,15 @@ function Roadmap() {
     return (
         <div className="roadmap-container">
             <div className="title-roadmap">
-                <Text text={"DECCERT Roadmap"} fontSize={"1.5rem"} textColor={"white"} margin={"4rem 0 0"} />
-                <Text text={"Proof You Learn"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
+                <Text 
+                text={"DECCERT Roadmap"} 
+                fontSize={"1.5rem"} 
+                textColor={"white"} 
+                margin={"4rem 0 0"} />
+                <Text 
+                text={"Proof You Learn"} 
+                fontSize={"4rem"} 
+                textColor={"white"} margin={"0"} />
             </div>
 
             <ul className="roadmap-list">

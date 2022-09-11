@@ -4,8 +4,6 @@ import './estilo.css'
 import {
   NavLink
 } from "react-router-dom";
-import styled from 'styled-components'
-import { Link as ScrollLink } from 'react-scroll'
 import Cadenas from '../Cadenas/Cadenas'
 import Search from '../search-bar/Search'
 
@@ -20,10 +18,13 @@ function Menu() {
       <NavLink
         style={{ marginLeft: '2%' }}
         id="RouterNavLink"
-        to='/mint'>
+        className='img_logo_menu'
+        to='/mint'
+        >
         <img
           width='7%'
           src={Logo} />
+          
       </NavLink>
 
       <NavLink
@@ -72,7 +73,7 @@ function Menu() {
       /> */}
 
 
-      <Cadenas />
+      <Cadenas/>
 
     </nav>
 

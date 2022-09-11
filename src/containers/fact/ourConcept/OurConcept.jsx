@@ -1,17 +1,19 @@
 import React from 'react'
-import Image from "../../componentes/imagen/Image";
-import Text from "../../componentes/Texto/Text";
-import iconOne from "../../componentes/image/star.svg"
-import iconTwo from "../../componentes/image/clock.svg"
-import iconThree from "../../componentes/image/bomb.svg"
-import iconFour from "../../componentes/image/data_base.svg"
-import iconFive from "../../componentes/image/group_people.svg"
-import iconSix from "../../componentes/image/tree.svg"
+import iconOne from "./image/star.svg"
+import iconTwo from "./image/clock.svg"
+import iconThree from "./image/bomb.svg"
+import iconFour from "./image/data_base.svg"
+import iconFive from "./image/group_people.svg"
+import iconSix from "./image/tree.svg"
 import './estilo.css'
+import Text from '../../../componentes/Texto/Text'
+import Image from '../../../componentes/imagen/Image'
 
-function FactDeccertTwo() {
+
+export default function OurConcept() {
     return (
         <div className='fact-container-two'>
+            
             <div className='fact-title'>
                 <Text text={"Our concept"} fontSize={"1.5rem"} textColor={"snow"} margin={"0"} fontWeight={"bold"}/>
                 <Text text={"Proof of Learning"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
@@ -25,8 +27,8 @@ function FactDeccertTwo() {
                         <div className='element-icon-text'>
                             <Image src={iconOne} alt={"illustration"} width={"auto"} height={"4rem"} margin={"0 3rem 0 0"}/>
                             <div className='icon-text-content'>
-                                <Text text={"NFT’S"} fontSize={"26px"} textColor={"white"} margin={"0 0 10px"} />
-                                <Text text={"Entes digitales descentralizados"} fontSize={"18px"} textColor={"white"} margin={"0"} />
+                                <Text text={"Utility NFT’S"} fontSize={"26px"} textColor={"white"} margin={"0 0 10px"} />
+                                <Text text={"Using the ERC-721 standar fully focus on utility."} fontSize={"18px"} textColor={"white"} margin={"0"} />
                             </div>
                         </div>
 
@@ -85,4 +87,3 @@ function FactDeccertTwo() {
     )
 }
 
-export default FactDeccertTwo

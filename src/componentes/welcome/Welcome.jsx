@@ -8,9 +8,9 @@ import Trends from '../../pages/Trends/Trends'
 import WhatIs from '../../pages/WhatIs/WhatIs'
 import Roadmap from '../../containers/roadmap/Roadmap';
 import FactDeccertOne from '../../containers/fact/FactDeccertOne';
-import FactDeccertTwo from '../../containers/fact/FactDeccertTwo';
-import FactDeccertThree from '../../containers/fact/FactDeccertThree';
 import FactDeccertFour from '../../containers/fact/FactDeccertFour';
+import OurConcept from '../../containers/fact/ourConcept/OurConcept';
+import WhatWeAreDoing from '../../containers/fact/WhatWeAreDoing';
 
 
 export default function Welcome() {
@@ -25,8 +25,8 @@ export default function Welcome() {
 
               <p className='p_texto_principal'>
                 
-              Certificates NFT for the decentralization 
-              of the education
+              
+              NFT Certification Protocol
               </p>
 
               <a href='./test'>
@@ -105,9 +105,9 @@ export default function Welcome() {
       <FactDeccertOne/>
       
       <Div View={
-      <FactDeccertTwo/>}/>
+      <OurConcept/>}/>
 
-      <FactDeccertThree/>
+      <WhatWeAreDoing/>
       
       <Div View={
       <FactDeccertFour/>}/>

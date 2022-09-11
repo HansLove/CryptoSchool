@@ -20,6 +20,7 @@ ul.roadmap-list{
     margin-top: 4rem;
 	transition:.4s;
 }
+
 ul.roadmap-list > li{
 	display:grid;
     align-items: center;
@@ -91,4 +92,22 @@ ul.roadmap-list > li:nth-child(even) .element-image{
     display: flex;
     justify-content: flex-start;
     grid-area: left;
+}
+
+@media 
+  (min-device-width: 300px) 
+  and (max-device-width: 1024px) 
+{
+	
+	.roadmap-container{
+		background-color: black;
+		width: 90%;
+		display: block;
+		margin: 1%;
+		flex-direction: column;
+		border-radius: 2rem;
+		padding: 1rem 2rem;
+		
+	}
+
 }

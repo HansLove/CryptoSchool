@@ -7,8 +7,15 @@ import './estilo.css'
 function FactDeccertOne() {
     return (
         <div className='fact-container-one'>
+            
             <div className='image-container'>
-                <Image src={illustration} alt={"illustration"} width={"34vw"} height={"auto"} margin={"0 6rem 0 0"}/>
+                <Image 
+                src={illustration} 
+                alt={"illustration"} 
+                width={"34vw"} 
+                cellphoneWidth={'30vw'}
+                height={"auto"} 
+                margin={"0 2rem 0 0"}/>
 
             </div>
 

@@ -1,0 +1,39 @@
+.fact-container-two{
+    padding: 150px 0;
+    margin: 0 10rem;  
+}
+
+.element-icon-text{
+    margin-bottom:50px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-text-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+@media 
+(min-device-width: 300px) 
+and (max-device-width: 1024px) 
+{
+
+    .fact-container-two{
+        padding: 10px 0;
+        margin: 1%;  
+    }
+
+    .icon-text-container{
+        display: block;
+    }
+    
+    
+    .element-icon-text{
+        margin-bottom:50px;
+        width: 99%;
+        display: flex;
+        
+    }
+}

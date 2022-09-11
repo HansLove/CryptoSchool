@@ -32,8 +32,33 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background: radial-gradient(green,skyblue);
     color: white;
-    padding: 0.7%;
+    padding: 1% 2%;
+    font-size: 1.5rem;
     outline: none;
     border: none;
     border-radius: 50%;
+}
+
+@media 
+  (min-device-width: 300px) 
+  and (max-device-width: 1024px) 
+{
+
+    .div_trends img{
+        display: none;
+    }
+
+    .button_number{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        background: radial-gradient(purple,skyblue);
+        display: block;
+        margin: auto;
+        color: white;
+        padding: 1.2% 2%;
+        outline: none;
+        border: none;
+        font-size: 2.5rem;
+        border-radius: 50%;
+    }
+
 }

@@ -4,25 +4,37 @@ import iconOne from "../../componentes/image/graphic.svg"
 import iconTwo from "../../componentes/image/wallet.svg"
 import iconThree from "../../componentes/image/chat.svg"
 import iconFour from "../../componentes/image/two_persons.svg"
-
 import './estilo.css'
 import CardImageText from '../../componentes/card/CardImageText';
 
-function FactDeccertThree() {
+export default function WhatWeAreDoing() {
     return (
         <div className='fact-container-three'>
             <div className='fact-title'>
-                <Text text={"What we are doing?"} fontSize={"1.5rem"} textColor={"snow"} margin={"0"} fontWeight={"bold"} />
-                <Text text={"Market Contributions"} fontSize={"4rem"} textColor={"white"} margin={"0"} />
+                <Text 
+                text={"What we are doing?"} 
+                fontSize={"1.5rem"} 
+                fontSize2={"1.4rem"}
+                textColor={"snow"} margin={"0"} fontWeight={"bold"} />
 
-                <Text text={"Thanks to the distributed and indestructible nature of NFTs, we are using these assets for the following activities."}
-                    fontSize={"20px"}
-                    textColor={"white"}
-                    margin={"2rem 12vw"}
+                <Text 
+                text={"Market Contributions"} 
+                fontSize={"4rem"}
+                fontSize2='1rem'
+                 textColor={"white"} margin={"0"} />
+
+                <Text 
+                text={"Thanks to the distributed and indestructible nature of NFTs, we are using these assets for the following activities."}
+                fontSize={"20px"}
+                fontSize2='1.3rem'
+                textColor={"white"}
+                margin={"2rem 12vw"}
+                margin2={'10% 1%'}
                 />
             </div>
 
             <div className='fact-content-cards'>
+
                 <CardImageText
                     border={"1px solid white"}
                     borderRadius={"10px"}
@@ -77,4 +89,3 @@ function FactDeccertThree() {
     )
 }
 
-export default FactDeccertThree

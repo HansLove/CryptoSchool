@@ -56,11 +56,14 @@ function Cadenas({width='50%'}) {
         (min-device-width: 350px) 
         and (max-device-width: 1024px) 
         {
-            width:40%;
-            
+            width:10%;
             & img{
                 width: 100%;
             }
+
+            & .icon_alert{
+            display: none;
+        }
         }
     `
 
