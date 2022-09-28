@@ -2,7 +2,6 @@ import React from 'react'
 import Text from "../../componentes/Texto/Text";
 import {useNavigate} from 'react-router-dom';
 import BotonNavigate from '../../componentes/Boton/BotonNavigate';
-
 import './estilo.css'
 
 function FactCertificationFive({ 
@@ -19,12 +18,16 @@ function FactCertificationFive({
     return (
         <div 
         className='fact-cert-container-five'>
+            
             <div 
             style={{background:background}}
             className='fact-cert-content-five'>
+
                 <Text text={subtitle} 
-                fontSize={"4rem"} 
+                fontSize={"3.7rem"} 
+                fontSize2='1.5rem'
                 textColor={"black"} margin={"0"} />
+
                 <div className='fact-cert-button-five'>
                     <BotonNavigate
                         onClick={onClickContact}

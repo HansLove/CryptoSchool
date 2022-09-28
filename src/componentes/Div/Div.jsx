@@ -2,6 +2,8 @@ import React,{Children, useEffect} from 'react'
 import { useInView } from "react-intersection-observer";
 import {motion,useAnimation} from 'framer-motion/dist/framer-motion'
 
+
+
 function Div({View}) {
 
 const boxVariant = {
@@ -18,6 +20,7 @@ const boxVariant2 = {
 const control = useAnimation();
 const [ref, inView] = useInView()
 
+
 useEffect(() => {
     if (inView) {
       control.start("visible");
@@ -26,8 +29,10 @@ useEffect(() => {
     }
   }, [control, inView]);
 
+
   return (
     <motion.div
+    className='div_container_type'
     ref={ref}
     variants={boxVariant}
     initial="hidden"

@@ -96,6 +96,11 @@
     margin-top: 2rem;
 }
 
+.div_icon_points{
+    height: 15vh;
+    width: 45vh;
+}
+
 @media 
 (min-device-width: 300px) 
 and (max-device-width: 1024px) 
@@ -134,6 +139,39 @@ and (max-device-width: 1024px)
         display: block;
         padding: 10px 0;
         margin: 2rem 1rem;  
+     
     }
 
+    .fact-cert-container-four{
+        padding: 15px 0 0;
+        margin: 0 1rem;  
+        margin-top: 2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .fact-four-content-cards{
+        width: 100%;
+      
+        
+    }
+
+    .div_icon_points{
+        width: 17vh;
+    }
+
+
+    .fact-cert-container-five{
+        padding: 2%;
+        margin: 0 1%;  
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .fact-cert-button-five{
+
+        width: 50%;
+    }
 }

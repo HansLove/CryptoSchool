@@ -22,6 +22,17 @@ const Button = styled.button`
         border: 1px solid gray;
         letter-spacing: 0.1em;
     }
+
+    @media 
+    (min-device-width: 300px) 
+    and (max-device-width: 1024px) 
+    {
+        margin: 1%;
+        right: 1px;
+        font-size: 1rem;
+        padding: 10%;
+        width: 100%;
+    }
 `
 
 function BotonNavigate({ 

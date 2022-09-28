@@ -3,8 +3,11 @@ import styled from "styled-components";
 
 
 
-function Text({text, fontSize, fontWeight, textColor, margin,
-    fontSize2='1.2rem',margin2='1%'}){
+function Text({text, fontSize, 
+    fontWeight, 
+    textColor, margin,
+    fontSize2='1.2rem',
+    margin2='1%'}){
 
     const Paragraph = styled.p`
         font-size:${props => props.fontSize};
@@ -12,6 +15,7 @@ function Text({text, fontSize, fontWeight, textColor, margin,
         color:${props => props.textColor};
         margin:${props => props.margin};
         overflow: auto;
+      
 
         @media 
         (min-device-width: 300px) 

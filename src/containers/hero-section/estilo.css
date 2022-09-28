@@ -6,4 +6,26 @@
 
 .hero-content{
     margin-right: 4rem;
+    
+}
+
+@media 
+  (min-device-width: 300px) 
+  and (max-device-width: 1024px) 
+{
+
+    .hero-container{
+        margin: 2%;
+        display: block;
+        align-items: center;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    
+
+    .hero-content{
+        margin-right: 1%;
+      
+    }
+
 }

@@ -8,8 +8,11 @@ function NFT_Types({
     marginTop='none',
     title='Soul Bond Deccert NFT´s'
 }) {
+  
   return (
-    <Div View={
+    <Div 
+    
+    View={
     <div style={{
         display:'block',
         margin:'auto',

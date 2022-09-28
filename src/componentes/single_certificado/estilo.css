@@ -47,3 +47,24 @@
 	position: absolute;
 	top: auto;
 }
+
+@media 
+  (min-device-width: 300px) 
+  and (max-device-width: 1024px) 
+{
+	.div_central{
+		border-radius: 5%;
+		width: 95%;
+		margin-top: 2%;
+		vertical-align: top;
+		display: inline-flex;
+		color: white;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		background-size: 200% 200%;
+		position: relative;
+		overflow: hidden;
+		padding: 10px;
+		border: 1px dashed green;
+	}
+
+}

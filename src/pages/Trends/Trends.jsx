@@ -14,19 +14,18 @@ function Trends() {
             <ul>
                 <li>
                     <button className='button_number'>1</button>
-                    <h2>Recruitment: An Information Asymmetry Problem</h2>
-                    While it is often difficult to judge if the job seeker is being totally honest and not inaccurately enhancing themselves. 
-                    Likewise, for the candidates, it is rather difficult to assess what the company culture, the team culture is like.
+                    <h2>Proof of Action</h2>
+                    The protocol allows keeping track of certifiable shares issued by users and financial entities
                 </li>
 
                 <li>
                     <button className='button_number'>2</button>
-                    <h2>Alternate Approach: Internal Referrals</h2>
-                    Nearly 80% of all job openings are not posted online as companies rely more on word of mouth and internal recommendations than on external hiring. </li>
+                    <h2>Alternate Approach: NFT Public API</h2>
+                    Public database that gives full ownership of the NFTs resume to users</li>
 
                 <li>
                     <button className='button_number'>3</button>
-                    <h2>Blockchain – a potential solution</h2>
+                    <h2>Blockchain – the solution</h2>
                     One solution proposed to the recruitment industry is the blockchain to use keep track of all
                     the skills and knowladge got by an user inside our ecosystem.         
                 </li>
@@ -34,7 +33,8 @@ function Trends() {
                 <li>
                     <button className='button_number'>4</button>
                     <h2>Third-Party Services as work providers</h2>
-                    Third Party companies providing services and demand for workers with a specific profile.            
+                    Third Party companies providing services and demand for workers with a specific profile 
+                    using our database based on digital assets.            
                 </li>
 
                

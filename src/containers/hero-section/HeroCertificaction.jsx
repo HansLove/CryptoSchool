@@ -10,7 +10,6 @@ import Collaboration from "../../componentes/image/collaboration.svg"
 import Guarantee from "../../componentes/image/group_people.svg"
 import Participation from "../../componentes/image/eddi.svg"
 import Education from "../../componentes/image/education.svg"
-
 import './estilo.css'
 
 function HeroCertificaction({
@@ -23,7 +22,9 @@ function HeroCertificaction({
 
     return (
         <div className='hero-container'>
+
             <div className='hero-content'>
+                
                 <Text text={nameCertification} 
                 fontSize={"4.5rem"} 
                 textColor={"white"} 

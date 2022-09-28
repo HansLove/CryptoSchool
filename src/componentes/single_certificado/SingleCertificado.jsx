@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {useNavigate} from 'react-router-dom';
-import './estilo.css'
 import styled from 'styled-components'
-import { ObjetoDeccert } from '../blockchain/ObjetoDeccert'
-
+// import { ObjetoDeccert } from '../blockchain/ObjetoDeccert'
+import './estilo.css'
 
 function SingleCertificado({
     id=1,
