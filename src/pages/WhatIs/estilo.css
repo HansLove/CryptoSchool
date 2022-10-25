@@ -1,6 +1,6 @@
 .div_what_is{
     margin-top: 7%;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.5);
 
 }
 
@@ -27,10 +27,11 @@
     margin-left: 2%;
     margin-top: 2%;
     vertical-align: top;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     letter-spacing: 0.1em;
     font-weight: 900;
     color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 @media 

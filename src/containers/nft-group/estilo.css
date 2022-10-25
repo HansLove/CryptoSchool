@@ -1,8 +1,17 @@
+.div_container_profile_nfts{
+    display: grid;
+    margin: auto;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(100px, auto);
+    /* ------- */
+    white-space: nowrap;
+}
+
 .nfts-group{
     margin: 0 6rem;
     display: flex;
-
-    
 }
 
 .group-cards-container{

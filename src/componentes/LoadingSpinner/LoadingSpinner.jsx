@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import './estilo.css'
 
-function LoadingSpinner({
+export default function LoadingSpinner({
     largo='80px',
     altura='80px',
     color='white',
@@ -39,4 +39,3 @@ function LoadingSpinner({
     )
 }
 
-export default LoadingSpinner

@@ -5,29 +5,35 @@ import BotonSubmit from "../../componentes/Boton/BotonSubmit";
 import Image from "../../componentes/imagen/Image";
 import Text from "../../componentes/Texto/Text";
 import profilePhoto from "../../componentes/image/blockchain.png"
-import './estilo.css'
 import { editUser, getUserData, registerUser } from "../../componentes/ConexionAxios/ConexionAxios";
 import { actulizarCuenta } from "../../componentes/blockchain/Blockchain";
-
+import './estilo.css'
 
 function UpdateInfoForm() {
 
-    const [userData, setUserData] = useState({name:'',description:'',image:profilePhoto,
+    const [userData, setUserData] = useState({
+        name:'',
+        description:'',
+        image:profilePhoto,
     occupation:''})
-    const [image, setImage] = useState('')
+
     const [isRegistred, setIsRegistred] = useState(true)
+    const [imageSelected, setImageSelected] = useState(false)
+    const [URL, setURL] = useState('')
 
 
     useEffect(async() => {
       
         let data=await getUserData()
         setUserData(data)
+        setURL(data.image)
+
 
         //user has no registry in the database, go to edit mode 
         if(!data)setIsRegistred(false)
-        //user doesnt have any image as a file
-        if(!data.image=='')setImage(data.image)
+
     }, [])    
+
 
     const [changes, setChanges] = useState({
         name: "",
@@ -42,52 +48,81 @@ function UpdateInfoForm() {
 
 
     const SubmitUserData=async()=>{
+        if(URL=='')return
 
         if(isRegistred){
             await editUser({
                 name:changes.name,
                 description:changes.description,
-                image:changes.image.length>15?changes.image:'',
+                image:URL,
                 address:await actulizarCuenta(),
                 occupation:changes.occupation
-    
             })
         }else{
-
-        await registerUser({
-            name:changes.name,
-            description:changes.description,
-            image:changes.image,
-            address:await actulizarCuenta(),
-            occupation:changes.occupation
-
-        })
-    }
+            await registerUser({
+                name:changes.name,
+                description:changes.description,
+                image:URL,
+                address:await actulizarCuenta(),
+                occupation:changes.occupation
+            })
+        }
     }
 
+    const ProfileImages=[
+        "https://firebasestorage.googleapis.com/v0/b/hashimas.appspot.com/o/Chester%2Fches_5.jpeg?alt=media&token=34ffbec6-2da0-4fbc-869f-a1f9468b84ec",
+        "https://firebasestorage.googleapis.com/v0/b/hashimas.appspot.com/o/Chester%2Fches_2.jpeg?alt=media&token=93d41e86-50df-44fd-bab8-a5d1f158d705",
+        "https://firebasestorage.googleapis.com/v0/b/hashimas.appspot.com/o/Chester%2Fches_1.jpeg?alt=media&token=5d28607b-5307-4e93-95dd-bd24744b623f",
+        "https://firebasestorage.googleapis.com/v0/b/hashimas.appspot.com/o/Chester%2Fches_3.jpeg?alt=media&token=59eee8e9-c818-444c-8c1e-9590d2d08d6b",
+        "https://firebasestorage.googleapis.com/v0/b/hashimas.appspot.com/o/Chester%2Fches_4.jpeg?alt=media&token=05f484c1-0514-4e93-b273-bd46b403259d"
+    ]
+
+    const imagesWidth='15rem'
     return (
-        <form className="profile-info-container">
+        <form className="profile_info_container">
 
             <div className="account-info-update">
 
-                <div className="account-photo">
-                    <Image src={changes.image.length>10?changes.image:image!=''?image:profilePhoto} 
-                    alt={"profile-photo"} width={"26rem"} height={"auto"} borderRadius={"2rem"} />
-                    
-                    <InputTwo
-                            defaultValue={changes.image}
-                            onChange={onChangeChanges}
-                            name="image"
-                            type="text"
-                            placeholder={"Image URI"}
-                            fontSize={"16px"}
-                            padding={"15px 24px"}
-                            textColor={"black"}
-                            backgroundColor={"#F3F3F3"}
-                            borderRadius={"10px"}
-                            margin={"0"}
-                        />
-                </div>
+                {!imageSelected?
+                <div className="account_photo">
+                    <Image 
+                    display='inline-block'
+                    src={profilePhoto} 
+                    alt={"profile-photo"} 
+                    width={imagesWidth} 
+                    height={"auto"} 
+                    borderRadius={"2rem"} />
+
+                    {ProfileImages.map((image,key)=><Image 
+                    onClick={()=>{
+                        setImageSelected(true)
+                        setURL(image)
+                    }}
+                    display='inline-block'
+                    src={image}
+                    alt={"profile-photo"} 
+                    width={imagesWidth} 
+                    height={"auto"} 
+                    borderRadius={"2rem"} />
+                    )}
+
+                </div> 
+                :
+                //El usuario ya eligio una imagen de perfil
+                <div>
+                    <Image 
+                    onClick={()=>{
+                        setImageSelected(false)
+                        setURL('')
+                    }}
+                    display='inline-block'
+                    src={URL} 
+                    alt={"profile-photo"} 
+                    width={'40rem'} 
+                    height={"auto"} 
+                    borderRadius={"2rem"} />                    
+                </div>}
+
 
                 <div className="account-update">
                     <Text 

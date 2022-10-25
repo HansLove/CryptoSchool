@@ -1,3 +1,7 @@
+.profile_info_container{
+    width: 100%;
+}
+
 .test-form-container{
     margin: -14rem 8rem 0;
     display: flex;
@@ -34,19 +38,31 @@
     display: flex;
 }
 
+.account-update{
+    padding: 0 2vw 0 1rem;
+    /* width: -webkit-fill-available; */
+    width: 100%;
+}
+
 .account-description{
     padding: 0 3rem;
 }
 
-.account-update{
-    padding: 0 8vw 0 3rem;
-    width: -webkit-fill-available;
-}
+
 
 .account-about-text{
     width: 90%;
 }
 
+.account_photo{
+    display: grid;
+    margin: auto;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(100px, auto);
+
+}
 @media 
 (min-device-width:300px) 
 and (max-device-width: 1024px) 

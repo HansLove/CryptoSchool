@@ -8,12 +8,10 @@ import axios from 'axios';
 import './estilo.css'
 
 function NFTCardInfo({
-    blockNumber,
     uri,
     time,
     NFTImage,  
     NFTSystem, 
-    NFTMinter='DECCERT', 
     Valid=false,
     NFTOwnerImage
 }) {
@@ -26,7 +24,6 @@ function NFTCardInfo({
             async function Load(){
                 let res=await getMetaData(uri) 
                 setmetaData(res)
-                console.log('res: ',res,uri)
                 if(res.type=='Educational')setbackground('lightcoral')
                 
             }
@@ -45,11 +42,10 @@ function NFTCardInfo({
 
         
   return (
-
-    
     <div 
-    style={{background: 'linear-gradient(45deg,black,'+background+')'}}
-    className="card-container">
+    className="card-container"
+    style={{
+        background: 'linear-gradient(45deg,black,'+background+')'}}>
         <div className='card-image'>
             <Image src={NFTImage} alt={"nft-img"} width={"14rem"} height={"auto"} borderRadius={"1rem"}/>
         </div>

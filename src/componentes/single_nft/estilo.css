@@ -1,4 +1,5 @@
 .card-container{
+    display: inline-block;
     width: fit-content;
     padding: 1rem;
     border-radius: 1rem;

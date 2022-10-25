@@ -1,20 +1,24 @@
 import React, { useEffect,useState } from 'react'
 import NFTCardInfo from '../../componentes/single_nft/NFTCardInfo';
 import NFTImage from "../../componentes/image/image-card-nft-example.png"
-import StateIndicator from '../../componentes/state_indicator/StateIndicator'
+// import StateIndicator from '../../componentes/state_indicator/StateIndicator'
 import profilePhoto from "../../componentes/image/EDDI.png"
 import { ObjetoDeccert } from '../../componentes/blockchain/ObjetoDeccert';
 import { actulizarCuenta } from '../../componentes/blockchain/Blockchain';
+import LoadingSpinner from '../../componentes/LoadingSpinner/LoadingSpinner';
 import './estilo.css'
+
 
 function ProfileNFTs({
  
 }) {
 
   const [listaNFT, setlistaNFT] = useState([])
+  const [loading, setLoading] = useState(false)
 
 
 useEffect(async() => {
+  setLoading(true)
   let objeto=new ObjetoDeccert()
   let account=await actulizarCuenta()
   await objeto.load()
@@ -30,27 +34,31 @@ useEffect(async() => {
       }
   }
   
-  
   setlistaNFT(_lista)
-
+  setLoading(false)
 
 }, [])
 
   
   return (
     <div className='nfts-group'>
-        {listaNFT.map((item,key)=><NFTCardInfo
-        blockNumber={item.certificado.blockNumber}
-        time={item.certificado.time}
-        uri={item.uri}
-        background='lightgreen'
-        NFTImage={NFTImage} 
-        NFTName={"Recycling in Tulum"} 
-        NFTOwnerImage={profilePhoto}
-        Valid={true}
-        NFTSystem={"BSC"}
-        key={key}/>)}
-        
+        {loading?<LoadingSpinner/>
+        :
+        <div 
+        className='div_container_profile_nfts'>
+          {listaNFT.map((item,key)=>
+          <NFTCardInfo
+            blockNumber={item.certificado.blockNumber}
+            time={item.certificado.time}
+            uri={item.uri}
+            background='lightgreen'
+            NFTImage={NFTImage} 
+            NFTName={"Recycling in Tulum"} 
+            NFTOwnerImage={profilePhoto}
+            Valid={true}
+            NFTSystem={"BSC"}
+            key={key}/>)}
+        </div>}
     </div>
   )
 }

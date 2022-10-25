@@ -4,11 +4,10 @@ import Image from "../../componentes/imagen/Image";
 import Text from "../../componentes/Texto/Text";
 import UpdateInfoForm from "../form/UpdateInfoForm";
 import profilePhoto from "../../componentes/image/fondo_2.png"
-import './estilo.css'
 import { getUserData } from "../../componentes/ConexionAxios/ConexionAxios";
 import { CheckConexion } from "../../componentes/blockchain/Blockchain";
 import Cadenas from "../../componentes/Cadenas/Cadenas";
-
+import './estilo.css'
 
 function ProfileInfo(){
 

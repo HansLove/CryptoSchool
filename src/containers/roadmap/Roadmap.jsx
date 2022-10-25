@@ -27,7 +27,7 @@ function Roadmap() {
 
             <ul className="roadmap-list">
                 <Element
-                    date={"July 2022"}
+                    date={"November 2022"}
                     title={"Documentation"}
                     description={"Realease of our white-paper, lite-paper and tokenomics."}
                     linkText={""}
@@ -35,7 +35,7 @@ function Roadmap() {
                     image={bitcoinImage}
                 />
                 <Element
-                    date={"August 2022"}
+                    date={"December 2022"}
                     title={"Full Blockchain Deployment"}
                     description={"DECCERT protocol smart contracts of our ecosystem are deployed and tested in at least 1 blockchain. ."}
                     linkText={""}
@@ -43,7 +43,7 @@ function Roadmap() {
                     image={blockchainImage}
                 />
                 <Element
-                    date={"September 2022"}
+                    date={"January 2023"}
                     title={"Full Certification"}
                     description={"DECCERT covers all the gamma of NFT´s sould bond capability and expands the human/machine actions to be certificated."}
                     linkText={""}
@@ -51,24 +51,24 @@ function Roadmap() {
                     image={blackCoinImage}
                 />
                 <Element
-                    date={"November 2022"}
-                    title={"Native Token"}
+                    date={"March 2023"}
+                    title={"Digital Commodity"}
                     description={"$EDDI token will be deployed to give the DECCERT community voting power over our ecosystem."}
                     linkText={""}
                     linkHref={"/"}
                     image={shibaImage}
                 />
                 <Element
-                    date={"January 2023"}
-                    title={"Stable-coin liquidity"}
-                    description={"Will add in our treasury the most community voted stable coins."}
+                    date={"March 2023"}
+                    title={"Liquidity Pool"}
+                    description={"Will add on the official pool from our treasury the most community voted stable coin"}
                     linkText={""}
                     linkHref={"/"}
                     image={colorCoinImage}
                 />
 
                 <Element
-                    date={"March 2023"}
+                    date={"June 2023"}
                     title={"Liquidity event"}
                     description={"First event where DECCERT will add diferent round of liquidity to our native token to be able to reach our price targets."}
                     linkText={""}
@@ -76,7 +76,7 @@ function Roadmap() {
                     image={rocketImage}
                 />
                 <Element
-                    date={"June 2023"}
+                    date={"August 2023"}
                     title={"Multichain"}
                     description={"DECCERT smart contracts running in more than 3 chains."}
                     linkText={""}
