@@ -46,3 +46,22 @@
 .account-about-text{
     width: 90%;
 }
+
+@media 
+(min-device-width:300px) 
+and (max-device-width: 1024px) 
+{
+
+    .account-info-update{
+        width: 100%;
+        display: block;
+        
+    }
+
+    .account-modifiders{
+        display: block;
+    }
+
+  
+    
+}

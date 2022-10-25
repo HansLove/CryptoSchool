@@ -7,9 +7,8 @@ export async function determinarChain(deployedNetwork,id){
         
     ]
     
-
     let array_binance_testnet=[
-        "0x47cc182104e5ed076e9b6D65817dED530d97e812"//Deccert
+        "0xb86Cdc7e93F601D605FaFe6A3Eb5E42b82d5A97e"//Deccert
     ]
     
     let matic_testnet=[

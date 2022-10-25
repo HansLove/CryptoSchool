@@ -8,13 +8,12 @@ export default function Boton({
   color2='black',
   color='white',
   fontSize='1rem',
-  text_id='.',
   display='block',
   margin='auto',
   marginTop='1%',
   marginLeft='null',
   padding2='1%',
-  borderRadius='5%',
+  borderRadius='10% 15%',
   colorBorder='transparent',
   fontWeight='100'
 }) {
@@ -31,11 +30,12 @@ export default function Boton({
         display: ${display};
         margin: ${margin};
         margin-top: ${marginTop};
-        padding:0.5%;
+        padding:1% 2%;
         margin-bottom: 1%;
         margin-left: ${marginLeft};
         animation: anim_b 5s ease-in-out infinite alternate-reverse;
         background-size: 300% 300%;
+        
         &:hover{
             border-radius: 10%;
             padding:${padding2};

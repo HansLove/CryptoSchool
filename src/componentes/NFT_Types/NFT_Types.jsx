@@ -17,6 +17,7 @@ function NFT_Types({
         display:'block',
         margin:'auto',
         marginTop:marginTop,
+        alignItems:'center',
         marginBottom:'2%',
         width:'90%'}}
         id='nfts_id'

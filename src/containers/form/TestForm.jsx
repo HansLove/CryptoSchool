@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,lazy } from 'react'
 import QuestionText from '../../componentes/question/QuestionText'
 import QuestionOptions from '../../componentes/question/QuestionOptions'
 import BotonSubmit from '../../componentes/Boton/BotonSubmit'
-import axios from 'axios'
 import './estilo.css'
 import { actulizarCuenta } from '../../componentes/blockchain/Blockchain'
 import { getUserData } from '../../componentes/ConexionAxios/ConexionAxios'
 import Animacion_felicidades from '../../animations/Congrats/Animacion_felicidades'
+import { sendAnswer } from '../../componentes/ConexionAxios/ConexionServer'
+import LoadingSpinner from '../../componentes/LoadingSpinner/LoadingSpinner'
 
 function TestForm({
     id,
@@ -23,6 +24,7 @@ function TestForm({
     const [address, setAddress] = useState('')
     const [answers, setAnswers] = useState({})
     const [succesfulMinting, setSuccesfulMinting] = useState('null')
+    const [isLoading, setIsLoading] = useState(false)
 
 
     const onChangeAnswer = (e) => {
@@ -35,27 +37,25 @@ function TestForm({
     }
 
     const Submit=async()=>{
-
-        //Get user data and then the name
+        setIsLoading(true)
         let userData=await getUserData()
+        // console.log('user data: ',userData)
+        
+        let res_return=await sendAnswer(
+            id.toString(),
+            userData.name,
+            address.toString(),
+            answers)
 
-
-        axios.post('http://localhost:5002/nft/'+id.toString()+
-        '/'+address.toString()+'/'+userData.name
-        ,answers).
-        then((response)=>{
-            console.log(response.data.status);
-            setSuccesfulMinting(response.data.status)
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+        setSuccesfulMinting(res_return)
+        setIsLoading(false)
 
     }
 
     return (
 
-        <form className='test-form-container' onSubmit={handleSubmit}>
+        <form 
+        className='test-form-container' onSubmit={handleSubmit}>
             {/* <QuestionText
                 value={answers.answer1}
                 onChange={onChangeAnswer}
@@ -68,6 +68,7 @@ function TestForm({
                 boxShadow={"0px 10px 20px rgba(0, 0, 0, 0.07)"}
                 margin={"0 0 2rem"}
             /> */}
+
             {formData.map((item,key)=>
             
             <QuestionOptions
@@ -79,8 +80,8 @@ function TestForm({
                 options={item.options}
             />)} 
 
-         
-            {succesfulMinting=='null'?
+            {isLoading?<LoadingSpinner/>:
+            succesfulMinting=='null'?
             <BotonSubmit
                 onClick={Submit}
                 text={"Check answers"}

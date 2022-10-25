@@ -41,6 +41,7 @@ function CertificationSingleView() {
   return (
     <div>
         <NFT_Types/>
+        
         <HeroCertificaction description={DATA.description}/>
 
         {/* <FactCertificationOne/> */}

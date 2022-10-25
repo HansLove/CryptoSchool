@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+// import userImage from '../../componentes/image/profile-photo-example.jpg'
 
 
 
-function Image({src, alt, width, height,borderRadius, margin,cellphoneWidth='90%' }){
+function Image({
+    src, alt, 
+    width, height,borderRadius, margin,cellphoneWidth='90%' }){
 
     const Img = styled.img`
         width:${props => props.width};
@@ -22,9 +25,12 @@ function Image({src, alt, width, height,borderRadius, margin,cellphoneWidth='90%
     return(
         <Img 
         src={src} 
+        // defaultValue={userImage}
         alt={alt} 
         width={width} 
-        height={height} borderRadius={borderRadius} margin={margin} />
+        height={height} 
+        borderRadius={borderRadius} 
+        margin={margin} />
     )
 }
 

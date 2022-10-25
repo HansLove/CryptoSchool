@@ -11,14 +11,17 @@ function CardJobBank({id, userImage, userName, userPosition, userExperience, use
     const navigate = useNavigate();
     
     const onClickContact = () => {
-        navigate(`/user-profile/${id}`);
+        navigate(`/user-profile/${id}/${userName}`);
     }
     
     return (
         <div className='card-job-container'>
             <div className='user-info-g'>
                 <div className='user-image'>
-                    <Image src={userImage} alt={"profile-photo"} width={"5rem"} height={"auto"} borderRadius={"50%"} />
+                    <Image 
+                    src={userImage} 
+                    alt={"profile-photo"} 
+                    width={"5rem"} height={"auto"} borderRadius={"50%"} />
                 </div>
 
                 <div className='user-info'>

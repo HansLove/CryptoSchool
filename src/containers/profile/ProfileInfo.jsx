@@ -3,18 +3,20 @@ import BotonTwo from "../../componentes/Boton/BotonTwo";
 import Image from "../../componentes/imagen/Image";
 import Text from "../../componentes/Texto/Text";
 import UpdateInfoForm from "../form/UpdateInfoForm";
-import profilePhoto from "../../componentes/image/profile-photo-example.jpg"
+import profilePhoto from "../../componentes/image/fondo_2.png"
 import './estilo.css'
-import axios from "axios";
 import { getUserData } from "../../componentes/ConexionAxios/ConexionAxios";
-import { actulizarCuenta } from "../../componentes/blockchain/Blockchain";
 
 
 function ProfileInfo(){
 
     const [editMode, seteditMode] = useState(false)
-    const [userData, setUserData] = useState({name:'',description:'',image:profilePhoto,
-    occupation:''})
+    const [userData, setUserData] = useState({
+        name:'',
+        description:'',
+        image:profilePhoto,
+        occupation:''
+    })
     const [image, setImage] = useState(profilePhoto)
 
 
@@ -36,7 +38,8 @@ function ProfileInfo(){
                 {!editMode?
                 <>
                     <div className="account-photo">
-                        <Image src={image} 
+                        <Image 
+                        src={image} 
                         alt={"profile-photo"} 
                         width={"26rem"} height={"auto"} borderRadius={"2rem"}/>
 

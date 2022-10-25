@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import NothingHere from '../../animations/NothingHere/NothingHere'
 import { actulizarCuenta } from '../../componentes/blockchain/Blockchain'
 import { ObjetoDeccert } from '../../componentes/blockchain/ObjetoDeccert'
-import SingleNFT from '../../languaje/SingleNFT/SingleNFT'
+// import SingleNFT from '../../languaje/SingleNFT/SingleNFT'
 import {motion} from 'framer-motion/dist/framer-motion'
-import './estilo.css'
 import { getUserData } from '../../componentes/ConexionAxios/ConexionAxios'
 import UserBar from '../../componentes/UserBar/UserBar'
+import './estilo.css'
 
 export default function Profile() {
 
@@ -26,7 +26,7 @@ export default function Profile() {
           if(certificado['owner']==account)_lista.push(certificado)
       }
       setlistaNFT(_lista)
-      console.log('lista: ',_lista)
+      // console.log('lista: ',_lista)
 
       let resultado=await getUserData(account)
       setdata(resultado)

@@ -5,7 +5,6 @@ import { actulizarCuenta } from '../blockchain/Blockchain'
 const base_url='https://deccert.herokuapp.com/user/'
 
 
-
 export const registerUser=async({name,address,description,image,occupation})=>{
     try {
     await axios.post(base_url,{
@@ -30,10 +29,12 @@ export const getUserData=async()=>{
     var name=''
     var description=''
     var occupation=''
+
     let _address=await actulizarCuenta()
 
     await axios.get(base_url+_address.toString()).then(
         result=>{
+            // console.log('result ConexionAxios.js getUserData: ',result)
             name=result.data.data[0].name
             image=result.data.data[0].image
             description=result.data.data[0].description
@@ -43,8 +44,9 @@ export const getUserData=async()=>{
     
     )
     return {name,image,description,occupation}
+    
     } catch (error) {
-           console.log('erorr en conexion con axios: ',error.message) 
+           console.log('error in getUserData: ',error.message) 
            return false
     }
 }
@@ -81,7 +83,7 @@ export const getUsers=async()=>{
         
     } catch (error) {
            console.log('erorr en ConexionAxios: getUsers: ',error.message) 
-           return false
+           return []
     }
     return list
 }

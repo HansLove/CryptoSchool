@@ -52,7 +52,7 @@ function App() {
         </Route>
         <Route exact path='/mint' element={<Mint/>}></Route>
         <Route exact path='/job-bank' element={<JobBank/>}></Route>
-        <Route exact path = "/user-profile/:idUser" element={<ProfileSingle />}></Route>
+        <Route exact path = "/user-profile/:idUser/:name" element={<ProfileSingle />}></Route>
 
         <Route exact path='/' element={<Welcome/>}></Route>
 

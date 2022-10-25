@@ -26,7 +26,8 @@ function FactCertificationFive({
                 <Text text={subtitle} 
                 fontSize={"3.7rem"} 
                 fontSize2='1.5rem'
-                textColor={"black"} margin={"0"} />
+                textColor={"black"} 
+                margin={"0"} />
 
                 <div className='fact-cert-button-five'>
                     <BotonNavigate

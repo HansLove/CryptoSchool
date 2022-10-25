@@ -9,8 +9,6 @@ function SingleCertificado({
     name='',
     color='lightgreen',
     icon,
-    setcertificado,
-    certificado,
     colored=false
 }) {
 
@@ -40,7 +38,7 @@ function SingleCertificado({
     const Div=styled.div`
         background: ${selected?'linear-gradient(-45deg,'+color+',black)':colored?'linear-gradient(-45deg,'+color+',black)':'snow'};
         color: ${selected?'whitesmoke':colored?'white':'gray'};
-
+        
         &:hover{
             transition: all 0.5 ease-in-out;
             border: 1px dashed ${color};

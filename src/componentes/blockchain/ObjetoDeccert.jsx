@@ -38,12 +38,12 @@ export class ObjetoDeccert{
 
     async Manual(
         userName,
-        _certificado,
+        _uri,
         _address){
         try {
             var _res=await this.contrato.methods.ManualMinting(
                 userName,
-                _certificado,
+                _uri,
                 _address
                 
             ).send({from:this.account})

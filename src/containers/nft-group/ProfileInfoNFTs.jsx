@@ -13,12 +13,12 @@ function ProfileInfoNFTs() {
           <StateIndicator text="Recycling" fontSize={"16px"} fontWeight={"bold"} textColor={"white"} backgroundColor={"black"} borderRadius={"10px"} padding={"20px 10px"} margin={"10px 0"} />
         </div>
         <div className='group-cards-container'>
-          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"Lorem ipsum dolor"} NFTOwnerName={"Satoshi Nakamoto"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
-          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"Lorem ipsum dolor"} NFTOwnerName={"Satoshi Nakamoto"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
-          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"Lorem ipsum dolor"} NFTOwnerName={"Satoshi Nakamoto"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
-          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"Lorem ipsum dolor"} NFTOwnerName={"Satoshi Nakamoto"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
-          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"Lorem ipsum dolor"} NFTOwnerName={"Satoshi Nakamoto"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
-          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"Lorem ipsum dolor"} NFTOwnerName={"Satoshi Nakamoto"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
+          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"Bitcoin I"} NFTOwnerName={"Satoshi Nakamoto"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
+          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"Bitcoin II"} NFTOwnerName={"Satoshi Nakamoto"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
+          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"Blockchain Basic"} NFTOwnerName={"Satoshi Nakamoto"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
+          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"English II"} NFTOwnerName={"Satoshi Nakamoto"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
+          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"Bitcoin III"} NFTOwnerName={"Deccert"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
+          <NFTCardInfoTwo NFTImage={NFTImage} NFTName={"Blockchain system I"} NFTOwnerName={"Satoshi Nakamoto"} NFTOwnerImage={profilePhoto} NFTValue={"1.32 ETH"} NFTSystem={"BSC"} />
 
         </div>
       </div>

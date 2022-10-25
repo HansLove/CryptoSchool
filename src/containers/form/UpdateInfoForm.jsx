@@ -4,7 +4,7 @@ import TextArea from "../../componentes/Input/TextArea";
 import BotonSubmit from "../../componentes/Boton/BotonSubmit";
 import Image from "../../componentes/imagen/Image";
 import Text from "../../componentes/Texto/Text";
-import profilePhoto from "../../componentes/image/profile-photo-example.jpg"
+import profilePhoto from "../../componentes/image/blockchain.png"
 import './estilo.css'
 import { editUser, getUserData, registerUser } from "../../componentes/ConexionAxios/ConexionAxios";
 import { actulizarCuenta } from "../../componentes/blockchain/Blockchain";
@@ -66,9 +66,10 @@ function UpdateInfoForm() {
     }
 
     return (
-        <form className="profile-info-container" 
-        >
+        <form className="profile-info-container">
+
             <div className="account-info-update">
+
                 <div className="account-photo">
                     <Image src={changes.image.length>10?changes.image:image!=''?image:profilePhoto} 
                     alt={"profile-photo"} width={"26rem"} height={"auto"} borderRadius={"2rem"} />
@@ -89,7 +90,11 @@ function UpdateInfoForm() {
                 </div>
 
                 <div className="account-update">
-                    <Text text={"Update Information"} fontSize={"32px"} textColor={"white"} margin={"1rem 0 15px"} />
+                    <Text 
+                    text={"Update Information"} 
+                    fontSize={"32px"} 
+                    textColor={"white"} 
+                    margin={"1rem 0 15px"} />
 
                     <div className="label-update">
                         <Text text={"Name"} fontSize={"16px"} textColor={"white"} margin={"10px 0"} />
@@ -162,6 +167,7 @@ function UpdateInfoForm() {
                     padding={"14px 40px"}
                 />
             </div>}
+
         </form>
 
 

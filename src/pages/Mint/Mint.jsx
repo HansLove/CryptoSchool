@@ -7,8 +7,8 @@ import SingleCertificado from '../../componentes/single_certificado/SingleCertif
 import {Certificaciones} from '../../data/certifaciones.js'
 import {GiCoolSpices} from 'react-icons/gi'
 import {motion} from 'framer-motion/dist/framer-motion'
-
 import './estilo.css'
+import LoadingSpinner from '../../componentes/LoadingSpinner/LoadingSpinner'
 
 function Mint() {
 
@@ -17,14 +17,19 @@ function Mint() {
     const [address, setAddress] = useState('')
     const [isValid, setIsValid] = useState(false)
     const [certificado, setcertificado] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
     const [exito, setExito] = useState(false)
 
+    const Participation='https://gateway.pinata.cloud/ipfs/QmUeR4fVw7TpGMgifYFQsxzp14XcZh1B37boFaaEunqZ4t'
+
     const GenerarCertificado=async()=>{
+        setIsLoading(true)
         let objeto=new ObjetoDeccert()
         await objeto.load()
-        let res=await objeto.mint(name,certificado,address)
-        console.log('res: ',res.status)
+        let res=await objeto.Manual(name,Participation,address)
+        // console.log('res: ',res.status)
         setExito(res.status)
+        setIsLoading(false)
     }
 
     const ValidAddress=async(_address)=>{
@@ -69,27 +74,9 @@ function Mint() {
         placeholder='0x....'/>
         </>
         }
-        
+ 
+        {isLoading&&<LoadingSpinner/>}
         {isValid&&
-
-        <div style={{display:'block',margin:'auto',width:'99%',alignItems:'center'}}>
-        <p 
-        className='p_mint_name_of_the_user'>DECCERT NFT</p>
-
-        {Certificaciones.map((item,key)=><SingleCertificado 
-        name={item.name}
-        icon={item.icon}
-        imagen={item.image}
-        color={item.colors[0]}
-        certificado={certificado}
-        setcertificado={setcertificado}
-        colored={true}
-        key={key}/>)}
-        
-
-        </div>}   
-        
-        {isValid&&certificado!=''&&
         <Boton 
         borderRadius='10%'
         onClick={GenerarCertificado}

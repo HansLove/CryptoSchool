@@ -18,3 +18,10 @@
     border-radius: 40% 40%;
     width: 10%;
 }
+
+@media 
+(min-device-width:300px) 
+and (max-device-width: 1024px) 
+{
+    
+}

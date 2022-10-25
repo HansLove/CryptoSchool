@@ -11,6 +11,15 @@ const QuestionBox = styled.div`
         box-shadow:${props => props.boxShadow};
         border-radius:1rem;
         margin:${props => props.margin};
+        /* ................................................ */
+        @media 
+        (min-device-width:300px) 
+        and (max-device-width: 1024px) 
+        {   
+            margin: 2%;
+            width: 100%;
+        }   
+        
     `
 
 function QuestionOptions({ name, onChange, 
@@ -33,7 +42,12 @@ function QuestionOptions({ name, onChange,
         >
             <div className='question-container'>
                 <div className='number-question'>
-                    <Text text={numberQuestion + "."} fontSize={"26px"} fontWeight={"500"} textColor={textColor} margin={"0 16px 0 0"} />
+                    <Text 
+                    text={numberQuestion + "."} 
+                    fontSize={"26px"} 
+                    fontWeight={"500"} 
+                    textColor={textColor} 
+                    margin={"0 16px 0 0"} />
                 </div>
 
                 <div className='question-text'>
