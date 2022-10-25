@@ -1,46 +1,12 @@
 import Web3 from 'web3'
 // import detectEthereumProvider from '@metamask/detect-provider';
-import Web3Modal from "web3modal";
-import WalletConnectProvider from "@walletconnect/web3-provider";
-import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
 
 
 const web3=new Web3(window.ethereum)
 
-// const INFURA_ID='638abf31dffd41faa04a27725f181f26'
 let currentAccount = null;
 
-// const providerOptions = {
-//   /* See Provider Options Section */
-//   binancechainwallet: {
-//     package: true
-//   },
 
-//   coinbasewallet: {
-//     package: CoinbaseWalletSDK, // Required
-//     options: {
-//       appName: "DECCERT", // Required
-//       infuraId: INFURA_ID, // Required
-//       rpc: "", // Optional if `infuraId` is provided; otherwise it's required
-//       chainId: 1, // Optional. It defaults to 1 if not provided
-//       darkMode: false // Optional. Use dark theme, defaults to false
-//     }
-//   },
-
-//   walletconnect: {
-//     package: WalletConnectProvider, // required
-//     options: {
-//       infuraId: INFURA_ID // required
-//     }
-//   }
-// };
-
-
-// const web3Modal = new Web3Modal({
-//   // network: "mainnet", // optional
-//   // cacheProvider: true, // optional
-//   providerOptions // required
-// });
 
 
 export const ConectWallet=async()=>{
