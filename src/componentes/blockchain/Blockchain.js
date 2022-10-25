@@ -7,8 +7,6 @@ const web3=new Web3(window.ethereum)
 let currentAccount = null;
 
 
-
-
 export const ConectWallet=async()=>{
   // const provider = await web3Modal.connect();
   // let web3 = new Web3(provider);

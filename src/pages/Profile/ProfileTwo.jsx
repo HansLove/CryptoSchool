@@ -5,8 +5,6 @@ import ProfileNFTs from "../../containers/nft-group/ProfileNFTs";
 
 function Profile(){
 
-
-
     return(
         <div>
             <ProfileInfo/>

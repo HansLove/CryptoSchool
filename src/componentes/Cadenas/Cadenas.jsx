@@ -9,7 +9,13 @@ import Boton from '../Boton/Boton'
 
 
 
-function Cadenas({width='50%'}) {
+function Cadenas({
+    width='50%',
+    display='inline-flex',
+    fontSize='0.9rem',
+    background1='black',
+    background2='black'
+}) {
 
     const [chainId, setChainId] = useState('')
     const [isConnected, setIsConnected] = useState(true)
@@ -42,8 +48,8 @@ function Cadenas({width='50%'}) {
 
     const MainDiv=styled.div`
         position: relative;
-        display: inline-flex;
-        width: 25%;
+        display: ${display};
+        width: ${width};
         margin-left: auto;
         color: whitesmoke;
 
@@ -131,10 +137,10 @@ function Cadenas({width='50%'}) {
             <Boton
             onClick={web3Installed?()=>RequestConexion(setIsConnected):()=>window.open('https://metamask.io/download/')}
             text={web3Installed?'Connect Wallet':'Download Wallet'}
-            fontSize='0.9rem'
+            fontSize={fontSize}
             shadow='grey'
-            color1='black'
-            color2='black'
+            color1={background1}
+            color2={background2}
             padding='0.5%'
             padding2='0.5%'
             paddingTop='5%'

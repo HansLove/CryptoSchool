@@ -6,6 +6,8 @@ import UpdateInfoForm from "../form/UpdateInfoForm";
 import profilePhoto from "../../componentes/image/fondo_2.png"
 import './estilo.css'
 import { getUserData } from "../../componentes/ConexionAxios/ConexionAxios";
+import { CheckConexion } from "../../componentes/blockchain/Blockchain";
+import Cadenas from "../../componentes/Cadenas/Cadenas";
 
 
 function ProfileInfo(){
@@ -18,22 +20,35 @@ function ProfileInfo(){
         occupation:''
     })
     const [image, setImage] = useState(profilePhoto)
+    const [isConnected, setIsConnected] = useState(false)
+    const [loaded, setLoaded] = useState(false)
 
 
     useEffect(async() => {
-      
+        let res_conexion=await CheckConexion()
+        // console.log('res conexion: ',res_conexion.connect)
+        
         let data=await getUserData()
         setUserData(data)
+        setIsConnected(res_conexion.connect)
         //user has no registry in the database, go to edit mode 
         if(!data)seteditMode(true)
         //user doesnt have any image as a file
         if(!data.image=='')setImage(data.image)
+        setLoaded(true)
+
+        return()=>{
+            setLoaded(false)
+        }
     }, [])
+
     
 
     return(
         <div className="profile-info-container">
-            
+
+            {isConnected?
+            <>
             <div className="account-info">
                 {!editMode?
                 <>
@@ -58,11 +73,11 @@ function ProfileInfo(){
                     </div>
                 </>
                 :
+                //Modo edicion activado
                 <UpdateInfoForm/>
                 }
 
             </div>
-
 
             <BotonTwo 
                 onClick={()=>seteditMode(!editMode)}
@@ -75,13 +90,22 @@ function ProfileInfo(){
                 borderButton={"1px solid #FFFFFF"}
                 borderRadius={"26px"}
                 padding={"14px 40px"}
-                margin={"10px 0"}
+                margin={"10px 0"}/>
+            </>
+            :
+            //El usuario no esta conectado en Metamask
+            loaded&&
+            <>
+            <Cadenas
+            fontSize='2rem'
+            width='90%'
+            background1='navy'
+            background2='pink'
             />
-
+            </>
+            }
 
         </div>
-
-        
     )
 }
 

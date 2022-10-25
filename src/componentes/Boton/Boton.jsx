@@ -21,7 +21,7 @@ export default function Boton({
     const Button=styled.button`
         background: linear-gradient(-45deg,${color1},${color2});
         color:${color};
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: ${fontSize};
         font-weight:${fontWeight};
         border: 1px solid ${colorBorder};
@@ -40,6 +40,8 @@ export default function Boton({
             border-radius: 10%;
             padding:${padding2};
             transition: all 1s ease-in-out;
+            background: linear-gradient(45deg,${color2},${color2});
+            border: none;
         }
 
         @keyframes anim_b {
