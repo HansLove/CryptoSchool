@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { actulizarCuenta } from '../blockchain/Blockchain'
 
-// const base_url='http://localhost:5002/user/'
-const base_url='https://deccert.herokuapp.com/user/'
+const base_url='http://localhost:5002/user/'
+// const base_url='https://deccert.herokuapp.com/user/'
 
 
 export const registerUser=async({name,address,description,image,occupation})=>{
@@ -21,7 +21,6 @@ export const registerUser=async({name,address,description,image,occupation})=>{
            return false
     }
 }
-
 
 export const getUserData=async()=>{
     try {
@@ -51,7 +50,6 @@ export const getUserData=async()=>{
     }
 }
 
-
 export const editUser=async({name,address,description,image,occupation})=>{
     try {
     await axios.patch(base_url+address,{
@@ -69,8 +67,6 @@ export const editUser=async({name,address,description,image,occupation})=>{
     }
 }
 
-
-
 export const getUsers=async()=>{
     var list=[]
     try {
@@ -87,5 +83,4 @@ export const getUsers=async()=>{
     }
     return list
 }
-
 

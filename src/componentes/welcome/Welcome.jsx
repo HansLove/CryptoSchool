@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import {GiBookshelf, GiTeacher, GiWorld,GiMedal} from 'react-icons/gi'
+import {GiTeacher, GiAudioCassette,GiMedal} from 'react-icons/gi'
+import {FaBitcoin,FaNetworkWired} from 'react-icons/fa'
 import Partners from '../../pages/Partners/Partners'
 import Boton from '../Boton/Boton'
-import './estilo.css'
 import Div from '../Div/Div'
 import Trends from '../../pages/Trends/Trends'
 import WhatIs from '../../pages/WhatIs/WhatIs'
@@ -11,6 +11,7 @@ import FactDeccertOne from '../../containers/fact/FactDeccertOne';
 import FactDeccertFour from '../../containers/fact/FactDeccertFour';
 import OurConcept from '../../containers/fact/ourConcept/OurConcept';
 import WhatWeAreDoing from '../../containers/fact/WhatWeAreDoing';
+import './estilo.css'
 
 
 export default function Welcome() {
@@ -19,27 +20,21 @@ export default function Welcome() {
 
   return (
       <div className='div_main_welcome'>
-
-
             <div className='div_header_welcome'>
-
-              <p className='p_texto_principal'>
-                
-              
-              NFT Certification Protocol
-              </p>
+              <p className='p_texto_principal'>NFT Certification Protocol</p>
 
               <a href='./test'>
+                
               <Boton 
               // onClick={async()=>await window.open('https://deccert.com/')}
               marginTop='10%'
               marginLeft='5%'
-              fontSize='1.7rem'
-              borderRadius='10%'
+              fontSize='1.4rem'
+              borderRadius='7%'
               padding2='1%'
-              colorBorder='green'
-              color1='navy'
-              color2='lightgreen'
+              colorBorder='transparent'
+              color1='black'
+              color2='darkblue'
               display='inline-block'
               text={"Certifications NFT"}
               fontWeight='300'
@@ -51,32 +46,27 @@ export default function Welcome() {
           
           <>
             <div className='div_part_welcome'>
-              <GiWorld size={95} style={{display:'block',margin:'auto'}}/>
+              <GiAudioCassette size={95} style={{display:'block',margin:'auto'}}/>
 
-                <h2>Ilimited Access</h2>
+                <h2>NFTs 2.0</h2>
                 
-                <p>World Reach using blockchain</p>
+                <p>Utility base digital asset</p>
                 
             </div>
 
             <div className='div_part_welcome'>
-              <GiBookshelf size={95} style={{display:'block',margin:'auto'}}/>
+              <FaBitcoin size={95} style={{display:'block',margin:'auto'}}/>
+                <h2>The Goal</h2>
 
-                <h2>Our Courses</h2>
-                
-
-                <p>Automatic decentralized update</p>
-                
-                
-
+                <p>Monetize your skills</p>
             </div>
 
 
             <div className='div_part_welcome'>
-              <GiTeacher size={95} style={{display:'block',margin:'auto'}}/>
+              <FaNetworkWired size={95} style={{display:'block',margin:'auto'}}/>
 
-                <h2>Work with us</h2>
-                <p>Use 2.0 NFT´s for your academic process</p>
+                <h2>Find the job</h2>
+                <p>Use Deccert and find what you are looking</p>
     
                 
             </div>
@@ -85,9 +75,9 @@ export default function Welcome() {
             <div className='div_part_welcome'>
               <GiMedal size={95} style={{display:'block',margin:'auto'}}/>
               
-                <h2>NFT´s 2.0 and Learning</h2>
+                <h2>Proof of Learning</h2>
                 
-                <p>Blockchain in digital schools</p>
+                <p>Blockchain keeps track of the learning process</p>
                 
             </div>
 

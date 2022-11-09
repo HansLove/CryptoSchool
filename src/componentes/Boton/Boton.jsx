@@ -26,7 +26,6 @@ export default function Boton({
         font-weight:${fontWeight};
         border: 1px solid ${colorBorder};
         border-radius: ${borderRadius};
-        transition: all 0.5s ease-in-out;
         display: ${display};
         margin: ${margin};
         margin-top: ${marginTop};
@@ -35,13 +34,14 @@ export default function Boton({
         margin-left: ${marginLeft};
         animation: anim_b 5s ease-in-out infinite alternate-reverse;
         background-size: 300% 300%;
+        transition: all 0.5s ease-in-out;
+
         
         &:hover{
-            border-radius: 10%;
-            padding:${padding2};
-            transition: all 1s ease-in-out;
-            background: linear-gradient(45deg,${color2},${color2});
-            border: none;
+            transition: all 0.4s ease-in-out;
+            background: linear-gradient(45deg,${color1},${color1});
+            box-shadow: 0.5px 0.5px 0.5px 0.5px goldenrod;
+            letter-spacing: 0.05em;
         }
 
         @keyframes anim_b {

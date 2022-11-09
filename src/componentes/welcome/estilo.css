@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
-
 .div_main_welcome{
     display: block;
     z-index: -2;    
@@ -20,14 +19,14 @@
 
 }
 
-
-
-
 .p_texto_principal{
     width: 60%;
     vertical-align: top;
     display: inline-block;
-    font-size: 5.5rem;
+    font-size: 6rem;
+    font-weight: 800;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
 }
 
 
@@ -58,21 +57,20 @@
     border-radius: 3%;
     vertical-align: top;
     border: 1px solid goldenrod;
-    color:darkblue;
+    border: none;
+    color:black;
     background: radial-gradient(whitesmoke,snow);
     outline: none;
     transition: all 0.5s ease-in-out;
-
 
 }
 
 .div_part_welcome:hover{
     transition: all 0.5s ease-in-out;
-    background: radial-gradient(black,skyblue);
     padding: 0.5%;
-    color: whitesmoke;
-    border: 2px solid blueviolet;
-    
+    color: white;
+    background: radial-gradient(black,black);
+
 }
 
 .div_part_welcome h2{

@@ -1,7 +1,7 @@
 .div_what_is{
     margin-top: 7%;
-    background: rgba(0, 0, 0, 0.5);
-
+    /* background: rgba(0, 0, 0, 0.5); */
+    font-weight: 700;
 }
 
 .div_what_is h1{
@@ -9,14 +9,16 @@
     margin: auto;
     display: block;
     color: white;
+
     border-bottom: 3px solid crimson;
     border-radius: 15%;
 }
 
 .div_what_is img{
     width: 25%;
+    background: snow;
     display: inline-block;
-    box-shadow: 1px 1px 1px 1px lightgreen;
+    box-shadow: 1px 1px 1px 1px black;
     border-radius: 10%;
     margin-left: 1%;
 }
@@ -28,10 +30,10 @@
     margin-top: 2%;
     vertical-align: top;
     font-size: 1.8rem;
-    letter-spacing: 0.1em;
-    font-weight: 900;
+    font-weight: 800;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 0.07em;
 }
 
 @media 
@@ -42,7 +44,6 @@
     .div_what_is img{
         width: 95%;
         display: block;
-        box-shadow: 1px 1px 1px 1px lightgreen;
         border-radius: 10%;
         margin: auto;
     }

@@ -25,7 +25,6 @@ function ProfileInfo(){
 
     useEffect(async() => {
         let res_conexion=await CheckConexion()
-        // console.log('res conexion: ',res_conexion.connect)
         
         let data=await getUserData()
         setUserData(data)

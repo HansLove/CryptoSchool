@@ -14,14 +14,17 @@ function Trends() {
             <ul>
                 <li>
                     <button className='button_number'>1</button>
-                    <h2>Proof of Action</h2>
-                    The protocol allows keeping track of certifiable shares issued by users and financial entities
+                    <h2>Proof of Energy</h2>
+                    At the moment in which the human brain compiles information, we had a successful energetic exchange.
+                    With NFTs, we can keep track of this exchange.
                 </li>
 
                 <li>
                     <button className='button_number'>2</button>
                     <h2>Alternate Approach: NFT Public API</h2>
-                    Public database that gives full ownership of the NFTs resume to users</li>
+                    Public database that gives full ownership of the NFTs resume to users
+                    and makes the information open to all.
+                    </li>
 
                 <li>
                     <button className='button_number'>3</button>
@@ -32,9 +35,8 @@ function Trends() {
 
                 <li>
                     <button className='button_number'>4</button>
-                    <h2>Third-Party Services as work providers</h2>
-                    Third Party companies providing services and demand for workers with a specific profile 
-                    using our database based on digital assets.            
+                    <h2>Decentralization – the way to go</h2>
+                    The number one underlying goal of the protocol is to achieve full decentralization.
                 </li>
 
                

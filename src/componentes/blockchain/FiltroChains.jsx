@@ -3,7 +3,7 @@ import { dameCurrentChain } from "./Blockchain"
 export async function determinarChain(deployedNetwork,id){
 
     let array_binance_mainnet=[
-        "0x66cafdD687b83663512bCfC99e36724d86b11C7e"//Deccert
+        "0x5F494eed5C36Cf52c75465F0B4e28F69344C8973"//Deccert
         
     ]
     

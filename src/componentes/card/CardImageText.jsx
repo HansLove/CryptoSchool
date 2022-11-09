@@ -11,13 +11,20 @@ const Card = styled.div`
     border-radius:${props => props.borderRadius};
     padding:${props => props.padding};
     margin:${props => props.margin};
+    transition: all 0.5s ease-in;
+
+
+    &:hover{
+        border: 1px solid black;
+        transition: all 0.5s ease-in;
+    }
     @media 
     (min-device-width: 300px) 
     and (max-device-width: 1024px) 
     {
         display: block;
         margin: 2%;
-    }
+    }    
 `
 
 function CardImageText({border, borderRadius, padding, margin, image, imageHeight, title, titleFontSize, textContent, textFontSize}) {

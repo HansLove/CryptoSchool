@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ButtonLaser from '../Boton/ButtonLaser/ButtonLaser'
+import Payment from '../Payment/Payment'
 import Text from '../Texto/Text'
 import './estilo.css'
 
@@ -27,8 +28,7 @@ function TestHeader({
     
 
     <Header
-        padding={padding}
-    >
+        padding={padding}>
         <Text text={courseName} fontSize={"24px"} fontWeight={"500"} textColor={textColor} margin={"0 0 18px"}/>
         <Text text={testName} fontSize={"40px"} fontWeight={"500"} textColor={textColor} margin={"0 0 30px"}/>
         <div className='header-description'>
@@ -46,6 +46,8 @@ function TestHeader({
             color={backgroundColor}
             // style={{position:'absolute',top:0,right:0}}
         />
+
+        <Payment/>
     </Header>
     
     </div>

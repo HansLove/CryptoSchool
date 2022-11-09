@@ -9,7 +9,7 @@ function WhatIs() {
 
         <img 
         src={Logo} 
-        alt="logo"  />
+        alt="logo"/>
 
         <p>
         Deccert is a protocol that verified Resume NFT platform that turns people’s skills into blocks 

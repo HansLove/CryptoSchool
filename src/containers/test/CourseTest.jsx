@@ -4,6 +4,7 @@ import Payment from '../../componentes/Payment/Payment'
 import TestForm from '../form/TestForm'
 import './estilo.css'
 
+
 function CourseTest({
   name='General Test',
   testName="Your first certificate NFT",
@@ -31,12 +32,6 @@ function CourseTest({
             textColor={textColor}
         />
         
-        {selected&&!formVisible&&
-        <Payment 
-        makeVisible={()=>setFormVisible(true)}/>
-       
-        }
-
         {formVisible&&
         <TestForm 
          id={id}

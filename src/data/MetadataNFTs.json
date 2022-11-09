@@ -1,0 +1,34 @@
+[
+    {
+        "image":"https://ipfs.io/ipfs/QmeN3RiEuqfS2B7BVcQfFQYCaEBTnLvHcZAFWVp7rbLBcD",
+        "description":"Succesfully pass the test",
+        "name":"Bitcoin I",
+        "type":"Educational",
+        "attributes":[
+            {
+                "color":"orange",
+                "color2":"black"
+            },
+            {
+                "version":"v1"
+            }
+        ]
+    },
+
+
+    {
+        "image":"https://ipfs.io/ipfs/QmeN3RiEuqfS2B7BVcQfFQYCaEBTnLvHcZAFWVp7rbLBcD",
+        "description":"Participacion en el evento ocurrido en Mexico, Monterrey, Nuevo Leon.",
+        "name":"Blockchain Land Octubre 06 2022",
+        "type":"Participation",
+        "attributes":[
+            {
+                "color":"black",
+                "color2":"teal"
+            },
+            {
+                "version":"v1"
+            }
+        ]
+    }
+]
