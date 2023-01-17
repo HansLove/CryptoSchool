@@ -1,9 +1,8 @@
 import React, { useEffect, useState,lazy, useContext } from 'react'
-import QuestionText from '../../componentes/question/QuestionText'
+// import QuestionText from '../../componentes/question/QuestionText'
 import QuestionOptions from '../../componentes/question/QuestionOptions'
 import BotonSubmit from '../../componentes/Boton/BotonSubmit'
 import { getUserData } from '../../componentes/ConexionAxios/ConexionAxios'
-import Animacion_felicidades from '../../animations/Congrats/Animacion_felicidades'
 import { sendAnswer } from '../../componentes/ConexionAxios/ConexionServer'
 import LoadingSpinner from '../../componentes/LoadingSpinner/LoadingSpinner'
 import { DataContext } from '../../context/DataContext'
@@ -83,8 +82,7 @@ function TestForm({
             />
             :
             succesfulMinting?
-            // <p>Amazing job! You minted your Deccert NFT</p>
-            <Animacion_felicidades/>
+            <p>Amazing job! You minted your Deccert NFT</p>
             :
             <p style={{color:'crimson',fontWeight:'900',fontSize:'3rem'}}>You failed the test</p>
             }
