@@ -1,10 +1,9 @@
 import React, { useEffect,useState } from 'react'
 import NFTCardInfo from '../../componentes/single_nft/NFTCardInfo';
 import NFTImage from "../../componentes/image/image-card-nft-example.png"
-// import StateIndicator from '../../componentes/state_indicator/StateIndicator'
 import profilePhoto from "../../componentes/image/EDDI.png"
-import { ObjetoDeccert } from '../../componentes/blockchain/ObjetoDeccert';
-import { actulizarCuenta } from '../../componentes/blockchain/Blockchain';
+import { ObjetoDeccert } from '../../blockchain/ObjetoDeccert';
+import { getCurrentAccount } from '../../blockchain/Blockchain';
 import LoadingSpinner from '../../componentes/LoadingSpinner/LoadingSpinner';
 import './estilo.css'
 
@@ -20,7 +19,7 @@ function ProfileNFTs({
 useEffect(async() => {
   setLoading(true)
   let objeto=new ObjetoDeccert()
-  let account=await actulizarCuenta()
+  let account=await getCurrentAccount()
   await objeto.load()
   let _total=await objeto.getTotal()
   var _lista=[]

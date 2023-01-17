@@ -2,20 +2,22 @@ import React, { useEffect, useState } from "react";
 import InputTwo from "../../componentes/Input/InputTwo";
 import TextArea from "../../componentes/Input/TextArea";
 import BotonSubmit from "../../componentes/Boton/BotonSubmit";
-import Image from "../../componentes/imagen/Image";
+// import Image from "../../componentes/imagen/Image";
 import Text from "../../componentes/Texto/Text";
 import profilePhoto from "../../componentes/image/blockchain.png"
 import { editUser, getUserData, registerUser } from "../../componentes/ConexionAxios/ConexionAxios";
-import { actulizarCuenta } from "../../componentes/blockchain/Blockchain";
+import { getCurrentAccount } from "../../blockchain/Blockchain";
+import {FaUserCircle} from 'react-icons/fa'
 import './estilo.css'
 
+// Funcion donde el usuario actualiza su base de datos
 function UpdateInfoForm() {
 
     const [userData, setUserData] = useState({
         name:'',
         description:'',
         image:profilePhoto,
-    occupation:''})
+        occupation:''})
 
     const [isRegistred, setIsRegistred] = useState(true)
     const [imageSelected, setImageSelected] = useState(false)
@@ -27,7 +29,6 @@ function UpdateInfoForm() {
         let data=await getUserData()
         setUserData(data)
         setURL(data.image)
-
 
         //user has no registry in the database, go to edit mode 
         if(!data)setIsRegistred(false)
@@ -46,7 +47,6 @@ function UpdateInfoForm() {
         setChanges({ ...changes, [e.target.name]: e.target.value })
     } 
 
-
     const SubmitUserData=async()=>{
         if(URL=='')return
 
@@ -55,7 +55,7 @@ function UpdateInfoForm() {
                 name:changes.name,
                 description:changes.description,
                 image:URL,
-                address:await actulizarCuenta(),
+                address:await getCurrentAccount(),
                 occupation:changes.occupation
             })
         }else{
@@ -63,7 +63,7 @@ function UpdateInfoForm() {
                 name:changes.name,
                 description:changes.description,
                 image:URL,
-                address:await actulizarCuenta(),
+                address:await getCurrentAccount(),
                 occupation:changes.occupation
             })
         }
@@ -78,12 +78,18 @@ function UpdateInfoForm() {
     ]
 
     const imagesWidth='15rem'
+
     return (
         <form className="profile_info_container">
+            
+            {/* El usuario no tiene registro */}
+            <div className='div_no_register'>
+                <FaUserCircle size={400}/>
+            </div>
 
-            <div className="account-info-update">
+            <div className="account_info_update">
 
-                {!imageSelected?
+                {/* {!imageSelected?
                 <div className="account_photo">
                     <Image 
                     display='inline-block'
@@ -94,6 +100,7 @@ function UpdateInfoForm() {
                     borderRadius={"2rem"} />
 
                     {ProfileImages.map((image,key)=><Image 
+                    key={key}
                     onClick={()=>{
                         setImageSelected(true)
                         setURL(image)
@@ -121,7 +128,7 @@ function UpdateInfoForm() {
                     width={'40rem'} 
                     height={"auto"} 
                     borderRadius={"2rem"} />                    
-                </div>}
+                </div>} */}
 
 
                 <div className="account-update">
@@ -142,8 +149,6 @@ function UpdateInfoForm() {
                             fontSize={"16px"}
                             padding={"15px 24px"}
                             textColor={"black"}
-                            backgroundColor={"#F3F3F3"}
-                            borderRadius={"10px"}
                             margin={"0"}
                         />
                     </div>
@@ -188,20 +193,17 @@ function UpdateInfoForm() {
             </div>
 
             {changes.name.length>0&&changes.occupation.length>0&&changes.description.length>7&&
-            <div className="account-modifiders">
                 <BotonSubmit
                     onClick={SubmitUserData}
                     text={"Update"}
                     fontSize={"18px"}
                     fontWeight={"500"}
-                    textColor={"white"}
-                    buttonColor={"#3B37FF"}
+                    textColor={"black"}
                     borderButton={"none"}
                     borderRadius={"26px"}
                     margin={"10px 0"}
                     padding={"14px 40px"}
-                />
-            </div>}
+                />}
 
         </form>
 

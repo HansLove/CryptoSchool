@@ -28,7 +28,6 @@ function AutomaticConversion({
         let rate=USD_PRICE/_res
         setRate(rate.toString().substr(0,6))
 
-
       }, [price]);
 
 
@@ -59,17 +58,17 @@ function AutomaticConversion({
         return precio
       }
   
-      const SeparadorDecimal=(num)=>{
+    const SeparadorDecimal=(num)=>{
         return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
              
     }
   return <p style={{
-      display:'block',
-      marginLeft:'10%',
+      display:'inline-block',
+      marginLeft:'1%',
       width:'fit-content',
       fontFamily:'monospace',
       color:color,
-      fontSize:'1.1rem'
+      fontSize:'1.2rem'
          }}>
 
            {visible&&<>

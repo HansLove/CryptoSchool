@@ -4,10 +4,8 @@ import Polygon from './image/polygon_1.png'
 import Binance from './image/binance_1.png'
 import styled from 'styled-components'
 import { AiFillAlert } from 'react-icons/ai'
-import { CheckConexion, dameCurrentChain, RequestConexion } from '../blockchain/Blockchain'
+import { CheckConexion, getCurrentChain, RequestConexion } from '../../blockchain/Blockchain'
 import Boton from '../Boton/Boton'
-
-
 
 function Cadenas({
     width='50%',
@@ -23,7 +21,7 @@ function Cadenas({
 
 
     useEffect(async() => {
-        const _chainId = await dameCurrentChain()
+        const _chainId = await getCurrentChain()
         const respuesta=await CheckConexion()
         console.log('respuesta::',respuesta)
         setChainId(_chainId)

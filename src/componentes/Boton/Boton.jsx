@@ -12,7 +12,6 @@ export default function Boton({
   margin='auto',
   marginTop='1%',
   marginLeft='null',
-  padding2='1%',
   borderRadius='10% 15%',
   colorBorder='transparent',
   fontWeight='100'

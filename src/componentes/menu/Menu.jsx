@@ -1,31 +1,18 @@
-import React, { useEffect, useState, useContext } from 'react'
-import Logo from '../image/logo_deccert.png'
-import './estilo.css'
 import {
   NavLink
 } from "react-router-dom";
-import Cadenas from '../Cadenas/Cadenas'
-// import Search from '../search-bar/Search'
-
+import Search from '../search-bar/Search'
+import './estilo.css'
+import ButtonConnect from '../ButtonConnect/ButtonConnect';
 
 
 function Menu() {
 
-
   return (
     <nav className='nav_menu'>
-
-      <NavLink
-        style={{ marginLeft: '2%' }}
-        id="RouterNavLink"
+      {/* <img
         className='img_logo_menu'
-        to='/mint'
-        >
-        <img
-          width='7%'
-          src={Logo} />
-          
-      </NavLink>
+        src={Logo} /> */}
 
       <NavLink
         id="RouterNavLink"
@@ -48,14 +35,6 @@ function Menu() {
       </NavLink>
 
 
-
-      <NavLink
-        id="RouterNavLink"
-        to='/certifications'>
-        CERTIFICATIONS
-      </NavLink>
-
-
       {/* <Search
         name="name"
         type="text"
@@ -72,8 +51,7 @@ function Menu() {
         marginButtom={"0 0 0 -100px"}
       /> */}
 
-
-      <Cadenas/>
+      <ButtonConnect/>
 
     </nav>
 

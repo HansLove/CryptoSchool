@@ -6,7 +6,8 @@ const Button = styled.button`
     cursor:pointer;
     height: 7vh;
     position: absolute;
-    right: 120px;
+    right: 20px;
+    bottom: 0;
     font-size:${props => props.fontSize};
     font-weight:${props => props.fontWeight};
     color:${props => props.textColor};

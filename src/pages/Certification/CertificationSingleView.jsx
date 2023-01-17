@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import HeroCertificaction from '../../containers/hero-section/HeroCertificaction'
-import FactCertificationOne from '../../containers/fact/FactCertificationOne'
-import FactCertificationTwo from '../../containers/fact/FactCertificationTwo'
-import FactCertificationThree from '../../containers/fact/FactCertificationThree'
+// import FactCertificationOne from '../../containers/fact/FactCertificationOne'
+// import FactCertificationTwo from '../../containers/fact/FactCertificationTwo'
+// import FactCertificationThree from '../../containers/fact/FactCertificationThree'
 import FactCertificationFour from '../../containers/fact/FactCertificationFour'
 import FactCertificationFive from '../../containers/fact/FactCertificationFive'
 import NFT_Types from '../../componentes/NFT_Types/NFT_Types'
 import {Data} from '../../data/Certifications_data.js'
 
 function CertificationSingleView() {
-
 
   const {nameCertification}=useParams()
 
@@ -30,11 +29,8 @@ function CertificationSingleView() {
         })
         
       }
-      
     });
-    return () => {
-      
-    }
+    
   }, [nameCertification])
   
 

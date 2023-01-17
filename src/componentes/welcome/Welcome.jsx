@@ -1,22 +1,16 @@
-import React, { useEffect } from 'react';
-import {GiTeacher, GiAudioCassette,GiMedal} from 'react-icons/gi'
+import {GiAudioCassette,GiMedal} from 'react-icons/gi'
 import {FaBitcoin,FaNetworkWired} from 'react-icons/fa'
-import Partners from '../../pages/Partners/Partners'
 import Boton from '../Boton/Boton'
-import Div from '../Div/Div'
-import Trends from '../../pages/Trends/Trends'
-import WhatIs from '../../pages/WhatIs/WhatIs'
-import Roadmap from '../../containers/roadmap/Roadmap';
-import FactDeccertOne from '../../containers/fact/FactDeccertOne';
-import FactDeccertFour from '../../containers/fact/FactDeccertFour';
-import OurConcept from '../../containers/fact/ourConcept/OurConcept';
-import WhatWeAreDoing from '../../containers/fact/WhatWeAreDoing';
+// import Div from '../Div/Div'
+// import Trends from '../../pages/Trends/Trends'
+// import Roadmap from '../../containers/roadmap/Roadmap';
+// import FactDeccertOne from '../../containers/fact/FactDeccertOne';
+// import OurConcept from '../../containers/fact/ourConcept/OurConcept';
+// import WhatWeAreDoing from '../../containers/fact/WhatWeAreDoing';
 import './estilo.css'
 
 
 export default function Welcome() {
-
-
 
   return (
       <div className='div_main_welcome'>
@@ -24,21 +18,18 @@ export default function Welcome() {
               <p className='p_texto_principal'>NFT Certification Protocol</p>
 
               <a href='./test'>
-                
-              <Boton 
-              // onClick={async()=>await window.open('https://deccert.com/')}
-              marginTop='10%'
-              marginLeft='5%'
-              fontSize='1.4rem'
-              borderRadius='7%'
-              padding2='1%'
-              colorBorder='transparent'
-              color1='black'
-              color2='darkblue'
-              display='inline-block'
-              text={"Certifications NFT"}
-              fontWeight='300'
-              />
+                <Boton 
+                marginTop='10%'
+                marginLeft='5%'
+                fontSize='1.4rem'
+                borderRadius='10%'
+                colorBorder='transparent'
+                color1='black'
+                color2='black'
+                display='inline-block'
+                text={"Mint NFT"}
+                fontWeight='300'
+                />
               </a>
 
             </div>
@@ -70,7 +61,6 @@ export default function Welcome() {
     
                 
             </div>
-
             
             <div className='div_part_welcome'>
               <GiMedal size={95} style={{display:'block',margin:'auto'}}/>
@@ -83,27 +73,19 @@ export default function Welcome() {
 
           </>
 
-    
-      <Div View={<WhatIs/>}/>
-
-      <Div View={
-      <Trends/>}/>
+      {/* <Div View={
+      <Trends/>}/> */}
 
 
-      <Roadmap/>
+      {/* <Roadmap/> */}
 
-      <FactDeccertOne/>
+      {/* <FactDeccertOne/> */}
       
-      <Div View={
-      <OurConcept/>}/>
+      {/* <Div View={
+      <OurConcept/>}/> */}
 
-      <WhatWeAreDoing/>
+      {/* <WhatWeAreDoing/> */}
       
-      <Div View={
-      <FactDeccertFour/>}/>
-
-      <Div View={<Partners/>}/>
-
       </div>
   )
 }

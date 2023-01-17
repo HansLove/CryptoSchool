@@ -1,9 +1,9 @@
-import {GiWaterRecycling} from 'react-icons/gi'
+// import {GiWaterRecycling} from 'react-icons/gi'
 import {MdCastForEducation} from 'react-icons/md'
 import {GiHand} from 'react-icons/gi'
-import {BiDonateHeart} from 'react-icons/bi'
-import {BsGem} from 'react-icons/bs'
-import {SiAdguard} from 'react-icons/si'
+// import {BiDonateHeart} from 'react-icons/bi'
+// import {BsGem} from 'react-icons/bs'
+// import {SiAdguard} from 'react-icons/si'
 
 const size1=60
 export const Certificaciones=[

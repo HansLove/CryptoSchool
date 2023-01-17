@@ -10,6 +10,11 @@ const Label = styled.label`
         transition: all 0.3s;
         margin:${props => props.margin};
         cursor:pointer;
+
+        &:hover{
+          background: linear-gradient(25deg,navy,black);
+          color:white;
+        }
     `
 
 function Option({name, text, padding, textColor, backgroundColor, borderRadius, margin}) {

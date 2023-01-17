@@ -87,10 +87,13 @@
     margin: auto;
 }
 
-@media (max-width: 500px) {
+@media 
+(min-device-width:300px) 
+and (max-device-width: 1024px){
+
     .div_part_welcome{
-    width: 95%;
-    display: block;
+        width: 95%;
+        display: block;
     
     }
 

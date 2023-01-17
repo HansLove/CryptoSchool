@@ -1,5 +1,6 @@
 [
     {
+        "uri":"https://ipfs.io/ipfs/QmSorwT3gB19bNhj791kQx4v26TJaRppETNyYELmETmamX?filename=educational_json.json",
         "name":"Bitcoin Fundamentals",
         "testName":"Your first Deccert NFT",
         "description":"Automatic proof of learning",
@@ -64,113 +65,284 @@
         ]        
 
     },
+
     {
-        "name":"Blockchain",
-        "testName":"Level I Blockchain Test",
-        "description":"This test will proof your blockchain understanding",
+        "uri":"https://ipfs.io/ipfs/QmSorwT3gB19bNhj791kQx4v26TJaRppETNyYELmETmamX?filename=educational_json3.json",
+        "name":"Javascript II",
+        "testName":"Stronger and better in JS",
+        "description":"Larn the most popular languaje",
         "image":"https://firebasestorage.googleapis.com/v0/b/deccert-1bc30.appspot.com/o/Bitcoin_logo_2.jpg?alt=media&token=265d1225-e464-40e0-925a-c3aac1bbacd3",
         "type":1,
-        "backgroundColor":"mediumseagreen",
+        "backgroundColor":"hotpink",
         "formData":[
             {
-                "question":"What is ABI?",
+                "question":"What is the difference between var, let, and const in JavaScript?",
                 "options":[
-                    {
-                        "text": "App Binance Internet"
-                    },
-                    {
-                        "text": "Application Binary Interface"
-                    },
-                    {
-                        "text": "Alliance Bet Integrity"
-                    }
+                {
+                "text": "var is function scoped, let and const are block scoped"
+                },
+                {
+                "text": "var is block scoped, let and const are function scoped"
+                },
+                {
+                "text": "var and let are function scoped, const is block scoped"
+                },
+                {
+                "text": "var and const are function scoped, let is block scoped"
+                }
                 ]
-            },
-
-            {"question":"Bitcoin Consensus Alghoritm?",
+                },
+                {
+                "question":"What is the difference between == and === in JavaScript?",
                 "options":[
-                    {
-                        "text": "Proof of Burn"
-                    },
-                    {
-                        "text": "Proof of Stake"
-                    },
-                    {
-                        "text": "Proof of Work"
-                    }
+                {
+                "text": "== is a loose equality comparison while === is a strict equality comparison"
+                },
+                {
+                "text": "== is a strict equality comparison while === is a loose equality comparison"
+                },
+                {
+                "text": "== is used for string comparison while === is used for numeric comparison"
+                },
+                {
+                "text": "== is used for numeric comparison while === is used for string comparison"
+                }
                 ]
-            },
-
-            {"question":"Bitcoin is a ",
+                },
+                {
+                "question":"Which of the following is a closure in JavaScript?",
                 "options":[
-                    {
-                        "text": "Private network"
-                    },
-                    {
-                        "text": "Public network"
-                    },
-                    {
-                        "text": "Bank Database"
-                    },
-                    {
-                        "text": "Coin"
-                    }
+                {
+                "text": "A function within a function that has access to the outer function's variables"
+                },
+                {
+                "text": "A function that returns another function"
+                },
+                {
+                "text": "A function that does not have any parameters"
+                },
+                {
+                "text": "A function that is immediately invoked"
+                }
                 ]
-            }            
-                    
-
-
-        ] 
+                },
+                {
+                "question":"What is the difference between null and undefined in JavaScript?",
+                "options":[
+                {
+                "text": "null represents an intentional absence of any object value while undefined represents an uninitialized variable"
+                },
+                {
+                "text": "null is an object while undefined is a primitive value"
+                },
+                {
+                "text": "null and undefined are the same thing"
+                },
+                {
+                "text": "null is a property of the global object while undefined is a variable in the global scope"
+                }
+                ]
+                },
+                {
+                "question":"What is the difference between synchronous and asynchronous JavaScript?",
+                "options":[
+                {
+                "text": "Synchronous JavaScript runs in a single thread while asynchronous JavaScript runs in multiple threads"
+                },
+                {
+                "text": "Synchronous JavaScript blocks execution while asynchronous JavaScript does not"
+                },
+                {
+                "text": "Synchronous JavaScript runs faster than asynchronous JavaScript"
+                },
+                {
+                "text": "Synchronous JavaScript runs on the server while asynchronous JavaScript runs on the client"
+                }
+                ]
+                }
+        ]  
     },
 
     {
-        "name":"Solidity",
-        "testName":"Level I",
-        "description":"This test will proof your blockchain developer skills in solidity",
+        "uri":"https://ipfs.io/ipfs/QmSorwT3gB19bNhj791kQx4v26TJaRppETNyYELmETmamX?filename=educational_json2.json",
+        "name":"React Js I",
+        "testName":"Stronger and better in JS",
+        "description":"Larn the most popular languaje",
         "image":"https://firebasestorage.googleapis.com/v0/b/deccert-1bc30.appspot.com/o/Bitcoin_logo_2.jpg?alt=media&token=265d1225-e464-40e0-925a-c3aac1bbacd3",
         "type":1,
-        "backgroundColor":"darkmagenta",
+        "backgroundColor":"teal",
         "formData":[
             {
-                "question":"Private data is really private in a Smart Contract?",
+                "question":"What is the purpose of JSX?",
+                "options":[
+                {
+                "text": "JSX is a syntax extension for JavaScript, it allows to write HTML elements in JavaScript"
+                },
+                {
+                "text": "JSX is a JavaScript library for building user interfaces"
+                },
+                {
+                "text": "JSX is a pre-processor step that adds XML syntax to JavaScript"
+                },
+                {
+                "text": "JSX is a type of JavaScript that runs on the server"
+                }
+                ]
+                },
+                {
+                "question":"What is the virtual DOM?",
+                "options":[
+                {
+                "text": "A virtual representation of the actual DOM, it optimizes the process of updating the UI"
+                },
+                {
+                "text": "A lightweight copy of the actual DOM, it allows to make changes in the UI without affecting the real DOM"
+                },
+                {
+                "text": "A JavaScript object that contains the elements of the actual DOM"
+                },
+                {
+                "text": "A tool for debugging the actual DOM"
+                }
+                ]
+                },
+                {
+                "question":"What is the difference between state and props in React?",
+                "options":[
+                {
+                "text": "state is the internal data of a component while props are the data passed from a parent component"
+                },
+                {
+                "text": "state is the data passed from a parent component while props are the internal data of a component"
+                },
+                {
+                "text": "state and props are the same thing"
+                },
+                {
+                "text": "state is used for styling while props are used for data flow"
+                }
+                ]
+                },
+                {
+                "question":"What is the difference between a controlled and uncontrolled component in React?",
+                "options":[
+                {
+                "text": "Controlled components have their state controlled by the parent component, while uncontrolled components manage their own state"
+                },
+                {
+                "text": "Controlled components manage their own state, while uncontrolled components have their state controlled by the parent component"
+                },
+                {
+                "text": "Controlled components are used for forms, while uncontrolled components are used for displaying data"
+                },
+                {
+                "text": "Controlled components are used for displaying data, while uncontrolled components are used for forms"
+                }
+                ]
+                },
+                {
+                "question":"What is the purpose of the lifecycle methods in React?",
+                "options":[
+                {
+                "text": "Lifecycle methods allow a component to control when it is created, updated and destroyed"
+                },
+                {
+                "text": "Lifecycle methods are used for debugging the component"
+                },
+                {
+                "text": "Lifecycle methods are used for styling the component"
+                },
+                {
+                "text": "Lifecycle methods are used for managing the data flow between components"
+                }
+                ]
+                }            
+        ]  
+    },
+
+    {
+        "uri":"https://ipfs.io/ipfass/QmSorwT3gB19bNhj791kQx4v26TJaRppETNyYELmETmamX?filename=educational_json.json",
+        "name":"Javascript I",
+        "testName":"Stronger and better in JS",
+        "description":"Larn the most popular languaje",
+        "image":"https://firebasestorage.googleapis.com/v0/b/deccert-1bc30.appspot.com/o/Bitcoin_logo_2.jpg?alt=media&token=265d1225-e464-40e0-925a-c3aac1bbacd3",
+        "type":1,
+        "backgroundColor":"darkorange",
+        "formData":[
+            {
+                "question":"What is the difference between var, let, and const in JavaScript?",
                 "options":[
                     {
-                        "text": "Yes"
+                        "text": "var is function scoped, let and const are block scoped"
                     },
                     {
-                        "text": "No"
+                        "text": "var is block scoped, let and const are function scoped"
                     },
                     {
-                        "text": "Maybe"
+                        "text": "var and let are function scoped, const is block scoped"
+                    },
+                    {
+                        "text": "var and const are function scoped, let is block scoped"
+                    }
+                ]
+            },
+            
+            {
+                "question":"Which of the following is the correct way to declare an array in JavaScript?",
+                "options":[
+                    {
+                        "text": "var myArray = [1, 2, 3]"
+                    },
+                    {
+                        "text": "var myArray = new Array(1, 2, 3)"
+                    },
+                    {
+                        "text": "myArray = [1, 2, 3]"
+                    },
+                    {
+                        "text": "myArray = new Array[1, 2, 3]"
                     }
                 ]
             },
 
-            {"question":"Whats EVM?",
+            {
+                "question":"How do you define a function in JavaScript?",
                 "options":[
                     {
-                        "text": "Ethereum Virtual Machine"
+                        "text": "function myFunction() {}"
                     },
                     {
-                        "text": "Enviroment Vast Motor"
+                        "text": "var myFunction = function() {}"
+                    },
+                    {
+                        "text": "myFunction() {}"
+                    },
+                    {
+                        "text": "function = myFunction() {}"
                     }
                 ]
             },
 
-            {"question":"Can you write solidity code in Bitcoin",
+            {
+                "question":"Which of the following is the correct way to add an element to the end of an array in JavaScript?",
                 "options":[
                     {
-                        "text": "Yes"
+                        "text": "myArray.append(4);"
                     },
                     {
-                        "text": "No"
+                        "text": "myArray.push(4);"
+                    },
+                    {
+                        "text":"myArray.add(4);"
+                    },
+                    {
+                        "text": "myArray[myArray.length] = 4;"
                     }
                 ]
-            }            
-                    
+            }
+        ]   
+    }
 
-
-        ] 
-    }    
+        
     
 ]

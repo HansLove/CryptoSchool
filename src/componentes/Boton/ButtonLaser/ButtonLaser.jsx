@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-
-
 import './estilo.css'
 
 function ButtonLaser({
@@ -15,10 +13,10 @@ function ButtonLaser({
 }) {
 
     const A=styled.a`
-    display: ${display};
-    width: fit-content;
-    margin: ${margin};
-    font-size: ${fontSize};
+      display: ${display};
+      width: fit-content;
+      margin: ${margin};
+      font-size: ${fontSize};
     &:hover{
         box-shadow: 0 0 35px ${color};
         letter-spacing: 0.2em;

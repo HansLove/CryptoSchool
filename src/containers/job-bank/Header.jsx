@@ -1,13 +1,13 @@
-import React from 'react'
 import Text from '../../componentes/Texto/Text'
 import Search from '../../componentes/search-bar/Search'
-
+import Sections from '../../componentes/Materias/Sections'
 import './estilo.css'
 
 function Header() {
   return (
     <div className='job-bank-header'>
       <div className='fact-content'>
+
 
         <Text text={"DECCERT"}
           fontSize={"1.5rem"}
@@ -19,9 +19,11 @@ function Header() {
           fontSize={"20px"}
           textColor={"white"}
           margin={"2rem 40vw 2rem 0"}
-        />
+          />
 
-        <Search
+        <Sections/>
+
+        {/* <Search
           name="name"
           type="text"
           jobBankSearch={true}
@@ -36,7 +38,7 @@ function Header() {
           border={"1px solid white"}
           paddingButtom={"15px 24px"}
           marginButtom={"0 0 0 -100px"}
-        />
+        /> */}
 
 
       </div>

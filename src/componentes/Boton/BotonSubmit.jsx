@@ -1,40 +1,36 @@
-import React from "react";
 import styled from "styled-components";
-
-const Button = styled.button`
-        text-decoration:none;
-        cursor:pointer;
-        font-size:${props => props.fontSize};
-        font-weight:${props => props.fontWeight};
-        color:${props => props.textColor};
-        background-color:${props => props.buttonColor};
-        border:${props => props.borderButton};
-        border-radius:${props => props.borderRadius};
-        margin:${props => props.margin};
-        padding:${props => props.padding};
-    `
 
 function BotonSubmit({ 
     onClick,
-    text, 
-    fontSize, fontWeight, textColor, 
-    buttonColor, borderButton,
-    borderRadius, 
-    margin, padding }) {
+    text
+}) {
+
+    const Button = styled.button`
+        cursor:pointer;
+        display: block;
+        margin: auto;
+        font-size:1.2rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight:600;
+        color:white;
+        background:navy;
+        border:none;
+        border-radius:0.5rem;
+        padding: 1% 2%;
+        transition: all 0.5s ease-in-out;
+
+        &:hover{
+            transition: all 0.5s ease-in-out;
+            letter-spacing: 0.1em;
+            border-radius: 15px;
+            background: blue;
+        }
+`
 
     return (
-       
         <Button 
             onClick={onClick}
             type="submit"
-            fontSize={fontSize}
-            fontWeight={fontWeight}
-            textColor={textColor}
-            buttonColor={buttonColor}
-            borderButton={borderButton}
-            borderRadius={borderRadius}
-            margin={margin}
-            padding={padding}
         >
             {text}
         </Button>

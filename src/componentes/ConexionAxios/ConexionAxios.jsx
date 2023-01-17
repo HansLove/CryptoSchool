@@ -1,7 +1,8 @@
 import axios from 'axios'
-import { actulizarCuenta } from '../blockchain/Blockchain'
+import { getCurrentAccount } from '../../blockchain/Blockchain'
 
-const base_url='http://localhost:5002/user/'
+// const base_url='http://localhost:5002/user/'
+const base_url='http://localhost:5002/'
 // const base_url='https://deccert.herokuapp.com/user/'
 
 
@@ -22,6 +23,7 @@ export const registerUser=async({name,address,description,image,occupation})=>{
     }
 }
 
+// obtener datos del usuario desde backend
 export const getUserData=async()=>{
     try {
     var image=''
@@ -29,9 +31,9 @@ export const getUserData=async()=>{
     var description=''
     var occupation=''
 
-    let _address=await actulizarCuenta()
+    let _address=await getCurrentAccount()
 
-    await axios.get(base_url+_address.toString()).then(
+    await axios.get(base_url+'user/'+_address.toString()).then(
         result=>{
             // console.log('result ConexionAxios.js getUserData: ',result)
             name=result.data.data[0].name

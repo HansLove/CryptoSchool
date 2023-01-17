@@ -1,13 +1,41 @@
 .course-test-container{
-    margin: 0 6rem;
+    width: 70%;
+    display:block;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.background_header{
+    align-items: center;
+    text-align: center;
     position: relative;
+    padding: 3%;
+}
+.background_header button{
+    background: green;
+    color: white;
+    border-radius: 5%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1%;
+    padding: 1%;
+    font-size: 1rem;
+    border-radius: 3%;
+    transition: all 0.5s ease-in;
+
+}
+
+.background_header button:hover{
+    transition: all 0.5s ease-in;
+    border-radius: 10%;
+    background: darkgreen;
 }
 
 @media 
 (min-device-width:300px) 
 and (max-device-width: 1024px) 
 {
-
     .course-test-container{
         margin: 0.1rem 0.1rem;
         position: relative;

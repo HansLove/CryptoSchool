@@ -1,27 +1,21 @@
-import React, { useEffect, useState,lazy } from 'react'
+import React, { useEffect, useState,lazy, useContext } from 'react'
 import QuestionText from '../../componentes/question/QuestionText'
 import QuestionOptions from '../../componentes/question/QuestionOptions'
 import BotonSubmit from '../../componentes/Boton/BotonSubmit'
-import './estilo.css'
-import { actulizarCuenta } from '../../componentes/blockchain/Blockchain'
 import { getUserData } from '../../componentes/ConexionAxios/ConexionAxios'
 import Animacion_felicidades from '../../animations/Congrats/Animacion_felicidades'
 import { sendAnswer } from '../../componentes/ConexionAxios/ConexionServer'
 import LoadingSpinner from '../../componentes/LoadingSpinner/LoadingSpinner'
+import { DataContext } from '../../context/DataContext'
+import './estilo.css'
 
 function TestForm({
     id,
-    formData=[]
+    formData=[],
+    uri
 }) {
-
-
-
-    useEffect(async() => {
-      let account=await actulizarCuenta()
-      setAddress(account)
-    }, [])
-
-    const [address, setAddress] = useState('')
+    
+    const {account} = useContext(DataContext)
     const [answers, setAnswers] = useState({})
     const [succesfulMinting, setSuccesfulMinting] = useState('null')
     const [isLoading, setIsLoading] = useState(false)
@@ -36,15 +30,16 @@ function TestForm({
         console.log(answers)
     }
 
+    //Send answer to the backend
     const Submit=async()=>{
         setIsLoading(true)
         let userData=await getUserData()
-        // console.log('user data: ',userData)
         
         let res_return=await sendAnswer(
             id.toString(),
             userData.name,
-            address.toString(),
+            account,
+            uri,
             answers)
 
         setSuccesfulMinting(res_return)
@@ -53,7 +48,6 @@ function TestForm({
     }
 
     return (
-
         <form 
         className='test-form-container' onSubmit={handleSubmit}>
             {/* <QuestionText
@@ -82,17 +76,10 @@ function TestForm({
 
             {isLoading?<LoadingSpinner/>:
             succesfulMinting=='null'?
+
             <BotonSubmit
                 onClick={Submit}
                 text={"Check answers"}
-                fontSize={"16px"}
-                fontWeight={"500"}
-                textColor={"white"}
-                buttonColor={"#3B37FF"}
-                borderButton={"none"}
-                borderRadius={"1rem"}
-                margin={"26px 0 26px"}
-                padding={"20px 28px"}
             />
             :
             succesfulMinting?

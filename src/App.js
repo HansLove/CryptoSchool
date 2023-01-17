@@ -4,14 +4,15 @@ import Welcome from './componentes/welcome/Welcome';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Mint from './pages/Mint/Mint';
 import ProfileTwo from './pages/Profile/ProfileTwo';
-import Test from './pages/Test/Test';
+import Showcase from './pages/Test/Showcase';
 import NFT_Types from './componentes/NFT_Types/NFT_Types';
 import { useEffect } from 'react';
-import { turnOnAccountChange, turnOnChainChange } from './componentes/blockchain/Blockchain';
+import { turnOnAccountChange, turnOnChainChange } from './blockchain/Blockchain';
 import Fondo1 from '../src/componentes/image/fondo_2.png'
 import JobBank from './pages/JobBank/JobBank';
 import ProfileSingle from './pages/Profile/ProfileSingle';
 import CertificationSingleView from './pages/Certification/CertificationSingleView';
+import Examen from './pages/Examen/Examen';
 
 
 function App() {
@@ -43,7 +44,8 @@ function App() {
 
         <Route exact path='/welcome' element={<Welcome/>}></Route>
         <Route exact path='/profile' element={<ProfileTwo/>}></Route>
-        <Route exact path='/test' element={<Test/>}></Route>
+        <Route exact path='/test' element={<Showcase/>}></Route>
+        <Route exact path='/exam/:id' element={<Examen/>}></Route>
         <Route exact path='/certifications' element={<NFT_Types
         title='Soul Bond DECCERT NFT´s'
         />}></Route>

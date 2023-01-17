@@ -1,46 +1,35 @@
 .div_payment{
-    color: white;
-    position: relative;
-}
-
-.div_payment div{
-    width: 48%;
-    display: inline-block;
-    margin-left: 1%;
-    padding: 0.5%;
+    width: 25%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     background: black;
-    border-radius: 5%;
+    border: 1px solid silver;
+    padding: 1%;
+    border-radius: 3%;
+    margin: 0.5%;
 }
 
-.div_payment div:hover{
-    background:darkblue;
-    box-shadow: 1px 1px 1px 1px springgreen;
-}
-
-.div_payment div img{
-    width: 15%;
+.div_payment  img{
+    width: 30%;
     display: block;
     margin: auto;
+    padding: 1%;
 }
 
-.div_payment div h2{
+.div_payment h2{
     width: fit-content;
     display: block;
     margin: auto;
     padding: 1%;
+    font-size: 1.5rem;
 }
 
-.div_payment div p{
-    position: absolute;
-    right: 400px;
-    bottom: 0;
-    padding: 1%;
+.div_payment  p{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 800;
 }
 
-
-.div_payment div .stablecoin_price{
-    position: absolute;
-    left: 410px;
-    bottom: 0;
-    padding: 1%;
-}

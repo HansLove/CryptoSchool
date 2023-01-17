@@ -1,3 +1,10 @@
+.img_logo_menu{
+    width: 5vh;
+    height: 5vh;
+    margin-left: 0.5%;
+    margin-top: 0.5%;
+}
+
 .nav_menu{
     display: flex;
     z-index: 10;
@@ -11,7 +18,7 @@
     color: white;
     font-weight: 900;
     padding-right: 3%;
-    padding-left: 1%;
+    padding-left: 3%;
 }
 
 .div_menu{

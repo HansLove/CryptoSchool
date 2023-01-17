@@ -1,12 +1,18 @@
 .profile_info_container{
     width: 100%;
+    padding: 1%;
+    position: relative;
 }
 
-.test-form-container{
-    margin: -14rem 8rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.profile_info_container .div_no_register{
+    width: 35%;
+    display: inline-block;
+}
+
+.account_info_update{
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .update-info-container{
@@ -31,11 +37,6 @@
 
 .button-link{
     text-decoration: none;
-}
-
-.account-info-update{
-    width: 100%;
-    display: flex;
 }
 
 .account-update{
@@ -68,16 +69,11 @@
 and (max-device-width: 1024px) 
 {
 
-    .account-info-update{
+    .account_info_update{
         width: 100%;
         display: block;
         
     }
-
-    .account-modifiders{
-        display: block;
-    }
-
   
     
 }

@@ -11,18 +11,9 @@ const QuestionBox = styled.div`
         box-shadow:${props => props.boxShadow};
         border-radius:1rem;
         margin:${props => props.margin};
-        /* ................................................ */
-        @media 
-        (min-device-width:300px) 
-        and (max-device-width: 1024px) 
-        {   
-            margin: 2%;
-            width: 100%;
-        }   
-        
     `
 
-function QuestionOptions({ name, onChange, 
+export default function QuestionOptions({ name, onChange, 
     backgroundColor='white', 
     textColor='black', 
     padding="40px 50px 50px", 
@@ -38,9 +29,10 @@ function QuestionOptions({ name, onChange,
             backgroundColor={backgroundColor}
             padding={padding}
             boxShadow={boxShadow}
-            margin={margin}
-        >
+            margin={margin}>
+
             <div className='question-container'>
+                
                 <div className='number-question'>
                     <Text 
                     text={numberQuestion + "."} 
@@ -91,5 +83,3 @@ function QuestionOptions({ name, onChange,
         </QuestionBox>
     )
 }
-
-export default QuestionOptions

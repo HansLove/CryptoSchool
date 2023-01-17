@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Web3 from 'web3'
-import { ObjetoDeccert } from '../../componentes/blockchain/ObjetoDeccert'
+import { ObjetoDeccert } from '../../blockchain/ObjetoDeccert'
 import Boton from '../../componentes/Boton/Boton'
 import Input from '../../componentes/Input/Input'
-import SingleCertificado from '../../componentes/single_certificado/SingleCertificado'
-import {Certificaciones} from '../../data/certifaciones.js'
 import {GiCoolSpices} from 'react-icons/gi'
 import {motion} from 'framer-motion/dist/framer-motion'
-import './estilo.css'
 import LoadingSpinner from '../../componentes/LoadingSpinner/LoadingSpinner'
+import './estilo.css'
 
 function Mint() {
 

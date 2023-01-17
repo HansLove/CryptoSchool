@@ -5,9 +5,9 @@ import Text from "../../componentes/Texto/Text";
 import UpdateInfoForm from "../form/UpdateInfoForm";
 import profilePhoto from "../../componentes/image/fondo_2.png"
 import { getUserData } from "../../componentes/ConexionAxios/ConexionAxios";
-import { CheckConexion } from "../../componentes/blockchain/Blockchain";
-import Cadenas from "../../componentes/Cadenas/Cadenas";
+import { CheckConexion } from "../../blockchain/Blockchain";
 import './estilo.css'
+import { FaUserCircle } from "react-icons/fa";
 
 function ProfileInfo(){
 
@@ -25,11 +25,10 @@ function ProfileInfo(){
 
     useEffect(async() => {
         let res_conexion=await CheckConexion()
-        
         let data=await getUserData()
         setUserData(data)
         setIsConnected(res_conexion.connect)
-        //user has no registry in the database, go to edit mode 
+        //el usuario no tiene nada registrado en la base de datos
         if(!data)seteditMode(true)
         //user doesnt have any image as a file
         if(!data.image=='')setImage(data.image)
@@ -40,21 +39,20 @@ function ProfileInfo(){
         }
     }, [])
 
-    
 
     return(
         <div className="profile-info-container">
-
             {isConnected?
             <>
             <div className="account-info">
                 {!editMode?
                 <>
                     <div className="account-photo">
-                        <Image 
+                        {/* <Image 
                         src={image} 
                         alt={"profile-photo"} 
-                        width={"26rem"} height={"auto"} borderRadius={"2rem"}/>
+                        width={"26rem"} height={"auto"} borderRadius={"2rem"}/> */}
+                        <FaUserCircle size={400}/>
 
                     </div>
 
@@ -79,7 +77,7 @@ function ProfileInfo(){
 
             <BotonTwo 
                 onClick={()=>seteditMode(!editMode)}
-                text={"Edit"} 
+                text={!editMode?"Edit":"Go back"} 
                 fontSize={"18px"}
                 seteditMode={seteditMode}
                 editMode={editMode}
@@ -94,12 +92,6 @@ function ProfileInfo(){
             //El usuario no esta conectado en Metamask
             loaded&&
             <>
-            <Cadenas
-            fontSize='2rem'
-            width='90%'
-            background1='navy'
-            background2='pink'
-            />
             </>
             }
 

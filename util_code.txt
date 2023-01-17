@@ -14,3 +14,106 @@
           <button 
         ref={botonCool}
         >SDab</button>
+
+
+ {"respuestas: What is the difference between var, let, and const in JavaScript?
+        a. var is function scoped, let and const are block scoped
+        
+        Which of the following is the correct way to declare an array in JavaScript?
+        a. var myArray = [1, 2, 3];
+        
+        How do you define a function in JavaScript?
+        a. function myFunction() {}
+        
+        Which of the following is the correct way to add an element to the end of an array in JavaScript?
+        b. myArray.push(4);
+        
+        How do you check the type of a variable in JavaScript?
+        a. typeof variable"}
+    }  
+
+
+    /React Js questions and answers:
+    {
+"question":"What is the purpose of JSX?",
+"options":[
+{
+"text": "JSX is a syntax extension for JavaScript, it allows to write HTML elements in JavaScript"
+},
+{
+"text": "JSX is a JavaScript library for building user interfaces"
+},
+{
+"text": "JSX is a pre-processor step that adds XML syntax to JavaScript"
+},
+{
+"text": "JSX is a type of JavaScript that runs on the server"
+}
+],
+"answer":"JSX is a syntax extension for JavaScript, it allows to write HTML elements in JavaScript"
+}
+{
+"question":"What is the virtual DOM?",
+"options":[
+{
+"text": "A virtual representation of the actual DOM, it optimizes the process of updating the UI"
+},
+{
+"text": "A lightweight copy of the actual DOM, it allows to make changes in the UI without affecting the real DOM"
+},
+{
+"text": "A JavaScript object that contains the elements of the actual DOM"
+},
+{
+"text": "A tool for debugging the actual DOM"
+}
+],
+"answer":"A virtual representation of the actual DOM, it optimizes the process of updating the UI"
+}
+{
+"question":"What is the difference between state and props in React?",
+"options":[
+{
+"text": "state is the internal data of a component while props are the data passed from a parent component"
+},
+{
+"text": "state is the data passed from a parent component while props are the internal data of a component"
+},
+{
+"text": "state and props are the same thing"
+},
+{
+"text": "state is used for styling while props are used for data flow"
+}
+],
+"answer":"state is the internal data of a component while props are the data passed from a parent component"
+}
+{
+"question":"What is the difference between a controlled and uncontrolled component in React?",
+"options":[
+{
+"text": "Controlled components have their state controlled by the parent component, while uncontrolled components manage their own state"
+},
+{
+"text": "Controlled components manage their own state, while uncontrolled components have their state controlled by the parent component"
+},
+{
+"text": "Controlled components are used for forms, while uncontrolled components are used for displaying data"
+},
+{
+"text": "Controlled components are used for displaying data, while uncontrolled components are used for forms"
+}
+],
+"answer":"Controlled components have their state controlled by the parent component, while uncontrolled components manage their own state"
+}
+{
+"question":"What is the purpose of the lifecycle methods in React?",
+"options":[
+{
+"text": "Lifecycle methods allow a component to control when it is created, updated and destroyed"
+},
+{
+"text": "Lifecycle methods are used for debugging the component"
+},
+{
+"text": "Lifecycle methods are used for

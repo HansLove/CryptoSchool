@@ -1,17 +1,72 @@
-.seccion_materia{
-    margin: 0.5%;
-    border-radius: 2%;
-    padding: 0.5%;
-    width: 100%;
-    display: block;
-    margin: auto;
+.div_container_sections{
+    background: black;
+    border-radius: 0.7rem;
+    height: 30vh;
+    animation: entry 0.7s ease-in;
+
 }
-.seccion_materia p{
-    font-size: 2rem;
-    display: block;
-    width: fit-content;
-    margin: auto;
-    font-family: monospace;
+
+.div_container_sections .div_section{
+    padding: 1% 2%;
+    border-radius: 0.7rem;
+    margin: 1%;
+    width: 15%;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.div_container_sections .div_section:hover{
+    transition: all 0.3s ease-in-out;
+    border-radius: 1rem;
     font-weight: 800;
-    
+    letter-spacing: 0.05em;
+}
+
+
+/* div inside when user select section*/
+.div_container_sections .div_inside{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.7rem;
+    animation: entry 0.5s ease-in;
+}
+
+/* Boton atras dentro de la seccion expandida */
+.div_container_sections .div_inside button{
+    background: transparent;
+    font-size: 1.2rem;
+    border: none;
+}
+.div_container_sections .div_inside button:hover{
+    color: red;
+}
+
+/* div interno con las subsecciones */
+.div_container_sections .div_inside .internal{
+    background: darkSlateBlue;
+    padding: 1% 2%;
+    border-radius: 0.7rem;
+    margin: 1%;
+    width: 15%;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.div_container_sections .div_inside .internal:hover{
+    transition: all 0.2s ease-in-out;
+    background: black;
+}
+@keyframes entry {
+    0%{
+        scale: 0.1 1;
+        opacity: 0.1;
+    }
 }

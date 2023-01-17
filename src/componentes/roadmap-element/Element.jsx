@@ -3,7 +3,10 @@ import Text from '../Texto/Text';
 import Link from '../link/Link'
 import Image from "../../componentes/imagen/Image";
 
-function Element({date, title, description, linkText, linkHref, image }) {
+function Element({date, title, description, 
+    linkText, linkHref, 
+    image=''
+}) {
     return (
         <li>
             <div className='element-content'>
@@ -16,10 +19,11 @@ function Element({date, title, description, linkText, linkHref, image }) {
                 />
                 <Link text={linkText} href={linkHref} fontSize={"1rem"} textColor={"#3B37FF"} margin={"0"} />
             </div>
-
+            
+            {image!=''&&
             <div className='element-image'>
                 <Image src={image} alt={"bitcoin-image"} width={"24rem"} height={"auto"} />
-            </div>
+            </div>}
         </li>
     )
 }

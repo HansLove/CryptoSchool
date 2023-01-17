@@ -22,7 +22,8 @@ export const Data=[
     
     {
         name:'educational',
-        description:"Flexible system that lets the users of the network to build an educational reputation.",
+        description:"Flexible system that lets the users of the network to build an educational reputation."
+        +"The more NFTs you collect, the more reputation your resume has and the more likely it is that a company will offer you a job.",
         points:[
             "Make study plans more flexible",
             "Encourage multidiscipline in individuals",
